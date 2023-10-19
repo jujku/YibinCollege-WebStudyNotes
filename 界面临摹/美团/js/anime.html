@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body {
+            position: relative;
+        }
+
+        .anime {
+            position: absolute;
+            left: 0px;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <button>点我</button>
+    <button class="btn">点我</button>
+    <div class="anime"></div>
+    <script>
+        let div = document.querySelector(".anime")
+        // let timer = setInterval(function () {
+        //     if (anime.offsetLeft >= 200) {
+        //         clearInterval(timer)
+        //     }
+        //     anime.style.left = anime.offsetLeft + 1 + "px"
+        // }, 0)
+        // 封装
+        function anime(obj, target, delay, callback) { //callback回调函数
+
+            clearInterval(obj.timer) //创建定时器先清除 防止多次触发叠加
+            // let timer = setInterval(function () {
+            obj.timer = setInterval(function () {  //不多占用空间并且每个对象有专属的定时器
+                step = (target - obj.offsetLeft) / 10  //缓动
+                step = step > 0 ? Math.ceil(step) : Math.floor(step)
+                if (obj.offsetLeft == target) {
+                    clearInterval(obj.timer)
+                    if (callback) {
+                        callback()
+                    }
+                }
+                else { //加一个else防止已经到了target还要继续移动
+                    obj.style.left = obj.offsetLeft + step + "px"
+                    // console.log(2);
+                    // console.log(obj.offsetLeft);
+                }
+            }, delay)
+        }
+
+        let btn = document.querySelector("button")
+        let btn2 = document.querySelector(".btn")
+        //调用
+        btn.addEventListener("click", function () {
+            anime(div, 1000, 30, function () {
+                div.style.backgroundColor = "yellow"
+            })
+        })
+        btn2.addEventListener("click", function () {
+            anime(div, 500, 30, function () {
+                div.style.backgroundColor = "green"
+            })
+        })
+    </script>
+</body>
+
+</html>

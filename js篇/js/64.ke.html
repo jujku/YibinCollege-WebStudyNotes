@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: gray;
+      }
+
+      .container {
+        margin: 200px auto;
+        width: 500px;
+        /* height: 100px; */
+      }
+
+      .red {
+        background-color: red;
+      }
+
+      .yello {
+        background-color: yellow;
+      }
+
+      .blue {
+        background-color: blue;
+      }
+
+      .container div {
+        width: 100px;
+        height: 100px;
+        float: left;
+        margin-right: 100px;
+        transition: width 0.5s ease 0s, height 1s ease 0s;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="red"></div>
+      <div class="yello"></div>
+      <div class="blue" style="margin-right: 0"></div>
+    </div>
+    <script>
+      var divList = document
+        .querySelector(".container")
+        .querySelectorAll("div");
+      for (var index = 0; index < divList.length; index++) {
+        divList[index].onclick = function () {
+          for (var index = 0; index < divList.length; index++) {
+            divList[index].style.height = "100px";
+          }
+          this.style.height = "200px";
+        };
+      }
+    </script>
+  </body>
+</html>

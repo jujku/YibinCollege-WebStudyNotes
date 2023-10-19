@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用get发起的不带参数的请求</title>
+    <script src="jquery.js"></script>
+
+</head>
+
+<body>
+    <button id="btnGET">发起不带参数的GET请求</button>
+
+    <script type="text/javascript">
+        $(function () {
+            $.get('http://127.0.0.1:5000/', function (res) {
+                // alert(res);
+                var jsObject = JSON.parse(res)
+                console.log(jsObject)
+
+            })
+        })
+    </script>
+</body>
+
+</html>

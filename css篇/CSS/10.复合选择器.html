@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 多个基本选择器组合就是符合选择器 */
+        /* 后代选择器 子选择器 并集选择器 伪类选择器 */
+        /* 后代选择器 最重要 */
+        /* 可以选择父元素的子元素 */
+        /* 我想把ol的小li选出来改为pink */
+        /* 元素一和元素二`中必须用空格隔开 */
+        ol li {
+            color: pink;
+        }
+
+        ol li a {
+            color: red;
+            text-decoration: none;
+        }
+
+        /* 这样只会给ol里面的 不会给ul里面的 */
+
+        /* 父标签也可以为 类选择器 */
+
+        .nav li {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <ol>
+        变态写法
+        <li>我是ol的孩子</li>
+        <li>我是ol的孩子</li>
+        <li>我是ol的孩子</li>
+        <li><a href="#">我是孙子</a></li>
+    </ol>
+    <ul>
+        <li>我是ul1的孩子</li>
+        <li>我是ul1的孩子</li>
+        <li>我是ul1的孩子</li>
+    </ul>
+    <ul class="nav">
+        <li>我是ul2的孩子</li>
+        <li>我是ul2的孩子</li>
+        <li>我是ul2的孩子</li>
+    </ul>
+    <!-- 快速复制一行 shift + alt + ↓ -->
+
+</body>
+
+</html>

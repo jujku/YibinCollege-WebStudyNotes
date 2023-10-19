@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 元素显示模式 是以什么方式进行显示  例如div以自己占一行 span一行可以放多个 */
+        /* html标签一般分为  块元素 和 行内元素 */
+
+        /* 块元素 */
+        /* <h1> <p> <div> <ol> <ul> <li> 等*/
+        div {
+            /* width: 200px; */
+            height: 200px;
+            background-color: pink;
+        }
+
+        /* 行内元素 */
+        /* <a> <strong> <b> <em> <i> <del> <s> <ins> <u> <span> */
+        /* 也称为 内联元素 */
+        span {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>比较霸道自己独占一行</div>
+    <P>宽度 高度 外边距已经内边距都可以控制</P>
+    <p>宽度默认是容器(父级宽度)的100% 高度的话 是自己的高度</p>
+    <p>是一个容器以及盒子，里面可以放行内元素或者块级元素</p>
+    <p style="color: red;">注意 p标签里面不能放块级元素 特别不能放div 同理h标签也不行</p>
+    <hr><br><br>
+    <span>pink老师衣服</span><strong>品如的衣服</strong>
+    <span>pink老师衣服</span><strong>品如的衣服</strong>
+    <p>行内元素直接设置宽度和高度是没有效果的</p>
+    <p>默认宽度就是他本身的宽度</p>
+    <p>行内元素只能容纳文本或其他元素</p>
+    <p>链接里面不能放链接了</p>
+    <p>特殊情况a里面可以放块级元素 但是给a转换一下块级模式最安全</p>
+
+</body>
+
+</html>

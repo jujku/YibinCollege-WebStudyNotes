@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="vue.js"></script>
+  </head>
+  <body>
+    <div id="root" :x="n">
+      <h2>数字{{n}}</h2>
+      <button @click="add">n+1</button>
+    </div>
+    <script>
+      const vm = new Vue({
+        el: "#root",
+        data() {
+          return {
+            n: 1,
+          };
+        },
+
+        methods: {
+          add() {
+            this.n++;
+          },
+        },
+        beforeCreate() {
+          console.log("beforeCreate");
+          //   console.log(this);
+          //   生命周期，事件，但数据代理还未开始
+          //   debugger;
+        },
+        created() {
+          console.log("create");
+          //进行数据检测，数据代理
+          // console.log(vm);
+          debugger;
+        },
+        beforeMount() {
+          console.log("beforemout");
+          // console.log(vm);
+        },
+        mounted() {
+          console.log("mouted");
+          // console.log(vm);
+        },
+        beforeUpdate() {
+          console.log(vm);
+        },
+      });
+    </script>
+  </body>
+</html>

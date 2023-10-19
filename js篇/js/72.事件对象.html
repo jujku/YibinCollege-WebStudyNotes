@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+    }
+</style>
+
+<body>
+    <div>123</div>
+    <script>
+        var div = document.querySelector("div")
+        div.addEventListener('click', fn3)
+        function fn1(event) {
+            console.log(event);
+        }
+        // 1 event就是事件对象  事件对象有了事件才会存在由浏览器自动生成，不需要传参
+        // 2 事件对象也可以我们自己命名 比如说event  evt e
+        // 3 ie678有兼容性问题 可以通过以下函数解决
+        function fn2(e) {
+            e = e || window.event
+            console.log(e);
+        }
+
+        // e.target 和 this的区别
+        // 第一个返回的是触发的对象，this是绑定的对象
+        console.log("=======div和document的分割线==========");
+        document.addEventListener('click', fn4)
+        function fn3(e) {
+            console.log(e.target);
+            console.log(this);
+        }
+        function fn4(e) {
+            console.log(e.target);
+            console.log(this);
+        }
+    </script>
+</body>
+
+</html>

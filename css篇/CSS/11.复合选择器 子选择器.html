@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 子选择器 */
+        /* 选择作为某元素的最近一级的子元素 */
+
+        /* 这是后代选择器 */
+        .nav a {
+            color: red;
+        }
+
+        /* 这是子选择器 */
+        .nav1>a {
+            color: red;
+        }
+
+        /* 对比 */
+    </style>
+</head>
+
+<body>
+
+    <div class="nav">
+        <a href="#">我是儿子</a>
+        <p>
+            <a href="#">我是孙子</a>
+        </p>
+    </div>
+    <div class="nav1">
+        <a href="#">我是儿子</a>
+        <p>
+            <a href="#">我是孙子</a>
+        </p>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 我们浮动元素 前面的标准流父盒子一般都有一个高度  */
+        /* 我们想要的理想情况是父盒子随着子盒子的浮动流撑开 */
+        /* 很多时候 父标签不方便给高度 子盒子浮动又不占位置 最后父盒子高度为0 */
+        /* 就会影响下面的标准流盒子 */
+        /* 所以要清除浮动 */
+
+        /* 语法 */
+        /* 选择器 {
+            clear: ;
+            属性值 right left both
+            一般开发只用both
+        } */
+
+        /* 四种方法
+        1.额外标签法(隔墙法) W3C推荐
+        2.父级添加 overflow
+        3.父级添加 after 伪元素
+        4.父级添加 双伪元素 */
+
+        /* 1.在最后添加一个盒子 添加clear */
+        .damao {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            float: left;
+        }
+
+        .ermao {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: black;
+        }
+
+        div {
+            width: 600px;
+            background-color: blueviolet;
+        }
+
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="damao">大毛</div>
+        <div class="ermao">二毛</div>
+        <div class="clear"></div>
+        <!-- 这个新增的盒子只能是块级元素 -->
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script src="vue.js "></script>
+  <body>
+    <div id="root">
+      <a v-bind:href="url" :x="name" :upper="shcool.name.toUpperCase()">点击</a>
+      <h1 :time="Date.now()">d</h1>
+    </div>
+    <!-- V-bind: 绑定属性 简写： -->
+    <script>
+      // 指令语法：
+      //    功能：用于解析标签(包括：标签属性，标签体内容，绑定事件...)
+
+      new Vue({
+        el: "#root",
+        data: {
+          shcool: {
+            name: "rose",
+          },
+          name: "jack",
+          url: "http://www.baidu.com",
+        },
+      });
+    </script>
+  </body>
+</html>

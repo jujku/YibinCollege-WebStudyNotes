@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="vue.js"></script>
+  </head>
+  <body>
+    <div>
+      单项数据绑定：<input type="text" :value="name" /> <br />
+      双向数据绑定：<input type="text" v-model:value="name" /><br />
+      简写双向数据绑定：<input type="text" v-model="name" />
+    </div>
+    <script>
+      // 双向数据绑定只能用于表单元素上
+      // 单向只能从data流向页面。
+      new Vue({
+        el: "div",
+        data: {
+          name: "jack",
+        },
+      });
+    </script>
+  </body>
+</html>

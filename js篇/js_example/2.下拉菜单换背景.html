@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>下拉菜单改变背景颜色</title>
+    <script>
+        function changBg() {
+            var oBody = document.getElementsByTagName("body")[0]
+            var bg = document.getElementsByName("bg")[0].value;
+            if (bg == -1) {
+                oBody.style.backgroundColor = "#ffffff";
+            } else {
+                oBody.style.backgroundColor = bg;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    设置背景颜色
+    <select name="bg" onChange="changBg()">
+        <option value="-1">--请选择背景颜色--</option>
+        <option value="pink">粉红色</option>
+        <option value="olive">橄榄色</option>
+        <option value="lightblue">浅蓝色</option>
+    </select>
+
+</body>
+
+</html>

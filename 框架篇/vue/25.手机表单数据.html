@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="vue.js"></script>
+  </head>
+  <body>
+    <form @submit.prevent="demo" action="" id="root">
+      账号: <input type="text" v-model="userInfo.account" /> <br />
+      密码: <input type="password" v-model="userInfo.password" /> <br />
+      年龄: <input type="text" v-model.number="userInfo.age" /> <br />
+      性别: 男<input
+        type="radio"
+        name="sex"
+        v-model="userInfo.sex"
+        value="male"
+      />
+      女<input type="radio" name="sex" v-model="userInfo.sex" value="female" />
+      <br />
+      爱好： 学习<input
+        type="checkbox"
+        name="hobby"
+        v-model="userInfo.hobby"
+        value="study"
+      />
+      打游戏
+      <input
+        name="hobby"
+        type="checkbox"
+        v-model="userInfo.hobby"
+        value="playGame"
+      />
+      吃饭
+      <input
+        name="hobby"
+        type="checkbox"
+        v-model="userInfo.hobby"
+        value="eat"
+      />
+      <br />
+      所属校区
+      <select v-model="userInfo.city">
+        <option value="">请选择校区</option>
+        <option value="beijing">北京</option>
+        <option value="shanghai">上海</option>
+        <option value="shenzheng">深圳</option>
+      </select>
+      <br />其他信息：
+      <textarea
+        name=""
+        id=""
+        cols="30"
+        rows="10"
+        v-model="userInfo.text"
+      ></textarea>
+      <input type="checkbox" v-model="userInfo.isAgree" />阅读并接受<a href=""
+        >《用户协议》</a
+      >
+      <button>提交</button>
+    </form>
+
+    <script>
+      // <input type="text"> 则v-model收集的是value值 用户输入的也是value值
+      // input type=radio 则v-model收集的是value值  且要给标签配置value值
+      // input type=checkbox
+      //     1.若没有配置input的value属性，那么收集的就是cheked （勾选 or 未勾选 是布尔值）
+      //     2.配置input的value属性：
+      //         （1） v-model 的初始值是非数组吗，那么收集到的就是checked
+      //         （2） 是数组，那么收集的就是value组成的数组
+      // V-model的三个修饰符:
+      //     lazy:失去焦点再收集数据
+      //     number:输入字符串转为有效的数字
+      //     trim：输入首尾空格过滤
+
+      const vm = new Vue({
+        el: "#root",
+        data() {
+          return {
+            userInfo: {
+              account: "",
+              password: "",
+              sex: "female",
+              hobby: [],
+              city: "",
+              text: "",
+              isAgree: false,
+              age: "",
+            },
+          };
+        },
+        methods: {
+          demo() {
+            console.log(JSON.stringify(this.userInfo));
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

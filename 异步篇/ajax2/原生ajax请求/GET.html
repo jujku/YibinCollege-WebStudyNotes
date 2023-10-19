@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #result {
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <button>点击我请求</button>
+    <div id="result"></div>
+    <script>
+        const btn = document.querySelector("button")
+        const div = document.querySelector("#result")
+
+        btn.addEventListener("click", function () {
+            // 1.创建对象
+            const xhr = new XMLHttpRequest();
+            // 2.初始化 设置请求方法和 url
+            xhr.open("GET", 'http://127.0.0.1:5000/book/1?a=100&b=200')  //如果要添加参数在url后面加个问好 不同的参数用&符号隔开
+            // 3.发送请求
+            xhr.send();
+            // 4。事件绑定 处理服务器返回的结果
+            // on when 当....的时候
+            // readystate 是 xhr 对象中的属性，表示状态 0 1 2 3 4
+            // change 改变
+            xhr.addEventListener('readystatechange', function () {
+                // 判断 （4表示服务器已经返回了所有的结果）
+                if (xhr.readyState === 4) {
+                    // 判断响应状态码 200 404 403 401 500等
+                    // 2XX 都表示成功
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        // 处理结果 行 头 空行 体
+                        // 1.相应行
+
+                        // console.log(xhr.status);// 状态码
+                        // console.log(xhr.statusText); /* 状态字符串 */
+                        // console.log(xhr.getAllResponseHeaders); //所有响应头
+                        // console.log((xhr.response)); // 响应体
+                        div.innerHTML = xhr.response
+
+                    } else {
+
+                    }
+                }
+            })
+
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 1000px;
+            background-color: red;
+
+        }
+
+        .one {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+
+        .two {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        .clearfix:after {
+            /* 约定俗成叫 clearfix */
+            content: "";
+            /* 必须含有这个元素 */
+            display: block;
+            /* 因为相当于在后面加一个标准流 类似于隔断法 所以说是升级版的额外标签法。但这个标签是行内元素所以要转换成块元素 */
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        .clearfix {
+            /* 为了兼容 IE6，IE7 */
+            *zoom: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box clearfix">
+        <div class="one"></div>
+        <div class="two"></div>
+    </div>
+
+    <!-- 一般大厂都是用的这个 因为只需要写一次 以后直接在类里面调用clearfix -->
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        transition: width linear 0.1s;
+        transition: height linear 0.1s;
+      }
+    </style>
+    <script src="dragable.js"></script>
+  </head>
+
+  <body>
+    <div class="box" state="1" id="draggableElement"><button>全屏</button></div>
+    <script>
+      const draggableComponent = new DraggableComponent("draggableElement");
+      const btn = document.querySelector("button");
+      const box = document.querySelector(".box");
+      btn.addEventListener("click", (e) => {
+        if (box.getAttribute("state") == 1) {
+          box.style.top = 0;
+          box.style.left = 0;
+          box.style.width = "100%";
+          box.style.height = "100%";
+          box.setAttribute("state", 0);
+        } else {
+          console.log(1);
+          box.style.width = "100px";
+          box.style.height = "100px";
+          box.setAttribute("state", 1);
+        }
+        console.log(box.getAttribute("state"));
+      });
+    </script>
+  </body>
+</html>

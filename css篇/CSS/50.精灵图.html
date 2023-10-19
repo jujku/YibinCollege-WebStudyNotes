@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <p>CSS精灵技术 （CSS雪碧 CSS Sprites)</p>
+    <p>为了有效地减少服务器接受和发送请求的次数，提高页面的加载速度</p>
+    <p>将很多小图片拼成以一张大图片 就可以只请求一次</p>
+    <p>主要针对背景图片 因为产品图经常更换</p>
+    <p>大图片 也叫雪碧图 或者 雪碧图</p>
+
+    <p>原理是用 background-position 把一张大图的某一个部分移动到一个可见盒子里面 一般往下往左都是负值</p>
+
+    <p style="font-weight: 900;">使用方法</p>
+    <p>1.用相关软件的切片工具量出盒子大小，和XY</p>
+    <p>2.然后直接写如下</p>
+    <p>.box {</p>
+    <p> weight:</p>
+    <p> height:</p>
+    <p> background: url(精灵图) no-repeat X(单位是xp) Y；</p>
+    <p>}</p>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // es5
+
+      function Phone() {}
+
+      Phone.name = "手机";
+      Phone.change = function () {
+        console.log("我可以改变世界！");
+      };
+      // 这两个是属于函数对象的。并不属于实例对象,叫做静态成员
+      Phone.prototype.size = "16inch";
+
+      let nokia = new Phone();
+      console.log(nokia.name);
+      console.log(nokia.size);
+
+      //es6
+      class Smartphone {
+        static name = "手机";
+        static change() {
+          console.log("抓住机会");
+        }
+      }
+
+      let xiaomi = new Smartphone();
+
+      console.log(xiaomi.name);
+      console.log(Smartphone.name);
+    </script>
+  </body>
+</html>

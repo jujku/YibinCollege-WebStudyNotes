@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div></div>
+    <script>
+      // 递归函数 自己调用自己就是递归函数
+
+      //递归函数一定要加一个推出条件，不然就是死递归
+      //   let num = 0;
+      //   function fn() {
+      //     num++;
+      //     console.log(num);
+
+      //     if (num >= 100) return;
+
+      //     fn();
+      //   }
+      //   fn();
+
+      // 利用递归实现setinterval
+
+      let div = document.querySelector("div");
+
+      function fn1() {
+        div.innerHTML = new Date().toLocaleString();
+        setTimeout(fn1, 1000);
+      }
+
+      fn1();
+    </script>
+  </body>
+</html>

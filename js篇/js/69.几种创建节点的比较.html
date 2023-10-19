@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+</style>
+
+<body>
+    <div>
+
+    </div>
+    <script>
+        // innerhtml直接拼接的效率
+        function fn() {
+            var div = document.querySelector("div")
+            var d1 = +new Date()
+            for (var i = 0; i < 1000; i++) {
+                div.innerHTML += "<div style='border:1px solid black; width: 50px; height:2px'> </div>"
+            }
+            var d2 = +new Date()
+            console.log("innerhtml直接拼接字符串的时间" + (d2 - d1));
+        }
+        // fn()
+        // createElement的效率
+        function fn1() {
+            var div = document.querySelector("div")
+            var d1 = +new Date()
+            for (var i = 0; i < 1000; i++) {
+                divs = document.createElement('div')
+                divs.style.width = "50px"
+                divs.style.height = "2px"
+                divs.style.border = "1px solid black"
+                div.appendChild(divs)
+            }
+            var d2 = +new Date()
+            console.log("createElement的时间是" + (d2 - d1));
+        }
+        // fn1()
+        //innerhtml用数组拼接之后
+        function fn2() {
+            var div = document.querySelector("div")
+            var d1 = +new Date()
+            arr = []
+            for (var i = 0; i < 1000; i++) {
+                arr.push("<div style='border:1px solid black; width: 50px; height:2px'> </div>")
+            }
+            div.innerHTML = arr.join("")
+            var d2 = +new Date()
+            console.log("innerhtml用数组拼接的效率" + (d2 - d1));
+        }
+        fn2()
+    </script>
+</body>
+
+</html>

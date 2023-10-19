@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <button>点我json</button><input type="text">
+    <div></div>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>书名</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+
+    <script>
+        const btn = document.querySelector("button")
+        const div = document.querySelector("div")
+        const input = document.querySelector("input")
+        let tbody = document.querySelector("tbody")
+
+
+        const getjson = function () {
+
+            id = input.value
+            url = 'http://127.0.0.1:5000/book/' + id
+            const xhr = new XMLHttpRequest()
+            // xhr.responseType = "json" // 自动转化
+            xhr.open("POST", url)
+            xhr.send()
+            xhr.addEventListener("readystatechange", function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        // 1.手动转化
+                        let datas = []
+                        let data = JSON.parse(xhr.response)
+                        console.log(datas);
+                        div.innerHTML = data.book
+
+                        // 2.自动转化   
+
+                        // console.log(xhr.response.boook);
+
+                        //动态生成表格
+                        datas.push(data)
+                        for (let i = 0; i < datas.length; i++) {
+                            let tr = document.createElement('tr')
+                            tbody.appendChild(tr)
+                            for (let k in datas[i]) {
+                                let td = document.createElement("td")
+                                td.innerHTML = datas[i][k]
+                                tr.appendChild(td)
+                            }
+                        }
+                    }
+                }
+            })
+        }
+        btn.addEventListener("click", getjson)
+    </script>
+</body>
+
+</html>

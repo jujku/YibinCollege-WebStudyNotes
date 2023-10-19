@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<div class="box">
+    <div class="erweima">X</div>
+</div>
+
+<ul>
+    <li>子节点1</li>
+    <li>子节点</li>
+    <li>子节点</li>
+    <li>子节点2</li>
+</ul>
+
+<body>
+    <script>
+        //节点操作的意义就是更快的获得节点 不用每次都声明这些
+        //  如果这是一个二维码 点X号关闭 就必须获得两个节点
+
+        // 父节点操作 parentNode
+        var erweima = document.querySelector('.erweima')
+        console.log(erweima.parentNode);  //这里获取的就是erweima的父节点  如果没有父节点 就返回 null
+
+
+        // 二  子节点
+        // childNodes  
+        var ul = document.querySelector('ul')
+        console.log(ul.childNodes); //你会发现集合里面有9个节点  那是因为 集合里面有元素节点和文本节点   
+        //nodeType 可以检测节点类型   文本节点是 3   元素节点是1     换行这些都是文本节点
+        console.log(ul.childNodes[0].nodeType);
+        console.log(ul.childNodes[1].nodeType);
+        // 因为用nodeType可以检测数据类型 所以可以用for循环遍历使用
+        // 但是这种方法十分麻烦 这里有个不标准的 children 他可以只拿到元素节点
+        console.log(ul.children);
+
+        //三 节点的第一个第二个 
+        // firstChild
+        console.log(ul.firstChild);
+        console.log(ul.lastChild);
+        // 这里两个都是文本节点 因为有换行 这个和nodeChild一样所有类型的节点都会获取
+
+        //firstElementChild
+        console.log(ul.firstElementChild);
+        console.log(ul.lastElementChild); //这种方式可以直接取元素 但是IE8+
+
+        //或者说直接 children
+        console.log(ul.children[0]);
+        console.log(ul.children[ul.children.length - 1]);
+
+        console.log(ul.children[2]);
+        console.log();
+    </script>
+</body>
+
+</html>

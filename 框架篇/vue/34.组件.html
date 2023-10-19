@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="vue.js"></script>
+  </head>
+  <body>
+    <!-- 组件  实现应用中 局部 功能 代码 和资源 的 集合 -->
+
+    <!-- 非单文件组件  一个文件中包含有N个组件 -->
+
+    <!-- 单文件组件   一个文件中只包含有一个组件。 -->
+
+    <!-- 在组件中data一般用的是函数式，因为每次使用都是返回的一个新的对象，并不会用一个 导致改一个数据所以用到这个组件的数据都会变 -->
+    <div id="root">
+      <schooln></schooln>
+      <hellon></hellon>
+    </div>
+
+    <div id="root2">
+      <hellon></hellon>
+    </div>
+    <script>
+      const school = Vue.extend({
+        template: `
+            <div>
+                <h2>{{school}}</h2>
+            </div>            
+            `,
+        data() {
+          return {
+            school: "YBU",
+          };
+        },
+      });
+
+      //局部注册 需要在VM实例中添加
+
+      const hello = Vue.extend({
+        template: `
+            <div>
+                <h2>{{hello}}</h2>
+            </div>            
+            `,
+        data() {
+          return {
+            hello: "你好！",
+          };
+        },
+      });
+      //   全局注册，不用在哪个实例里面单独注册，用的比较少
+      Vue.component("hellon", hello);
+
+      const vm = new Vue({
+        el: "#root",
+        components: {
+          schooln: school,
+        },
+      });
+
+      const vm2 = new Vue({
+        el: "#root2",
+      });
+
+      //   注意的点
+      //   1，组件名写法  一个单词 一般首字母大写  School
+      //                 多个单词一般  my-school  在脚手架环境下可以写  MySchool
+
+      // 2. const school = Vue.extend(options) 可简写为 const school = options
+      //     因为在vm的compoents里面注册的时候，会自动调用extend
+    </script>
+  </body>
+</html>

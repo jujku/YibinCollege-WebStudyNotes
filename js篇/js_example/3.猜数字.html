@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 要求用户猜1`50但是 只有10次机会
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+
+        }  //创建随机数函数
+        var target = getRandomInt(1, 51);   // 创建目标值
+        var i = 0;  // 创建次数
+        while (1) {
+            var num = prompt('请输入一个整数');
+            if (num > target) {
+                alert('你输入的数字大了')
+            } else if (num < target) {
+                alert('你输入的数字小了')
+            } else {
+                alert('恭喜你输入正确 ' + target)
+                break;
+            }
+            i++
+            if (i >= 10) {
+                alert('非常抱歉你没能猜出正确答案 ' + target)
+                break;
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

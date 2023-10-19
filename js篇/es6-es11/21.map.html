@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let m = new Map();
+
+      //添加元素
+      m.set("name", "xiao");
+      m.set("change", function () {
+        console.log(1);
+        console.log("抓住机会！");
+      });
+      // 建也可以是对象
+      let key = {
+        word: "hello!",
+      };
+      m.set(key, ["hello you!", "hello me"]);
+
+      //size
+      console.log(m.size); //3
+
+      //删除
+
+      console.log(m.delete("name")); //true
+
+      //获取
+      console.log(m.get("change"));
+
+      //清空
+      console.log(m.clear());
+      console.log(m.size);
+
+      for (let v of m) {
+        console.log(v);
+      }
+      //   每一个v是一个数组，每个数组包含一个键和一个值
+    </script>
+  </body>
+</html>

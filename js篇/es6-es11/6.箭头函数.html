@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let fn = (a, b) => {
+            return a + b
+        }
+
+        let result = fn(1, 2);
+
+        console.log(result);
+
+
+        function getName() {
+            console.log(this.name);
+        }
+
+        let getName2 = () => {
+            console.log(this.name);
+        }
+
+        window.name = "金武"
+        {
+            let name = "王磊"
+            let getName3 = () => {
+                console.log(this.name);
+            }
+            yibing = {
+                name: "瑞峰",
+                getName,
+                getName2,
+                getName3
+            }
+        }
+
+        yibing.getName2()
+        yibing.getName()
+        yibing.getName3()
+
+        // 1.this是静态的，this始终指向函数声明时所在作用域下的this的值
+
+        // 2.不能作为构造实例化对象
+
+        // let Person = (name, age) => {
+        //     this.name = name
+        //     this.age = age
+        // }
+
+        // let me = new Person("xiao", 30);
+        // console.log(me);
+
+
+        // 3.不能使用arguments变量
+
+        // let fn = () => {
+        //     console.log(arguments);
+        // }
+        // fn(1, 2, 3)
+
+
+        // 4.箭头函数的简写
+        // 1.省略小括号，当形参只有一个的时候
+        let add = n => {
+            return n + n
+        }
+        // 2.省略花括号，当代码块只有一条语句的时候
+
+        let pow = n => n * n;
+
+
+    </script>
+</body>
+
+</html>

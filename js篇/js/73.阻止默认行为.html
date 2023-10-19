@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>123</div>
+
+    <form action="">
+        <input class="input" type="text">
+        <input class="sub" type="submit">
+    </form>
+    <script>
+        //e.type 返回事件的类型
+        var div = document.querySelector("div")
+        div.addEventListener("click", fn1)
+        div.addEventListener("mouseover", fn1)
+        div.addEventListener("mouseout", fn1)
+        function fn1(e) {
+            console.log(e.type);
+        }
+
+        var input = document.querySelector(".input")
+        var button = document.querySelector(".sub")
+        button.addEventListener("click", sub)
+        function sub(e) {
+            console.log(input.value);
+            if (input.value == '') {
+
+                e.preventDefault()
+                //这个方法可以阻止默认行为
+                alert("表格不能为空！")
+                //虽然 return false也可以但是后面的语句就不会执行了
+            }
+        }
+    </script>
+</body>
+
+</html>

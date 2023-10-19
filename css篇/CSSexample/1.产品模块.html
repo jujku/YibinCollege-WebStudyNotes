@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .box {
+            width: 298px;
+            height: 415px;
+            background-color: #fff;
+            margin: 100px auto;
+        }
+
+        .box img {
+            width: 100%;
+            height: 50%;
+            /* 让图片和父级元素一样宽 */
+        }
+
+        /* 评论 第一段文字 */
+        .review {
+            height: 70px;
+            font-size: 14px;
+            padding: 0 28px;
+            /* 这个段落没有 width所以不会撑开盒子 */
+            margin-top: 30px;
+
+        }
+
+        /* 评价 */
+        .appraise {
+            font-size: 12px;
+            color: #b0b0b0;
+            margin-top: 20px;
+            padding: 0 28px;
+        }
+
+        /* 产品名 介绍 */
+        .info {
+            font-size: 14px;
+            margin-top: 15px;
+            padding: 0 28px;
+        }
+
+        .info h4 {
+            display: inline-block;
+            font-weight: 400;
+            /* 文字不加粗 */
+        }
+
+        .info span {
+            color: #ff6700;
+        }
+
+        .info em {
+            color: #ebe4ee;
+            font-style: normal;
+            /* 因为加了em要倾斜可以用这个清除倾斜 */
+            margin: 0 6px 0 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="../imgaes/shawu.png" alt="">
+        <p class="review"> <a href="#">和泉纱雾，我的老婆！！这是我的老婆！我的老婆！纱雾酱天下第一!最可爱了！</a></p>
+        <div class="appraise">来自jujku的评价</div>
+        <div class="info">
+            <h4><a href="#">和泉纱雾画画高手</a></h4>
+            <em>|</em><span>无价</span>
+        </div>
+    </div>
+
+</body>
+
+</html>

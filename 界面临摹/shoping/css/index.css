@@ -1,0 +1,308 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?tomleg');
+    src:  url('../fonts/icomoon.eot?tomleg#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?tomleg') format('truetype'),
+      url('../fonts/icomoon.woff?tomleg') format('woff'),
+      url('../fonts/icomoon.svg?tomleg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+.main{
+    width: 980px;
+    height: 455px;
+    margin-left: 220px;
+    margin-top: 10px;
+}
+.main .focus{
+    display: block;
+    float: left;
+    height: 455px;
+    width: 720px;
+    background: url(../images/focus.png) no-repeat;
+}
+.main .newsflash{
+    float: left;
+    margin-left: 10px;
+    width: 250px;
+    height: 455px;
+}
+.main .newsflash .news{
+    height: 165px;
+}
+.main .newsflash .lifeservice{
+    height: 210px;
+}
+.main .newsflash .bargain{
+    margin-top: 5px;
+    height: 75px;
+    background-color: black;
+}
+.main .newsflash .news .newshd{
+    height: 35px;
+    border:1px solid gray;
+    border-bottom: 1px dashed gray;
+}
+.main .newsflash .news .newshd p{
+    margin-left: 15px;
+    font-size: 14px;
+    line-height: 37px;
+    margin-bottom: -4px;
+    /* 行高溢出 */
+}
+.main .newsflash .news .newshd a{
+    line-height: 35px;
+}
+.main .newsflash .news .newshd a::after{
+    content: '\e920';
+    line-height: 35px;
+    font-family: "icomoon";
+}
+.main .newsflash .news .newsbd{
+    height: 130px;
+    border: 1px solid gray;
+    border-top: none;
+    padding-left:15px ;
+}
+.main .newsflash .news .newsbd ul li{
+    float: left;
+    margin-top: 7px;
+}
+.main .newsflash .lifeservice div{
+    margin-left: -1px;
+    float: left;
+    width: 63px;
+    height: 70px;
+    border: 1px solid gray;
+    border-top:none;
+    background:url(../images/icons.png) no-repeat 0 0;
+    cursor: pointer;
+    padding-left: 16px;
+    padding-top: 45px;
+}
+.main .newsflash .lifeservice div:nth-of-type(4n+1){
+    margin-left: 0;
+    float: left;
+    width: 64px;
+    height: 70px;
+    border: 1px solid gray;
+    border-top:none;
+    background:url(../images/icons.png) no-repeat 0 0;
+    cursor: pointer;
+}
+.recom {
+    height: 163px;
+    background-color: pink;
+    margin-top: 11px;
+}
+
+.recom .recom_hd {
+    float: left;
+    width: 206px;
+    text-align: center;
+    line-height: 163px;
+    background-color: #5c5251;
+}
+.recom .recom_bd {
+    float: left;
+    background-color: #ebebeb;
+    width: 994px;
+    height: 100%;
+}
+.recom .recom_bd li{
+    position: relative;
+    float: left;
+    width: 248.5px;
+    cursor: pointer;
+}
+.recom .recom_bd .wenzi{
+    margin-top: 25px;
+    margin-left: 19px;
+    float: left;
+}
+.recom .recom_bd .wenzi p:nth-child(1){
+    font-size: 16px;
+    font-weight: 900;
+    color: black;
+}
+.recom .recom_bd .wenzi div:nth-of-type(1) {
+    background-color: #00a0e8;
+    color: white;
+    font-size: 14px;
+    margin-top: 12px;
+    text-align: center;
+    width: 90px;
+}
+.recom .recom_bd .wenzi div:nth-of-type(2) {
+    width: 57px;
+    background-color: #00a0e8;
+    border-radius: 16px;
+    color: white;
+    font-size: 14px;
+    margin-top: 20px;
+    text-align: center;
+}
+.recom .recom_bd ul li .recom_1{
+    float: left;
+    line-height: 163px;
+}
+.recom .recom_bd ul li:after {
+    content: '';
+    height: 144px;
+    width: 1px;
+    background-color: gainsboro;
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+.recom .recom_bd ul li:nth-child(4)::after {
+    content: '';
+    background-color: transparent;
+}
+.like{
+    margin-top: 30px;
+}
+.like .like_hd{
+    height: 24px;
+}
+.like .like_hd p:nth-child(1){
+    float: left;
+    font-size: 18px;
+    font-weight: 800;
+}
+.like .like_hd p:nth-child(2){
+    float: right;
+
+}
+.like .like_hd p:nth-child(2)::after{
+    content: '\ea2e';
+    font-family: 'icomoon';
+    margin-left: 9px;
+}
+.like .like_bd{
+    margin-top: 11px;
+    height: 233px;
+    border: 1px solid gray;
+}
+.like .like_bd li{
+    position: relative;
+    float: left;
+    width: 199px;
+    text-align: center;
+}
+.like .like_bd li h4{
+    font-size: 18px;
+    color: red;
+}
+.like .like_bd li::after{
+    content: '';
+    width: 1px;
+    height: 60px;
+    background-color: gray;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.like .like_bd li:nth-child(6):after{
+    content: '';
+    width: 1px;
+    height: 60px;
+    background-color: transparent;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.floor{
+    height: 390px;
+}
+.floor .jiadian .box_hd{
+    height: 30px;
+    border-bottom: 2px solid #c81623;
+    margin-top: 30px;
+}
+.floor .jiadian .box_hd p{
+    font-size: 18px;
+    color:#c81623;
+    font-weight: 600;
+}
+.floor .jiadian .box_hd ul li{
+    float: left;
+    line-height: 30px;
+    
+}
+.floor .jiadian .box_hd ul li a{
+    margin: 10px;
+}
+.floor .jiadian .box_bd .col_211{
+    float: left;
+    width: 211px;
+    height: 360px;
+    background-color: #f9f9f9;
+
+}
+.floor .jiadian .box_bd .col_329{
+    float: left;
+    width: 329px;
+    height: 360px;
+    text-align: center;
+    background-color: #aed6d8;
+    padding-top: 35px;
+}
+.floor .jiadian .box_bd .col_220{
+    float: left;
+    width: 220px;
+    height: 360px;
+}
+.floor .jiadian .box_bd .col_221{
+    border: 1px solid gainsboro;
+    border-left: none;
+    float: left;
+    width: 220px;
+    height: 360px;
+}
+.floor .jiadian .box_bd .col_211 li{
+    float: left;
+    width: 70px;
+    height: 33px;
+    border-bottom: 1px solid gray;
+    margin:0 15px;
+    text-align: center;
+    line-height: 33px;
+}
+.floor .jiadian .box_bd .col_211 .down{
+    float: left;
+    margin: 30px;
+}
+.floor .jiadian .box_bd .col_220 .item{
+    height: 180px;
+    position: relative;
+    border: 1px solid gainsboro;
+    border-left: none;
+    border-top: none;
+}
+.floor .jiadian .box_bd .col_220 p:nth-child(1){
+    position: absolute;
+    left: 20px;
+    top: 26px;
+    font-size: 16px;
+    
+}
+.floor .jiadian .box_bd .col_220 p:nth-child(2){
+    position: absolute;
+    left: 20px;
+    top: 47px;
+    color: red;
+    font-size: 14px;
+
+}
+.floor .jiadian .box_bd .col_220 img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.floor .jiadian .box_bd .col_221 .item2{
+    margin-top: 72px;
+    text-align: center;
+}

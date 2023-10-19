@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="vue.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <h2 @click="n++">{{n}}</h2>
+      <h2>放大10倍后的n <span v-big="n"></span></h2>
+      <h2 @click="name++">{{name}}</h2>
+    </div>
+
+    <script>
+      new Vue({
+        el: "#root",
+        data() {
+          return {
+            name: 123,
+            n: 1,
+          };
+        },
+        directives: {
+          // // big调用
+          //       1.指令禹元素成功绑定时（一上来）
+          //       2.指令所在的模板被重新解析的时候
+
+          big(element, binding) {
+            console.log(binding);
+            element.innerText = binding.value * 10;
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

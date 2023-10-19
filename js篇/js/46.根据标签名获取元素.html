@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li>dsad 1</li>
+        <li>dsad 2</li>
+        <li>dsad 3</li>
+        <li>dsad 4</li>
+        <li>dsad 5</li>
+    </ul>
+    <ol>
+        <li>刘德华 1</li>
+        <li>刘德华 2</li>
+        <li>刘德华 3</li>
+        <li>刘德华 4</li>
+        <li>刘德华 5</li>
+    </ol>
+    <script>
+        // 返回的是 获取过来的元素对象的集合 以伪数组的形式储存的
+        var arr = document.getElementsByTagName('li')
+        console.log(arr);
+        console.log(arr[0]);
+
+        for (var index = 0; index < arr.length; index++) {
+            console.log(arr[index]);
+        }
+
+        // 得到的是一个对象的集合 所以我们要操作里面的元素 就需要遍历
+        // 得到的元素是动态的 
+
+        // 如果页面中只有一个 li 返回的还是数组
+        // 如果页面中没有这个元素 返回的是undefine 一个空的伪数组
+
+
+
+        // 如果要用标签名获取 ol里面的li 此时就可以把document换成元素这样 
+        // element.getElementsByTagName()
+        // 父元素element必须是 单个对象 (必须指名是哪个元素对象) 获取的时候不能包括父元素自己
+        var ol = document.getElementsByTagName('ol')
+        console.log(ol);
+        console.log(ol.getElementsByTagName('li')); //这个不行就是因为 ol是 一个集合 伪数组 必须要单个对象才能为 父元素
+        console.log(ol[0].getElementsByTagName('li')); //这样就可以 但是一般都会在获取的时候给 Ol一个id
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function loadpage() {
+            var targetURL = document.getElementById('url').value;
+            console.log(targetURL)
+            document.getElementById('iframePosition').src = targetURL
+        }
+    </script>
+
+</head>
+
+<body>
+    <div>
+        <p>请输入要加载的地址:</p>
+        <p>
+            <input type="text" id="url" value="">
+            <input type="button" value="sub" onclick="loadpage()">
+        </p>
+    </div>
+
+    <div>
+        <h3>
+            加载页面的位置
+        </h3>
+        <iframe style="width: 100%; height: 500px;" id='iframePosition' src="">
+
+        </iframe>
+    </div>
+
+
+</body>
+
+</html>

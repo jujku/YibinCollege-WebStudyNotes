@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .san {
+            position: relative;
+            top: 0;
+            margin: 100px;
+            width: 150px;
+            height: 300px;
+            background-color: tomato;
+        }
+
+        .san span {
+            position: absolute;
+            top: -30px;
+            /* 底边 加 高边 上下border */
+            right: 20px;
+            width: 0;
+            height: 0;
+
+            line-height: 0;
+            font-size: 0;
+            /* 这两个是为了兼容IE */
+
+            border: 10px solid transparent;
+            /* 这里可以调整三角形的底边长 */
+            border-bottom: 20px solid tomato;
+            /* 这里可以调整三角形的高 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="san">
+        <span></span>
+    </div>
+
+
+</body>
+
+</html>

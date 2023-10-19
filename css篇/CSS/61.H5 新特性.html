@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    video {
+        display: block;
+    }
+</style>
+
+<body>
+    <p>主要是一些 新的标签 新的表单 新的表单属性</p>
+    <p style="font-weight: 300;">IE9以上的浏览器 和 移动端才支持</p>
+    <p>div 对 搜索引擎来说是没有语义的</p>
+
+    <p>新增的语一标签</p>
+    <header>头部标签</header>
+    <nav>导航标签</nav>
+    <article>内容标签</article>
+    <section>定义文档某个区域</section>
+    <aside>侧边栏标签</aside>
+    <footer>尾部标签</footer>
+
+    <p style="color: red;">这种语义化标签主要针对搜索引擎 IE9中需要转换为块级元素</p>
+
+    <p>新镇多媒体标签</p>
+    <!-- 1.音频：<audio></audio>
+    2.视频<video src=""></video> 尽量用mp4-->
+
+    <video src="61.test.mp4" autoplay muted loop width="400px" height="200px"></video>
+    <!-- 属性 autoplay(谷歌浏览器需要额外的插件)
+    controls 向用户显示播放控件
+    width height
+    loop 循环播放
+    preload auto 预先加载视频  none 不预先加载视频（如果有autoplay自动忽略这个属性）
+    poster 加载等待的画面图片
+    muted 静音播放(只有加了静音 谷歌浏览器才能自动播放) -->
+
+    <video autoplay='autoplay' width="200px" height="200px">
+        <source src="61.test.mp4" type="video/mp4">
+        <source src="61.test.ogg" type="video/ogg">
+    </video>
+    <!-- 增加兼容性 -->
+
+    <audio src="61.audio test.mp3" autoplay controls muted></audio>
+    其他属性可以类比 视频标签
+    <p>但是谷歌把 音频的自动播放静止了</p>
+    <!-- muted 是静音 -->
+
+
+
+</body>
+
+</html>

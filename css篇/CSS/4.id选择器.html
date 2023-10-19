@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* id选择器 以＃ */
+        #pink {
+            color: pink;
+        }
+
+        /* 通配符选择器可以选择当前页面所有标签 */
+        * {
+            font-size: 58px;
+            color: blue;
+        }
+
+        /* 但是优先级没有类选择器 和 id选择器优先度高 */
+
+        * {
+            margin: 0;
+            padding: 0;
+            /* 这个是清楚所有元素的内外边距 */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="pink"> M看</div> <!-- id选择器只能被调用一次 -->
+    <p>dsaf</p>
+    <h1>adsf</h1>
+</body>
+
+</html>
+<!-- 开发一般用类调用  id选择器一般与js一起使用  特殊情况用通配符选择器-->

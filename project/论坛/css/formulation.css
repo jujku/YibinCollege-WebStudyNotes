@@ -1,0 +1,96 @@
+body{
+    position: relative;
+}
+.publish .w .publishcard #userdata{
+    position: absolute;
+    font-weight: 900;
+    font-size: 14px;
+    top: 10px;
+    left: 10px;
+}
+.publish .w .publishcard #usertime{
+    position: absolute;
+    font-weight: normal;
+    font-size: 14px;
+    top: 28px;
+    left: 10px;
+}
+.comments{
+    margin-top: 50px;
+}
+.comments .w .commentslist{
+    position: relative;
+    /* width: 1200px; */
+    border-radius: 20px;
+    background-color: rgb(232,232,232);
+    /* border:2px inset; */
+    /* height: 400px; */
+    /* border-style: ; */
+    overflow: hidden;
+    margin-bottom: 200px;
+}
+.comments .w .commentslist .shadow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    box-shadow: inset 0px 10px 8px 4px rgba(0,0,0,0.3);
+}
+.comments .w .commentslist .comment{
+    border-bottom:1px solid black ;
+}
+.comments .w .commentslist .comment:last-of-type{
+    border: none;
+}
+.comments .w .commentslist .comment .commentuser{
+    /* background-color: aqua; */
+    height: 30px;
+    padding: 0 20px;
+}
+.comments .w .commentslist .comment .commentuser p{
+    line-height: 30px;
+    font-size: 16px;
+    color: black;
+    font-weight: 900;
+    float: left;
+    margin-right: 20px;
+}
+.comments .w .commentslist .comment .commenttext{
+    padding: 5px 30px;
+    color: black;
+    font-size: 16px;
+}
+.sendcomment{
+    position: fixed;
+    z-index: 9999;
+    border-top: 1px solid black;
+    width: 100%;
+    height: 150px;
+    background-color: rgb(245,245,245);
+    bottom: 0px;
+}
+.sendcomment .w{
+    position: relative;
+}
+.sendcomment .w #sendcommenttext{
+    padding: 20px;
+    border: none;
+    background-color: rgb(232,232,232);
+    display: block;
+    width: 700px;
+    border-radius: 10px;
+    height: 120px;
+    margin: 10px auto;
+    resize: none;
+    box-shadow: inset 0px 5px 8px 4px rgba(0,0,0,0.3);
+
+}
+.sendcomment .w #sendcommentbtn{
+    position: absolute;
+    display: block;
+    right: 190px;
+    top: 95px;
+    font-size: 20px;
+    font-weight: 900;
+
+}

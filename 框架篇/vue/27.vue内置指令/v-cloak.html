@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../vue.js"></script>
+
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <h2 v-cloak>{{name}}</h2>
+    </div>
+
+    <script>
+      // v-cloak指令 （没有值）
+      //     1.本质是一个特殊属性，Vue实例创建完毕，并接管容器后会删掉V-cloak属性
+      //     2，可以使用css配合v-cloak可以解决网速慢 页面展示出{{XXX}}的问题
+
+      setTimeout(() => {
+        new Vue({
+          el: "#root",
+          data() {
+            return {
+              name: "小明",
+            };
+          },
+        });
+      }, 3000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* display:block */
+        /* 转换为块级元素 */
+        a {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            /* 把行内元素 a 转换为块级元素 */
+            display: block;
+        }
+
+        .div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            display: inline;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        span {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            display: inline-block;
+
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">金星阿姨</a>
+    <div>我是div块级元素</div>
+    <div class="div">我是div块级元素 被转换为了行内元素</div>
+
+    <span>行内元素 转换为 行内块元素</span>
+    <span>行内元素 转换为 行内块元素</span>
+
+</body>
+
+</html>

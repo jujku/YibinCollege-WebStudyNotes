@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>发送</button><button>取消</button>
+    <script>
+        let btn = document.querySelectorAll("button")
+        let xhr = null
+        btn[0].addEventListener("click", function () {
+            xhr = new XMLHttpRequest()
+            xhr.open("POST", 'http://localhost:5000/book/1')
+            xhr.send()
+        })
+        btn[1].addEventListener("click", function () {
+            xhr.abort() //取消函数
+        })
+    </script>
+</body>
+
+</html>

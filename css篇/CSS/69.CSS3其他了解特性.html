@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 一下了解即可 -->
+    <!-- filter 滤镜 -->
+    <!-- filter: 函数();  -->
+    <!-- 列如 filter:blur(5px); 数值越大越模糊 -->
+    <style>
+        .one {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            filter: blur(5px);
+            /* 对他子元素也有用 */
+        }
+
+        /* calc()  可以让你进行一些计算 */
+        /* 需求让我们的子盒子宽度永远比父盒子小30px */
+        .two {
+            width: calc(100% - 30px);
+            height: 50px;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one">
+        <div class="two"></div>
+    </div>
+
+</body>
+
+</html>

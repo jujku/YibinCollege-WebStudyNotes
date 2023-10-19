@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">点击显示时间</button>
+    <div id="div"></div>
+    <p id="p"></p>
+
+    <div id="text">点我</div>
+    <div id='html'>我也想被点嘛QWQ</div>
+
+    <p id='p2'>
+        这是第三个区别
+        <span> 123</span>
+    </p>
+
+
+    <script>
+        var btn = document.getElementById('btn')
+        var div = document.getElementById('div')
+        var p = document.getElementById('p')
+        btn.onclick = function () {
+            div.innerText = '我...我不到啊';
+        }
+
+        p.innerText = '我不到啊'
+        //不用点击直接显示
+
+        // 一,innerText不识别html和标签
+        var text = document.querySelector('#text')
+        text.onclick = function () {
+            text.innerText = '<strong> 今天是</strong> 2022'
+        }
+
+        var html = document.querySelector('#html')
+
+        html.onclick = function () {
+            html.innerHTML = '<strong> 今天是 </strong> 2022'
+        }
+
+        //二, innerText 非标准   innerHTML W3C标准
+
+        // 这两个属性是可读写 的 可获取元素的内容
+        var p2 = document.querySelector('#p2');
+
+        console.log(p2.innerHTML);
+        console.log(p2.inmerText);
+        // 也就是说text 会清除空格和换行
+        // 而 html会原封不动的输出出来
+
+
+
+    </script>
+
+</body>
+
+</html>

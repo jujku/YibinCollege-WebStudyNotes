@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+        background-color: ghostwhite;
+      }
+      .content {
+        position: relative;
+        width: 800px;
+        height: 800px;
+        background-color: white;
+        border: solid 1px black;
+        border-radius: 20px;
+
+        overflow: hidden;
+      }
+      .item {
+        position: absolute;
+        background-color: black;
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+      }
+      .co {
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="co" style="background-color: red"></div>
+    <div class="co" style="background-color: yellow"></div>
+    <input type="text" placeholder="请输入画笔大小" />
+    <div class="content"></div>
+    <script>
+      let color = "black"; //画笔默认颜色
+
+      let body = document.querySelector("body");
+      let content = document.querySelector(".content");
+      const colors = document.querySelectorAll(".co");
+
+      for (let i = 0; i < colors.length; i++) {
+        colors[i].addEventListener("click", (e) => {
+          for (let i = 0; i < colors.length; i++) {
+            colors[i].style.border = "";
+          }
+          colors[i].style.border = "solid 5px black";
+          color = colors[i].style.backgroundColor;
+          console.log(color);
+        });
+      }
+      //更换颜色
+
+      function draw(e) {
+        let item = document.createElement("div");
+        item.className = "item";
+        item.style.backgroundColor = color;
+        item.style.width = document.querySelector("input").value + "px";
+        item.style.height = document.querySelector("input").value + "px";
+        item.style.left =
+          e.pageX -
+          content.offsetLeft -
+          document.querySelector("input").value / 2 +
+          "px";
+        item.style.top =
+          e.pageY -
+          content.offsetTop -
+          document.querySelector("input").value / 2 +
+          "px";
+
+        content.appendChild(item);
+      }
+      //画笔样式
+
+      let isdraw = false;
+      content.addEventListener("mousedown", (e) => {
+        isdraw = true;
+      });
+      content.addEventListener("mouseup", (e) => {
+        isdraw = false;
+      });
+      content.addEventListener("mousemove", (e) => {
+        e.stopPropagation();
+        if (isdraw) {
+          requestAnimationFrame(() => {
+            draw(e);
+          });
+        }
+      });
+      body.addEventListener("mousemove", (e) => {
+        if (isdraw) {
+          isdraw = false;
+        }
+      });
+    </script>
+  </body>
+</html>

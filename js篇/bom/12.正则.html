@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 三个主要功能 匹配 替换 提取
+      //定义
+      // let 变量名 = /表达式/
+      // /  / 是正则的子面量
+
+      //1 检测是否匹配
+      let reg = /javascript/;
+      console.log(reg.test("一起学javascript")); //true
+      //2 查找符合规则的字符串
+      let str = "javascript";
+      console.log(reg.exec("这里是javascript里面的bom")); //['javascript', index: 3, input: '这里是javascript里面的bom', groups: undefined]
+      console.log(reg.exec("java不行")); //null
+
+      //   元字符
+      // 1.边界符（开头和结尾）
+      // 2.量词
+      // 3.字符类(比如\d 表示0~9)
+
+      // 1.边界符
+      console.log(/^哈/.test("二哈")); //false
+      console.log(/^哈/.test("哈哈啊")); //true
+      console.log(/哈$/.test("啊哈哈")); // true
+      console.log(/^哈$/.test("哈哈")); //false
+      console.log(/^哈$/.test("哈")); //true
+      //   当 尖括号和美元符号一起出现的时候必须是 精确匹配
+
+      //2.量词
+      //   * 重复零次或更多次
+      //   + 重复一次或更多次
+      //   ？ 重复一次或零次
+      //   {n}重复n次
+      // {n,}重复n次或更多次
+      // {n,m}重复n次到m次
+      console.log("星号");
+      console.log(/a*/.test("a")); //true
+      console.log(/a*/.test("aa")); //true
+      console.log(/a*/.test("")); //true
+      console.log("加号");
+      console.log(/w+/.test("w")); //true
+      console.log(/w+/.test("")); //false
+      console.log(/aw{2}/.test("aw")); //false
+      console.log(/aw{2}/.test("awaw")); //false
+      console.log(/aw{2}/.test("awaww")); //true
+
+      console.log("特殊字符");
+      //中括号匹配中间任意一个字符
+      console.log(/[abc]/.test("test")); // false
+      console.log(/[abc]/.test("baby")); // true
+      console.log(/^[abc]$/.test("abc")); //fasle
+      console.log(/^[abc]$/.test("a")); //true
+      console.log(/^[abc]$/.test("b")); //true
+      //   abc里面调一个
+      console.log(/^[a-zA-Z]$/.test("A")); //true
+      console.log(/^[a-zA-Z-]$/.test("-")); //true
+      console.log(/^[1-9}[0-9]{4,}$/.test("1372592339")); //因为QQ第一个数字不能为0
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    传统事件
+    div.onclick 具有唯一性 后面写的事件 会把前面覆盖掉
+    addEventListener 高级注册方法
+    <button>高级注册方法</button>
+    <div style="background-color: pink;">
+        点击我只能点一次
+    </div>
+    <script>
+        var btn = document.querySelector("button")
+        btn.addEventListener("click", function () {
+            alert("高级注册方法")
+        })
+        btn.addEventListener("click", function () {
+            alert("不会覆盖前面的方法")
+        })
+
+        var div = document.querySelector("div")
+        function fn() {
+            alert("只能执行一次,移除函数不能针对匿名函数")
+            div.removeEventListener("click", fn)
+        }
+        div.addEventListener("click", fn)
+    </script>
+</body>
+
+</html>

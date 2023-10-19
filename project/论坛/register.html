@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>论坛</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/register.css" />
+    <script src="js/animate.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/1.2.0/axios.js"></script>
+  </head>
+  <div class="header">
+    <div class="w">
+      <div class="left">
+        <a href="index.html">首页</a>
+        <a href="publish.html" id="gotopublish">发布</a>
+        <!-- <div class="search">
+                <input type="text" class="searchinput">
+                <button class="searchbtn">搜索</button>
+            </div> -->
+      </div>
+      <div class="right">
+        <a href="register.html" class="offline">登录或注册</a>
+        <div class="online">
+          <div class="exit">
+            <button class="exitbtn">退出</button>
+          </div>
+          <p class="username">username</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w">
+    <div class="loginAndRegist">
+      <div class="cover">
+        <button class="coverbutton">点我去注册</button>
+      </div>
+      <div class="login">
+        <p>登录</p>
+        <input type="text" class="loginemail" placeholder="邮箱" />
+        <input type="password" class="loginpassword" placeholder="密码" />
+        <button class="loginbtn">登录</button>
+      </div>
+      <div class="regist">
+        <p>注册</p>
+        <input type="text" id="username" placeholder="用户名" />
+        <input type="password" class="password" placeholder="密码" />
+        <input type="password" class="confirmpassword" placeholder="确认密码" />
+        <input type="text" class="email" placeholder="邮箱" />
+        <div class="captcha">
+          <input class="writecaptcha" type="text" placeholder="验证码" />
+          <button class="getcaptcha">获取验证码</button>
+        </div>
+        <button class="registbtn">注册</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/registerInterface.js"></script>
+  <script src="js/registerAnimation.js"></script>
+  <script src="js/header.js"></script>
+
+  <body></body>
+</html>

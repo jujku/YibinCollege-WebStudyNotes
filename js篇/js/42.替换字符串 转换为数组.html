@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1.替换字符 replace('被替换的字符'，'替换为的字符')
+        var str = 'andyandy'
+        console.log(str.replace('a', 'b')); /* 只替换第一个 */
+        console.log(str);
+        // 替换全部加个循环就是了
+        var str1 = 'dahqweduqweddasd'
+        while (str1.indexOf('d') != -1) {
+            str1 = str1.replace('d', '0')
+        }
+        console.log(str1);
+
+        // 2.字符转换为数组 split('分割符')
+        var str2 = 'fd dfa sdf dff sa 32 jl'
+        console.log(str2.split(' ')); // 以空格为间隔生成数组
+        var arr = str2.split(' ');
+        console.log(arr);
+
+
+        //toUpperCase() 转换大写
+        //toLowerCase() 转换小写
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

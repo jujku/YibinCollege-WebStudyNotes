@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        document.addEventListener("keyup", function (e) {
+            console.log("键盘弹起")
+            console.log(e.key); //返回按的什么值
+        })
+        document.addEventListener("keypress", function (e) {
+            console.log("键盘按下press")
+            console.log(e.key); //返回按的什么值
+            // keypress不识别功能键
+            // keyup 和 keydowm 不区分大小写 (ascull码里面)
+        })
+        document.addEventListener("keydown", function (e) {
+            console.log("键盘按下down")
+            console.log(e.key); //返回按的什么值
+        })
+        // 顺序是先 down press up
+    </script>
+</body>
+
+</html>

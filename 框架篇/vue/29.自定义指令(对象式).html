@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="vue.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <input type="text" v-fbind:value="name" />
+    </div>
+
+    <script>
+      new Vue({
+        el: "#root",
+        data() {
+          return {
+            name: 123,
+            n: 1,
+          };
+        },
+        directives: {
+          // 调用
+          //       1.指令禹元素成功绑定时（一上来）
+          //       2.指令所在的模板被重新解析的时候
+
+          fbind: {
+            //指令与元素成功绑定时(一上来)
+            bind(element, binding) {
+              element.value = binding.value;
+            },
+            // 指令所在元素被插入页面时
+            inserted(element, binding) {
+              element.focus();
+            },
+            //指令所在的模板被重新解析时
+            update(element, binding) {
+              element.value = binding.value;
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

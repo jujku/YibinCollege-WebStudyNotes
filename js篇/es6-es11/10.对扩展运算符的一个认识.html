@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+        // ... 扩展运算符 能将 数组 转换为逗号分隔的 参数序列  
+        num = ['1', '2', 'asdf', '大师傅'];
+        function date() {
+            console.log(arguments);
+        } //这样出来的对象只有一个 数组
+
+        date(num)
+
+        // 这样里面就有4个数
+        date(...num)
+
+        // 和rest不一样的是  这个是放在实参 rest参数是放在形参的
+
+
+        // 运用
+
+        // 1。数组的合并
+        const a = ['王太利', '肖样']
+        const b = ['增益', '凌华']
+
+        const ab = [...a, ...b]
+
+        console.log(ab);
+
+        // 2.数组的克隆
+        const he = ['1', '2', '3']
+        const her = [...he]  // 如果没有引用数据类型就是 深拷贝  没有引用数据类型就是
+        console.log(her);
+        her[2] = 'asdf'
+        console.log(her);
+        console.log(he);
+
+        // 3.将伪数组转为真正的数组
+        const divs = document.querySelectorAll('div')
+        const divArr = [...divs]
+        console.log(divArr);
+        // 这样就可以使用数组的方法了，fillter等
+
+
+
+
+
+    </script>
+</body>
+
+</html>

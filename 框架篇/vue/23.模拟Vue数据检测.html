@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <script>
+      data = {
+        name: "jack",
+        age: 18,
+        address: {
+          a: "a",
+        },
+      };
+
+      const obs = new observe(data);
+      let vm = {};
+      vm._data = data = obs;
+
+      function observe(obj) {
+        const keys = Object.keys(obj);
+
+        keys.forEach((k) => {
+          //这里是有几层数据的情况
+          if (obj[k] instanceof Object) {
+            obj[k] = new observe(obj[k]);
+          }
+          Object.defineProperty(this, k, {
+            get() {
+              return obj[k];
+            },
+            set(val) {
+              console.log("我执行了");
+              obj[k] = val;
+            },
+          });
+        });
+      }
+    </script>
+  </body>
+</html>

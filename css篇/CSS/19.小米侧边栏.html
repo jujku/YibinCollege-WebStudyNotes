@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* CSS里面没有垂直居中 */
+        /* 但可以通过调整 文字的行高  和 盒子高度一样 */
+        /* 因为文字本身高度 +上空隙+下空隙 */
+        /* 行高等于盒子高度 居中
+        大于盒子高度 偏下
+        小于盒子高度 偏上 */
+        a {
+            width: 230px;
+            height: 40px;
+            display: block;
+            background-color: #55585a;
+            text-decoration: none;
+            font-size: 14px;
+            color: white;
+            text-indent: 2em;
+            /* 文字缩进 */
+            line-height: 40px;
+            /* 文字垂直居中 */
+        }
+
+        a:hover {
+            background-color: #dd1436;
+
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">手机 电话卡</a>
+    <a href="#">电视 盒子</a>
+    <a href="#">笔记本 平板</a>
+    <a href="#">出行 穿戴</a>
+    <a href="#">智能 路由器</a>
+    <a href="#">健康 儿童</a>
+    <a href="#">耳机 音响</a>
+
+</body>
+
+</html>

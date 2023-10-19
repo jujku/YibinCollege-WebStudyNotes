@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 三元表达式
+        var num = 10;
+        var result = num > 5 ? '是的' : '不是的';
+        console.log(num);
+        console.log(result);
+
+        //数字补0案例；
+        // var time = prompt('输入0-59的一个数字');
+        // alert(time > 10 ? time : '0' + time) 
+
+        // switch案列
+        /* switch (表达式 一般是变量) {
+            case value:
+                执行语句
+                
+                break;
+        
+            default:
+                执行语句
+                break;
+        } */
+        // switch里面的值和case里面的值要全等 ===
+
+
+        // case会穿透 如果 不加break的话 会继续执行下一个case并且无视条件
+        switch (1) {
+            case 1:
+                console.log(1);
+            case 2:
+                console.log(2);
+            default:
+                console.log(3);
+                break;
+        }
+        // 所以记住要加break
+
+        // switch 的优点是有时候效率会比 if else 高 因为他是直接跳到执行语句而ifelse要一个一个判断
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

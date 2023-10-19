@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // parseInt 将字符型转化为数字符型
+        var age = prompt('请输入你的年龄')
+        console.log(parseInt(age));
+        console.log('3.14');
+        // 只能转换成整数 如果是小数则会取整
+        console.log(parseInt('120px'));
+        // 可以去掉单位
+        console.log(parseInt('rem120px'));
+        // 这样就转换不了 会变成NaN
+
+
+        // 取小数 parseFloat取小数
+        console.log(parseFloat('3.14'));
+        console.log(parseFloat('120.65px'));
+
+
+        //第三种转换方式  Number强制转换
+        var str = '56.5'
+        console.log(Number(str));
+        console.log(Number('15'));
+
+        //隐式转换 利用四则运算
+        console.log(typeof ('12' + 0));
+        console.log(typeof ('12' + +'5'));
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

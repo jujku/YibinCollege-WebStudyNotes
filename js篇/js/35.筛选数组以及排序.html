@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr = [1, 54, 5, 34, 6, 43, 6, 7, 8, 45]
+        var newArr = []
+        for (let index = 0; index < arr.length; index++) {
+            if (arr[index] > 10) {
+                newArr.push(arr[index]);
+                //可以将删除的元素 加上替换的
+
+            }
+
+
+        }
+
+        //数组排序
+        // 1.reverse 翻转数组
+        var arr = [1, 423, 432, 12, 5, 6, 1, 545435]
+        arr.reverse();
+        console.log(arr);
+        // 2.sort 排序 （冒泡排序）
+        var arr1 = [2, 2, 4, 5, 3, 4, 4, 5]
+        arr1.sort();
+        console.log(arr1);
+        // 直接用sort只能排单位数
+        // 因为他是按一个数最左边那样排的1
+        // 如果要更高就试试这样写
+        var arr1 = [431, 5, 54, 65, 5, 6, 4532]
+        arr1.sort(function (a, b) {
+            return a - b
+        })
+        console.log(arr1);
+        // 从小到大
+        // 如果要从大就小 就 return b - a
+        
+    </script>
+</head>
+
+<body>
+    <p style="color: red;">红色</p>
+    <div style="width: 100px;height: 100px;background-color: pink;">大家好</div>
+
+</body>
+
+</html>

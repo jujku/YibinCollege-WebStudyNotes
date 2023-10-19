@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* transparent 透明 默认*/
+        /* background-image 用于一些装饰性的小图片 LOGO 或者超大的背景图片 */
+        .d2iv {
+            width: 1000px;
+            height: 1000px;
+            /* 不要落下url() */
+            /* background-image: url(../imgaes/QQ截图20220414013602.png); */
+            /* 背景图像肯定使用图片 */
+            background-image: url(../imgaes/QQ截图20220325031638.png);
+            /* 背景平铺 默认 通过background-repeat */
+            /* repeat no-repeat repeat-x reprat-y   x 是横向平铺 */
+            background-repeat: no-repeat;
+            /* 背景图片 */
+            background-position: center top;
+            /* 背景图标位置 方位名词*/
+            /* 第一个一般写左右 第二个一般写上下 */
+
+
+            /* 背景精确单位 */
+            /* background-position: X Y; */
+            /* 第一个一定是X 第二个一定是Y */
+
+            /* 背景混合单位 */
+            /* background-position: 精确单位 方位名词; */
+            /* 第一个也一定是X 第二个是Y */
+
+            /* 背景图像固定 */
+            /* 可以做视差滚动效果 */
+            /* scroll 默认随对象滚动  fixed 固定背景图片 */
+            background-attachment: fixed;
+        }
+
+        /* 背景的复合属性 连写 */
+        /* 没有顺序要求  但是约定这样写 */
+        /* background: 背景颜色 背景图片地址 背景平铺 背景图像滚动 背景图片位置 */
+
+        .div {
+            width: 300px;
+            height: 300px;
+            /* 背景颜色半透明 */
+            background: rgba(0, 0, 0, .3);
+            /* a就是alpha 范围为0-1 */
+            /* 实际开发的时候 0.3可以不加 0 直接.3 */
+
+            /* 背景色是CSS3新增的属性 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d2iv">
+        <p style="font-size: 100px;">fasdfda</p>
+        <p style="font-size: 100px;">fasdfda</p>
+        <p style="font-size: 100px;">fasdfda</p>
+        <p style="font-size: 100px;">fasdfda</p>
+        <p style="font-size: 100px;">fasdfda</p>
+        <p style="font-size: 100px;">fasdfda</p>
+        <p style="font-size: 100px;">fasdfda</p>
+        <p style="font-size: 100px;">fasdfda</p>
+        <p style="font-size: 100px;">fasdfda</p>
+        <p style="font-size: 100px;">fasdfda</p>
+        <p style="font-size: 100px;">fasdfda</p>
+        <p style="font-size: 100px;">fasdfda</p>
+        <p style="font-size: 100px;">fasdfda</p>
+        <p style="font-size: 100px;">fasdfda</p>
+        <p style="font-size: 100px;">fasdfda</p>
+        <p style="font-size: 100px;">fasdfda</p>
+        <p style="font-size: 100px;">fasdfda</p>
+        <p style="font-size: 100px;">fasdfda</p>
+        <p style="font-size: 100px;">fasdfda</p>
+        <p style="font-size: 100px;">fasdfda</p>
+        <p style="font-size: 100px;">fasdfda</p>
+        <p style="font-size: 100px;">fasdfda</p>
+        <p style="font-size: 100px;">fasdfda</p>
+        <p style="font-size: 100px;">fasdfda</p>
+        <p style="font-size: 100px;">fasdfda</p>
+        <p style="font-size: 100px;">fasdfda</p>
+        <p style="font-size: 100px;">fasdfda</p>
+        <p style="font-size: 100px;">fasdfda</p>
+        <p style="font-size: 100px;">fasdfda</p>
+        <p style="font-size: 100px;">fasdfda</p>
+        <p style="font-size: 100px;">fasdfda</p>
+        <p style="font-size: 100px;">fasdfda</p>
+        <p style="font-size: 100px;">fasdfda</p>
+        <p style="font-size: 100px;">fasdfda</p>
+    </div>
+    <div class="div"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div" index='sdf'></div>
+    <!-- id是内置属性
+     index是自定义属性 -->
+    <script>
+        //  element.属性 这是获得内置属性的
+        // element.getAttribute('属性') 这是获得自定义属性的
+
+        var div = document.getElementById('div')
+
+        console.log(div.id);
+        console.log(div.getAttribute('index'));
+
+        // 设置
+
+        div.id = 'div2'
+        div.setAttribute('index', 'aew')
+
+        // 移除属性
+
+        div.removeAttribute('index')
+        div.removeAttribute('id')
+
+        console.log(div.id);
+
+
+    </script>
+</body>
+
+</html>

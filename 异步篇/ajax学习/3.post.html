@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>传输</title>
+    <script src="jquery.js"></script>
+</head>
+
+<body>
+    <button id="butPOST">使用POST向服务器提供数据</button>
+
+    <script>
+        $(function () {
+            $('#butPOST').on('click', function () {
+                $.post('http://www.liulongbin.top:3006/api/addbook', { bookname: '金武市哲学', author: '覃哲学', publisher: '宜宾学院出版社' }, function (res) {
+                    console.log(res);
+                })
+            })
+        })
+    </script>
+
+</body>
+
+</html>

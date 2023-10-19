@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        for(var i = 1;i <= 5;i++){
+            console.log('你好');
+        }
+        var sum = 0;
+        var num = prompt('请输入总人数');
+        for(i = 1;i <= num;i++)
+        {
+            var score = prompt('请输入学生的分数');
+            sum = sum + parseFloat(score);              //注意数据类型的转换
+            console.log(sum);
+        }
+        alert('平均成绩为' + sum/num);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

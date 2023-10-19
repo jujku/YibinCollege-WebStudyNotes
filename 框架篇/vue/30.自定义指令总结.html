@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    一，定义语法： <br />
+    &nbsp;&nbsp; 局部指令： <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;new Vue({ <br />
+    &nbsp;&nbsp;&nbsp;&nbsp; directives:{指令名:配置对象} }) <br />或<br />
+    &nbsp;&nbsp;&nbsp;&nbsp; new Vue({ <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;directives:{指令名:回调函数} })
+
+    <!-- 二，配置对象中常用的3个回调：
+        1 bind：指令与元素成功绑定时调用。
+        2 inserted 指令所在元素被插入页面时调用。
+        3 update"指令所在模板结构被重新解析时调用
+    
+    1 指令定义时不加V-  但使用时要加V- 
+    2 指令命如果是多个单词，要使用kebab-case命名方式 不要用cmelCase -->
+  </body>
+</html>

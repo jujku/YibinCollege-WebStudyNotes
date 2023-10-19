@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        f1();
+        console.log(c);
+        console.log(b);
+        console.log(a);
+        function f1() {
+            var a = b = c = 9;  //因为 b 和 c没有声明  所以是全局变量  所以 当函数提升时 b与c是全局变量且被赋值 能被   函数体外的输出语句调用
+            console.log(a);
+            console.log(b);
+            console.log(c);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

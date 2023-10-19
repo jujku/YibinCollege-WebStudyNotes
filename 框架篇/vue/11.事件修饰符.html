@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+      .box2 {
+        width: 50px;
+        height: 50px;
+        background-color: aqua;
+      }
+    </style>
+    <script src="vue.js"></script>
+  </head>
+  <body>
+    <!-- 1.prevent 阻止默认事件
+    2.stop 阻止事件冒泡
+    3.once 事件只触发一次
+    非重点
+    4.capture 使用事件的捕获模式(默认是冒泡)
+    5.self 只有event.target是当前操作的元素时才触发事件
+    6.passive 事件的默认行为立即执行，无需等待事件回调执行完毕 -->
+
+    <!-- 6的话就是在某些事件列入whell等，会在回调函数执行完毕后才执行默认行为，有时候会对网页的交互
+    造成卡顿，这个passive用于优化 -->
+
+    <!-- 修饰符可以连续写 比如说  @click.stop.prevent -->
+
+    <div id="root">
+      <h1>prevent</h1>
+      <a href="https://www.baidu.com" @click.prevent="showInfo">点我</a>
+
+      <h1>stop</h1>
+      <div class="box1" @click="showInfo">
+        <div class="box2" @click.stop="showInfo"></div>
+      </div>
+
+      <h1>once</h1>
+      <div class="box2" @click.once="showInfo">点我</div>
+
+      <h1>capture</h1>
+
+      <div class="box1" @click="showInfo($event,0)">
+        <div class="box1" @click.capture="showInfo($event,1)">
+          1
+          <div class="box2" @click="showInfo($event,2)">2</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const vm = new Vue({
+        el: "#root",
+        methods: {
+          showInfo: function (event, num) {
+            if (num === undefined) {
+              alert("asdf");
+            } else {
+              console.log(num);
+            }
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

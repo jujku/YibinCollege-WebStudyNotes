@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 迭代器的作用一般是自定义遍历数据
+
+        const banji = {
+            name: "初一五班",
+            stus: [
+                'xiaoming',
+                'xiaogang',
+                'xiaotian',
+                'xiaome'
+            ],
+            [Symbol.iterator]() {
+                let index = 0
+                return {
+                    next: () => {
+                        if (index < this.stus.length) {
+                            const result = {
+                                value: this.stus[index],
+                                done: false
+                            }
+                            index++
+                            return result
+                        } else {
+                            return {
+                                value: undefined,
+                                done: true
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+        for (let v of banji) {
+            console.log(v);
+        }
+
+    </script>
+</body>
+
+</html>

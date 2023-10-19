@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="vue.js"></script>
+  </head>
+  <body>
+    <!-- 1. school组件本质是一个名为VueComponent的构造函数，且不是程序员i当以的，是Vue.extend生成的。
+
+    2. 我们只需要写 <school> </school> Vue解析时会帮我们创建school组件的实例对象 就是Vue帮我们执行的 new VueComponent(options)
+
+    3.特别注意：每次调用Vue.extend 返回的都是一个全新的VueComponent
+
+    4.关于this指向：
+        1，组件配置中
+            data 函数，methods中的函数，watch中的函数，computed中的函数  他们的this均是 VueCompoent实例对象
+        2.new Vue（options）配置中:
+            肯定就是在Vue实例对象了
+
+    5.VueComponent的实例对象简称VC 组件实例对象 -->
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .songti {
+            font-family: 宋体, 微软雅黑, 'Microsoft YaHei';
+            /* 字体样式 微软雅黑 */
+            /* 设置多个字体的意义是 用户电脑未安装第一个字体时 就执行第二个字体 以此类推 */
+            /* 开发中一般把字体 用body元素标签写 */
+        }
+
+        .zitidaxiao {
+            font-size: 20px;
+            /* 谷歌浏览器 默认大小为16px; */
+            /* 不同浏览器默认字体大小不一样 开发中一般尽量给一个明确值大小，不要默认大小 */
+            /* 标题标签需要单独指定文字大小 */
+        }
+
+        .ziticuxi {
+            /* 实际开发中一般用数字    100-900 normal正常是400大于400是加粗 小于400是变细 */
+            font-weight: bold;
+        }
+
+        .zitiyangshi {
+            font-style: italic;
+            /* italic 是斜体 normal是让倾斜的字体变为不倾斜 */
+        }
+
+        /* 复合字体样式 */
+        .fuheziti_qian {
+            font-size: 20px;
+            font-family: 宋体;
+            font-weight: 700;
+            font-style: italic;
+            /* 不用字体符合属性用了这么多代码 */
+        }
+
+        .fuheziti {
+            /* font: font-style font-weight font-size/line-height font-family;这是顺序 必须严格按照这个顺序*/
+            font: italic 700 20px 宋体;
+            /* 而且style和size可以省略但是 size和famil不能省略 */
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="songti">这是宋体</h1>
+    <p class="zitidaxiao">我是字体大小为20px的文本</p>
+    <p>我是默认大小的文本</p>
+    <p class="ziticuxi">我是字体变粗</p>
+    <p>我是默认字体</p>
+    <p class="zitiyangshi">我是斜体</p>
+    <p>我是默认样式字体</p>
+    <div class="fuheziti_qian">三生三世，十里桃花</div>
+    <div class="fuheziti">三生三世，十里桃花</div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* box-shadow 盒子阴影 */
+        /* 必选   v-shadow */
+        /* 必选    h-shadow */
+        /* 一个是 垂阴影 一个是水平阴影 */
+
+        .nav {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 100px auto;
+            box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
+            ;
+            /* 水平 垂直 模糊距离 阴影尺寸 color阴影的颜色 inset外部阴影 outset内部阴影 */
+        }
+
+        .one {
+            font-size: 50px;
+            color: red;
+            font-weight: 700;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* 盒子阴影是不占用空间的 */
+    </style>
+</head>
+
+<body>
+    <div class="nav"></div>
+    <div class="one">这是文字阴影</div>
+</body>
+
+</html>

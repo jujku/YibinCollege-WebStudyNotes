@@ -1,0 +1,504 @@
+.all{
+    margin: 0 auto;
+    width: 1920px;
+    background-color: white;
+}
+.shortcut{
+    width: 1920px;
+    height: 64px;
+    background-color: white;
+    position: fixed;
+    z-index: 9999999;
+}
+.shortcut .leftshortcut{
+    float: left;
+}
+.shortcut .leftshortcut ul li{
+    line-height: 64px;
+    float: left;
+}
+.shortcut .leftshortcut ul li{
+    margin-left: 20px;
+    color: black;
+    font-size: 14px;
+}
+.shortcut .searchinput{
+    position: absolute;
+    background-color: rgb(242,243,244);
+    width: 500px;
+    height: 40px;
+    left: 50%;
+    margin-left: -250px;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 13px;
+}
+.shortcut .searchinput:hover{
+    background-color: rgba(255, 255, 255);
+}
+.shortcut .searchinput input{
+    display: block;
+    height: 20px;
+    width: 420px;
+    float: left;
+    background-color: transparent;
+}
+.shortcut .searchinput .fangdajing{
+    width: 40px;
+    height: 20px;
+    float: left;
+    margin-left: 20px;
+}
+.topimg{
+    height: 180px;
+    width: 1920px;
+    background-image: url("http://i0.hdslb.com/bfs/archive/5a92350a55ba2c6a5b906bbb91d8f4d708f81d1b.png");
+    background-size: cover;
+}
+.shortcut .rightshortcut{
+    width: 620px;
+    float: right;
+    /* background-color: aqua; */
+}
+.shortcut .rightshortcut div,
+.shortcut .rightshortcut li{
+    /* line-height: 64px; */
+    margin-right: 15px;
+    float: right;
+    color: white;
+}
+.shortcut .rightshortcut>div:nth-of-type(1){
+    margin-top: 12px;
+}
+.shortcut .rightshortcut .headimg{
+    border: 2px solid white;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-image: url("https://i1.hdslb.com/bfs/face/38f6605f1594facd8febe0873295220fa0b77f7e.jpg@240w_240h_1c_1s.webp");
+    background-size: cover;
+}
+.shortcut .rightshortcut .tougao{
+    margin-top: 15px;
+    width: 90px;
+    height: 34px;
+    background-color:rgb(251,114,153);
+    border-radius: 5px;
+    line-height: 34px;
+    text-align: center;
+}
+.shortcut .rightshortcut ul li{
+    margin-top: 12px;
+    text-align: center;
+    color: black;
+    width: 50px;
+    height: 40px;
+}
+.shortcut .rightshortcut ul li>svg{
+    display: block;
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+}
+.shortcutposition{
+    width: 1920px;
+    height: 64px;
+    /* position: absolute; */
+    margin-bottom: 20px;
+}
+.w{
+    width: 1400px;
+    margin: 0 auto;
+}
+.w .leftvedio{
+    width: 1050px;
+    float: left;
+    margin-right: 30px;
+    height: 10000px;
+}
+.w .rightvedio{
+    float: left;
+    width: 320px;
+    height: 10000px;
+}
+.w .leftvedio .vedioimg{
+    position: relative;
+    height: 590px;
+    background-image: url("../img/QQ截图20221221192454.png");
+    background-size: cover;
+    overflow: hidden;
+}
+.w .leftvedio .mirror{
+    width: 240px;
+    height: 240px;
+    border: 10px solid white;
+    border-radius: 240px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-10px,-10px);
+}
+.w .leftvedio .mirror img{
+    position: absolute;
+}
+.w .leftvedio .vediobottom{
+    border-left: 1px solid rgb(229,233,239);
+    border-bottom: 1px solid rgb(229,233,239);
+    border-right: 1px solid rgb(229,233,239);
+    height: 45px;
+    background-color: white;
+    /* box-shadow: 0 1px 10px 0px; */
+}
+.w .leftvedio .vediobottom *{
+    
+    float: left;
+}
+.w .leftvedio .vediobottom .vediodata{
+    color: rgb(117,117,117);
+    margin-left: 20px;
+    line-height: 45px;
+}
+.w .leftvedio .vediobottom .danmubtn{
+    transform: translateY(50%);
+    margin-left: 200px;
+    height: 20px;
+    width: 30px;
+    background-color: rgb(0,161,214);
+    border-radius: 20px;
+}
+.w .leftvedio .vediobottom .danmubtn .smallbtn{
+    height: 16px;
+    width: 16px;
+    border-radius: 18px;
+    background-color: white;
+    float: right;
+    margin-right: 2px;
+    margin-top: 2px;
+    color: rgb(0,161,214);
+    text-align: center;
+    line-height: 16px;
+    cursor: pointer;
+}
+.w .leftvedio .vediobottom .danmuinput{
+    background-color: aqua;
+    height: 30px;
+    width: 600px;
+    margin-top: 6px;
+    margin-left: 20px;
+    color: rgb(117,117,117);
+
+}
+.w .leftvedio .vediobottom .danmuinput input{
+    padding: 10px;
+    float: left;
+    display: block;
+    background-color: rgb(244,244,244);
+    border-bottom:1px solid rgb(231,231,231);
+    border-top:1px solid rgb(231,231,231);
+    border-left:1px solid rgb(231,231,231);
+    height: 30px;
+    width: 540px;
+}
+.w .leftvedio .vediobottom .danmuinput .sendbtn{
+    float: left;
+    width: 60px;
+    height: 100%;
+    background-color: rgb(0,161,214);
+    line-height: 30px;
+    text-align: center;
+    color: white;
+}
+.w .leftvedio .active{
+    height: 70px;
+}
+.w .leftvedio .active *{
+    cursor: pointer;
+    color: rgb(117,117,117);
+    font-size: 20px;
+    float: left;
+}
+.w .leftvedio .active svg{
+    line-height: 70px;
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+.w .leftvedio .active p{
+    line-height: 70px;
+    margin-right: 50px;
+}
+.w .leftvedio .vediotext{
+    position: relative;
+    border-top: 1px solid rgb(229,233,239);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.w .leftvedio .vediotext .img{
+    margin-right: 20px;
+    width: 168px;
+    height: 224px;
+    background-image: url("https://i0.hdslb.com/bfs/bangumi/f7175cd20de509e2bfd43255c28cf4e24841480d.jpg@268w_358h.webp");
+    background-size: cover;
+    float: left;
+}
+.w .leftvedio .vediotext{
+    color: black;
+}
+.w .leftvedio .vediotext p:nth-of-type(1){
+    margin-top: 10px;
+    color:rgb(117,117,117);
+}
+.w .leftvedio .vediotext p:nth-of-type(2){
+    margin-top: 10px;
+    font-size: 16px;
+}
+.w .leftvedio .vediotext p:nth-of-type(3){
+    margin-top: 10px;
+    font-size: 16px;
+}
+.w .leftvedio .vediotext p:nth-of-type(4){
+    color:rgb(255,167,38);
+    margin-top: 15px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.w .leftvedio .vediotext p:nth-of-type(5){
+    color: rgb(117,117,117);
+    font-size: 14px;
+    margin-top: -3px;
+}
+.w .leftvedio .vediotext .zhuifanbtn {
+    position: absolute;
+    color: white;
+    width: 90px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: rgb(251,114,153);
+    font-size: 20px;
+    right: 0;
+    top: 20px;
+    cursor: pointer;
+}
+.w .leftvedio .dianping{
+    border-top: 1px solid rgb(229,233,239);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+.w .leftvedio .dianping .dianpingtitle{
+    height: 50px;
+    width: 100%;
+    margin-right: 20px;
+}
+.w .leftvedio .dianping .dianpingtitle p:nth-of-type(1){
+    color: black;
+    font-size: 20px;
+    float: left;
+}
+.w .leftvedio .dianping .dianpingtitle p:nth-of-type(2){
+    color: black;
+    font-size: 14px;
+    float: right;
+}
+.w .leftvedio .dianping .dianpingkuang .kuang{
+    float: left;
+    margin-right: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 320px;
+    height: 190px;
+    background-color: rgb(244,244,244);
+
+}
+.w .leftvedio .dianping .dianpingkuang .kuang p:nth-of-type(1){
+    font-size: 16px;
+    color: rgb(251,114,153);
+}
+.w .leftvedio .dianping .dianpingkuang .kuang p:nth-of-type(2){
+    margin-top: 10px;
+    font-size: 18px;
+    color: black;
+}
+.w .leftvedio .dianping .dianpingkuang .kuang p:nth-of-type(3){
+    margin-top: 5px;
+    font-size: 15px;
+    color: black;
+}
+.w .leftvedio .dianping .dianpingkuang .kuang p:nth-of-type(4){
+    margin-top: 10px;
+    font-size: 15px;
+    color: rgb(165,153,165);
+}
+
+.w .rightvedio .danmulist{
+    padding:0 20px;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(244,244,244);
+}
+.w .rightvedio .danmulist p:nth-of-type(1){
+    font-size: 20px;
+    color: black;
+    float: left;
+    line-height: 60px;
+}
+.w .rightvedio .danmulist p:nth-of-type(2){
+    font-size: 14px;
+    color: black;
+    float: right;
+    line-height: 60px;
+}
+.w .rightvedio .chose{
+    padding: 20px;
+    margin-top: 20px;
+    height: 240px;
+    background-color: rgb(244,244,244);
+    width: 100%;
+}
+.w .rightvedio .chose p{
+    float: left;
+    font-size: 18px;
+    color: black;
+}
+.w .rightvedio .choserbox{
+    height: 170px;
+    width: 240px;
+    margin: 40px auto;
+}
+.w .rightvedio .choserbox div{
+    margin-right: 10px;
+    margin-bottom: 10px;
+    float: left;
+    width: 70px;
+    height: 35px;
+    border: 1px solid rgb(231,231,231);
+    background-color: white;
+    text-align: center;
+    line-height: 35px;
+    font-size: 14px;
+    color: black;
+}
+.w .rightvedio .xiangguan{
+    margin-top: 30px;
+    width: 100%;
+}
+.w .rightvedio .xiangguan>p{
+    font-size: 20px;
+    color: black;
+}
+.w .rightvedio .xiangguan .item{
+    width: 100%;
+    height: 90px;
+    margin-bottom: 10px;
+}
+.w .rightvedio .xiangguan .item .itemimg{
+    float: left;
+    width: 150px;
+    height: 90px;
+    margin-right: 10px;
+    background-image: url("https://i0.hdslb.com/bfs/archive/3f39f1e9cfd573d1cf1689ebf4a988163621a08a.jpg@282w_160h.webp");
+    background-size: cover;
+}
+.w .rightvedio .xiangguan .item p:nth-of-type(1){
+    font-size: 16px;
+    color: black;
+}
+.w .rightvedio .xiangguan .item p:nth-of-type(2){
+    font-size: 14px;
+    color: rgb(117,117,117)
+}
+.w .rightvedio .xiangguan .item p:nth-of-type(3){
+    font-size: 14px;
+    color: rgb(117,117,117)
+}
+.w .leftvedio .comments{
+    padding-top: 20px;
+    border-top: 1px solid rgb(229,233,239);
+}
+.w .leftvedio .comments p{
+    font-size: 24px;
+    color: black;
+    margin-bottom: 30px;
+}
+.w .leftvedio .comments .sendcomment{
+    border-bottom: 1px solid rgb(229,233,239);
+    height: 160px;
+    width: 100%;
+}
+.w .leftvedio .comments .sendcomment .img{
+    margin-right: 20px;
+    float: left;
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/QQ截图20221221225350.png");
+    background-size: cover;
+    border-radius: 60px;
+}
+.w .leftvedio .comments .sendcomment textarea{
+    padding: 10px;
+    margin-right: 20px;
+    float: left;
+    resize: none;
+    display: block;
+    width: 800px;
+    height: 80px;
+    background-color: rgb(244,245,247);
+    border: 1px solid rgb(229,233,239);
+    border-radius: 10px;
+}
+.w .leftvedio .comments .sendcomment .sendbtn{
+    cursor: pointer;
+    padding: 10px 20px;
+    text-align: center;
+    color: white;
+    float: left;
+    /* resize: none; */
+    display: block;
+    width: 80px;
+    height: 80px;
+    background-color: rgb(0,161,214);
+    border-radius: 10px;
+    font-size: 20px;
+}
+.w .leftvedio .comentlsit .comment{
+    height: 130px;
+    position: relative;
+    width: 100%;
+    padding-bottom: 20px;
+}
+.w .leftvedio .comentlsit .comment .headimg{
+    overflow: hidden;
+    border-radius: 60px;
+    top: 20px;
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    background-image: url("../img/QQ截图20221221225350.png");
+    background-size: cover;
+}
+.w .leftvedio .comentlsit .comment .content{
+    width: 870px;
+    position: absolute;
+    top: 20px;
+    left: 70px;
+    border-bottom: 1px solid rgb(229,233,239);
+}
+.w .leftvedio .comentlsit .comment .content .username{
+    color: rgb(251,114,179);
+    margin-top: 10px;
+    font-size: 16px;
+}
+.w .leftvedio .comentlsit .comment .content .commentcontent{
+    color: black;
+    margin-top: 5px;
+    font-size: 18px;
+}
+.w .leftvedio .comentlsit .comment .content .time{
+    color: rgb(117,117,117);
+    margin-top: 5px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}

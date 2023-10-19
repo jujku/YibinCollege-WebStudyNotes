@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录</title>
+    <link rel="stylesheet" href="1.css">
+    <script src="jquery.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form action="">
+            <input type="text" class="tbx" placeholder="account">
+            <input type="password" class="tbx" placeholder="password">
+            <input type="submit" class="sub" value="login">
+        </form>
+    </div>
+    <script>
+        const con = document.querySelector('.container');
+
+        let isIn = true;
+        let isOut = false;
+
+        var span;
+
+        con.addEventListener('mouseenter', (e) => {
+            if (isIn) {
+
+                let inX = e.clientX - e.target.offsetLeft;
+                let inY = e.clienty - e.target.offsetTop;
+
+                let el = document.createElement('span');
+                el.style.left = inX + 'px';
+                el.style.top = inY + 'px';
+
+                con.appendChild(el);
+
+                $('.container span').removeClass('out');
+                $('.container span').addClass('in');
+
+                span = document.querySelector('.container span');
+                isIn = false;
+                isOut = true;
+            }
+        })
+    </script>
+
+</body>
+
+</html>

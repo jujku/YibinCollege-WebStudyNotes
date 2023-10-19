@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      number = 18;
+      let person = {
+        name: "jack",
+        sex: "男",
+      };
+
+      Object.defineProperty(person, "age", {
+        // value: number,
+        // enumerable: true, //这个属性控制属性是否可以枚举，默认值是false
+        // writable: true, //可以被改变吗 默认是false
+        // configurable: true, // 控制属性是否可以被删除，默认值是false
+
+        // 高级配置
+
+        // getter
+        get() {
+          console.log("有人读取了age属性");
+          return number;
+        },
+
+        set(value) {
+          console.log(`有人修改了age属性，且值是${value}`);
+
+          number = value;
+        },
+      });
+
+      // 第一个 属性是 给哪个对象添加
+      //   第二个 属性是添加的属性名
+      //   第三个属性是一些配置
+
+      //   用这个方法添加的属性，不能被 枚举(遍历)
+
+      console.log(person);
+
+      console.log(Object.keys(person));
+
+      for (let key in person) {
+        console.log(person[key]);
+      }
+    </script>
+  </body>
+</html>

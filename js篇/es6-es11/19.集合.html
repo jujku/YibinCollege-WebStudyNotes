@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let s = new Set();
+      let s2 = new Set(["大事儿", "小事儿", "好事儿"]);
+
+      //元素个数
+      console.log(s2.size); // 3
+      //添加新的元素
+      console.log(s2.add("坏事儿")); // 返回新的集合
+      // 删除元素
+      console.log(s2.delete("坏事儿")); //true
+      console.log(s2.delete("事儿")); //false
+      //检测元素
+      console.log(s2.has("小事儿")); // true
+      console.log(s2.has("事儿")); // false
+
+      // 因为有iterator接口 所有可以用let of遍历
+      for (let v of s2) {
+        console.log(k);
+      }
+    </script>
+  </body>
+</html>

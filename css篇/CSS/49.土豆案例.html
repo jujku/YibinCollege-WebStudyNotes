@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 遮罩的盒子是不占用位置的所以用绝对定位 -->
+    <style>
+        .tudou {
+            width: 444px;
+            height: 320px;
+            background-color: pink;
+            margin: 40px auto;
+            position: relative;
+            top: 0;
+        }
+
+        .tudou img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .mask {
+            display: none;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3) url(../imgaes/1.png) no-repeat center;
+            /* 这个center是上下左右的中间 */
+            position: absolute;
+            top: 0;
+        }
+
+        .tudou:hover .mask {
+            display: block;
+        }
+
+        /* 选中 tudou时显示mask */
+    </style>
+</head>
+
+<body>
+    <div class="tudou">
+        <img src="../imgaes/shawu.png" alt="">
+        <div class="mask"></div>
+    </div>
+
+</body>
+
+</html>

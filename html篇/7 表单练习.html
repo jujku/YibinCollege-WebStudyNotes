@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 表单域 表单控件（表单元素） 提示信息 -->
+    <!-- 表单域 <form></form> 收集信息并提供给后台 服务器 -->
+    <!-- <form action="url地址" method="提交方式" name="表单域名称"> -->
+        <!-- 各种表单元素控件 -->
+    <!-- </form> -->
+    <!-- action 用于指定并处理表单数据的服务器程序的url地址
+    method 有 get/post  表单的提取方法
+    name 表单域的名称 区分一个页面的其他表单域-->
+
+    
+    <form>
+        <!-- radio是单选按钮必须有相同的名字 -->
+        <!-- value给后台人员看的 -->
+        性别: 男<input type="radio" name="sex" value="男">  女<input type="radio" name="sex" value="女"> <br>
+        <!-- checkbox复选框 -->
+        <!-- 单选和多选按钮 加一个checked属性可以让页面第一次加载时默认选中 -->
+        爱好: 吃饭 <input type="checkbox" name="hobby" checked> 睡觉<input type="checkbox" name="hobby"> 打豆豆<input type="checkbox" name="hobby"> <br>
+        用户名:<input type="text" name="username" value="请输入用户名"> <br>
+        密码:<input type="password" name="password"> <br>
+        <input type="submit" value="立即注册"><br>
+        <input type="reset" value="重新填写">
+        <!-- 还有一个  maxlemgth 是输入的最大字符长度 -->
+
+        <!-- 按钮buttoon -->
+        <!-- 一般结合JS -->
+        <input type="button" value="获取验证码">
+        <br>
+
+        <!-- 上传文件 file -->
+        上传头像: <input type="file" >
+<br>
+        <!-- lable 为 input标签标注 -->
+        <!-- 主要为提升用户体验 -->
+        <br><br>
+        <label for="text">用户名:</label> <input type="text" id="text">
+
+        
+    </form>
+
+</body>
+</html>

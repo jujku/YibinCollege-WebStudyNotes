@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 声明函数 关键词是 function
+        /* function 函数名() {
+            函数体
+
+        } */
+        function SayHI() {
+            console.log('HI````');
+        }
+        // 函数不调用自己不执行，所以需要调用
+        // 函数名()
+        // 函数名后面一定要加小括号
+        SayHI();
+        // 函数的封装就是把 一个 或 多个功能封装在一个函数 只留下一个接口
+
+        // 形式参数 和 实际参数
+        /* function 函数名(形参，实参){
+            函数体
+        }
+        函数名(实参,实参)； */
+        function cook(aru){   // 形参是用来接收实参的 形参类似一个变量
+            console.log(aru);
+        }
+        cook('酸辣土豆丝');
+        cook('大肘子');
+        // 函数的参数可以有，也可以没有
+
+        function getSum(a,b){
+            console.log(a + b);
+        }
+        getSum(5,9)
+
+        // 求任意两个数之间的和
+        function getSums(start,end){
+            var sum = 0;
+            for(i = start; i <= end ; i++)
+            {
+                sum += i;
+            }
+            console.log(sum);
+        
+        }
+        getSums(1,100);
+
+        // 形参是不用声明的变量
+
+        // 当形参和实参不匹配的时候
+        getSum(5);         // 形参可以看做 不声明的变量，没有值就是undefined 任何一个数加上 undefined都是NaN
+        getSum(4,3,30);    // 多了的话只加到形参的个数
+
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

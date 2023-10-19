@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 标准流  浮动流 定位流 */
+        /* 很多排列形式 标准流是无法显示的 */
+        /* 典型应用 多个块级元素横向排列 是浮动 */
+        /* 改变标签默认的排列方式 */
+
+
+        /* flot用于创建浮动框  将其移动到一边，直到边缘以及包含块或另一个浮动框的边缘*/
+        /* none 元素不浮动  
+        left左浮动
+        right 右浮动 */
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="right">浮动的盒子</div>
+    <div class="left">浮动的盒子</div>
+    <div style="background-color: blue; width: 200px; height: 200px;">不浮动的盒子</div>
+    <p>脱标性 浮动原有的位置不再保留会被新的块级元素占用</p>
+
+
+</body>
+
+</html>

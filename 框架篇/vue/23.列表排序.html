@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="vue.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <input type="text" v-model="text" />
+      <button @click="sort = 2">按年龄升序</button>
+      <button @click="sort = 1">按年龄降序</button>
+      <button @click="sort = 0">原顺序</button>
+      <ul>
+        <li v-for="(p,index) of filtered" :key="p.id">
+          {{p.name}} - {{p.age}}
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      const vm = new Vue({
+        el: "#root",
+        data() {
+          return {
+            sort: 0,
+            text: "",
+            persons: [
+              {
+                id: 0,
+                name: "马冬雨",
+                age: "12",
+              },
+              {
+                id: 1,
+                name: "周冬雨",
+                age: "18",
+              },
+              {
+                id: 2,
+                name: "周杰伦",
+                age: "32",
+              },
+              {
+                id: 3,
+                name: "温哥伦",
+                age: "21",
+              },
+            ],
+          };
+        },
+        computed: {
+          filtered() {
+            const arr = this.persons.filter((p) => {
+              return p.name.indexOf(this.text) !== -1;
+            });
+            if (this.sort) {
+              arr.sort((a, b) => {
+                return this.sort === 1 ? b.age - a.age : a.age - b.age;
+              });
+            }
+            return arr;
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+
+</style>
+
+<body>
+    <ul>
+        <li>分割</li>
+    </ul>
+    <script>
+        //1,创建元素节点
+        var li = document.createElement('li')  //原先这个元素是没有的 是根据我们的需求 动态 生成的。所以我们也称为 动态创建元素节点
+        //2.添加元素节点 node.apendchild(child) node 是父级 child是子级
+        var ul = document.querySelector("ul");
+        ul.appendChild(li)
+        //3.添加到子节点的前面  node.insertBefore(child,你想添加到什么的前面)
+        var lili = document.createElement("li")
+        ul.insertBefore(lili, ul.children[0])
+    </script>
+</body>
+
+</html>

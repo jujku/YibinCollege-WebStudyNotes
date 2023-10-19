@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .dice {
+        width: 100px;
+        height: 100px;
+      }
+      .cube {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+      }
+
+      .face {
+        border: 1px solid black;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: beige;
+        opacity: 1;
+      }
+
+      .dot {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        background-color: black;
+        border-radius: 50%;
+      }
+
+      .one {
+        transform: rotateY(0deg) translateZ(50px);
+      }
+      .two {
+        transform: rotateX(90deg) translateZ(50px);
+      }
+      .three {
+        transform: rotateX(-90deg) translateZ(50px);
+      }
+      .four {
+        transform: rotateY(90deg) translateZ(50px);
+      }
+      .five {
+        transform: rotateY(-90deg) translateZ(50px);
+      }
+      .six {
+        transform: rotateY(180deg) translateZ(50px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dice">
+      <div class="cube">
+        <div class="face one">
+          <div class="dot" style="top: 40px; left: 40px"></div>
+        </div>
+        <div class="face two">
+          <div class="dot" style="top: 20px; left: 20px"></div>
+          <div class="dot" style="top: 60px; left: 60px"></div>
+        </div>
+        <div class="face three">
+          <div class="dot" style="top: 20px; left: 20px"></div>
+          <div class="dot" style="top: 40px; left: 40px"></div>
+          <div class="dot" style="top: 60px; left: 60px"></div>
+        </div>
+        <div class="face four">
+          <div class="dot" style="top: 20px; left: 20px"></div>
+          <div class="dot" style="top: 20px; left: 60px"></div>
+          <div class="dot" style="top: 60px; left: 20px"></div>
+          <div class="dot" style="top: 60px; left: 60px"></div>
+        </div>
+        <div class="face five">
+          <div class="dot" style="top: 20px; left: 20px"></div>
+          <div class="dot" style="top: 20px; left: 60px"></div>
+          <div class="dot" style="top: 40px; left: 40px"></div>
+          <div class="dot" style="top: 60px; left: 20px"></div>
+          <div class="dot" style="top: 60px; left: 60px"></div>
+        </div>
+        <div class="face six">
+          <div class="dot" style="top: 20px; left: 20px"></div>
+          <div class="dot" style="top: 20px; left: 60px"></div>
+          <div class="dot" style="top: 20px; left: 40px"></div>
+          <div class="dot" style="top: 60px; left: 20px"></div>
+          <div class="dot" style="top: 60px; left: 60px"></div>
+          <div class="dot" style="top: 60px; left: 40px"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const body = document.querySelector("body");
+      const cube = document.querySelector(".cube");
+
+      let isEnd = true;
+      let isDragging = false;
+      let initialX, initialY;
+      let rotateX = 0,
+        rotateY = 0,
+        X,
+        Y;
+
+      document.addEventListener("mousedown", function (e) {
+        if (!isEnd) return;
+        body.style.cursor = "grab";
+        isDragging = true;
+        initialX = e.clientX;
+        initialY = e.clientY;
+      });
+      document.addEventListener("mousemove", function (e) {
+        if (!isDragging) return;
+
+        X = e.clientX - initialX;
+        Y = e.clientY - initialY;
+
+        cube.style.transform = `rotate3d(0, 0, 1, ${X}deg) rotate3d(1, 0, 0, 45deg) rotate3d(0, 1, 0, 45deg)`;
+        console.log(rotateX);
+      });
+      document.addEventListener("mouseup", function (e) {
+        if (!isDragging) return;
+        isEnd = false;
+        body.style.cursor = "";
+        isDragging = false;
+        let delay, numY, numX;
+        if ((2 * X < 360) & (2 * X > -360)) {
+          console.log(1);
+          delay = 1000;
+          numX = 0;
+          numY = 0;
+        } else {
+          console.log(2);
+          numX = Math.floor((Math.random() - 0.5) * 4) * 90;
+          numY = Math.floor((Math.random() - 0.5) * 4) * 90;
+          delay = 2000;
+        }
+        console.log(X);
+        cube.style.transition =
+          (2 * X < 360) & (2 * X > -360)
+            ? "transform 1s ease-out"
+            : "transform 2s ease-out";
+        cube.style.transform = `rotate3d(0, 0, 1, ${
+          X + 2 * X
+        }deg) rotate3d(1, 0, 0,${numX}deg)
+          rotate3d(0, 1, 0, ${numY}deg)`;
+        console.log(numX, numY);
+
+        setTimeout(() => {
+          cube.style.transition = "";
+          isEnd = true;
+        }, delay);
+      });
+    </script>
+  </body>
+</html>

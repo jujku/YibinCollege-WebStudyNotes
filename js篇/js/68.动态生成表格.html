@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      thead td {
+        background-color: gainsboro;
+        padding: 10px 30px;
+        text-align: center;
+      }
+
+      tbody td {
+        padding: 10px 30px;
+        text-align: center;
+      }
+
+      p {
+        color: red;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <table border="1" cellpadding="0" cellspacing="0">
+      <thead>
+        <tr>
+          <td>姓名</td>
+          <td>科目</td>
+          <td>成绩</td>
+          <td>操作</td>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script>
+      //模拟数据
+      datas = [
+        {
+          name: "曹家垚",
+          subject: "javascript",
+          score: 89,
+        },
+        {
+          name: "蔡昌宏",
+          subject: "javascript",
+          score: 90,
+        },
+        {
+          name: "雷超",
+          subject: "javascript",
+          score: 91,
+        },
+        {
+          name: "辛禹杉",
+          subject: "javascript",
+          score: 103,
+        },
+        {
+          name: "刘瑞峰",
+          subject: "javascript",
+          score: 5,
+        },
+        {
+          name: "刘瑞峰",
+          subject: "javascript",
+          score: 5,
+        },
+      ];
+      var tbody = document.querySelector("tbody");
+      for (var i = 0; i < datas.length; i++) {
+        var tr = document.createElement("tr");
+        tbody.appendChild(tr);
+        for (var k in datas[i]) {
+          var td = document.createElement("td");
+          td.innerHTML = datas[i][k];
+          tr.appendChild(td);
+        }
+        var td = document.createElement("td");
+        td.innerHTML = "<p>删除</p>";
+        tr.appendChild(td);
+      }
+      var p = document.querySelectorAll("p");
+      for (var i = 0; i < p.length; i++) {
+        p[i].onclick = function () {
+          var flag = prompt("请输入确认删除");
+          if (flag == "确认删除") {
+            tbody.removeChild(this.parentNode.parentNode);
+          } else {
+            return false;
+          }
+        };
+      }
+    </script>
+  </body>
+</html>

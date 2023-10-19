@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //es6 中的class可以只看做一个语法糖。绝大数功能es5都做得到。只是更像传统写法
+
+      // es5中的构造函数
+      function Phone(brand, price) {
+        this.brand = brand;
+        this.price = price;
+      }
+      // 添加方法
+      Phone.prototype.call = function () {
+        console.log("我可以打电话！");
+      };
+
+      //实例化对象
+
+      let Huawei = new Phone("huawei", 59999);
+      Huawei.call();
+      console.log(Huawei);
+
+      class Smartphone {
+        //构造方法
+        constructor(brand, price) {
+          this.brand = brand;
+          this.price = price;
+        }
+
+        call() {
+          console.log("我也可以打电话！");
+        }
+      }
+
+      let onePlus = new Smartphone("1+", 1999);
+      console.log(onePlus);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+      const div = document.querySelectorAll("div");
+
+      for (let i = 0; i < div.length; i++) {
+        div[i].addEventListener("click", function () {
+          div[i].style.backgroundColor = "pink";
+          console.log(i);
+        });
+      }
+
+      //为什么上面要用this 因为var有提升 这里是这样
+      // {
+      //     var i = 0
+      // }
+      // {
+      //     var i = 1
+      // }
+      // {
+      //     var i = 2
+      // }
+      // 所以 i 永远是为2、、
+
+      // 如果是用let 就可以
+      //   for (let i = 0; i < div.length; i++) {
+      //     div[i].addEventListener("click", function () {
+      //       div[i].style.backgroundColor = "pink";
+      //     });
+      //   }
+    </script>
+  </body>
+</html>

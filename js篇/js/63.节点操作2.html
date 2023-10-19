@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>哥哥
+    </div>
+    <span>弟弟</span>
+
+    <ul>
+
+    </ul>
+
+    <script>
+        var div = document.querySelector('div')
+        // 兄弟节点
+        console.log(div.nextSibling); //这里是文本节点 因为div下面那个是换行
+        console.log(div.nextElementSibling); //这个可以只弄元素 但是有兼容问题
+
+        function getNextElementSibling(element) {
+            var el = element
+            while (el = el.nextSibling) {
+                if (el.nodeType === 1) {
+                    return el;
+                }
+            }
+            return null;
+        }
+        // 这个是考虑兼容性的方法 一般不考虑 记住思维
+        console.log(getNextElementSibling(div));
+    </script>
+</body>
+
+</html>

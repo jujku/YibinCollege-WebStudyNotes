@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 让绝对定位的盒子 在父盒子中水平居中 -->
+    <!-- 和固定定位的 类似 -->
+    <!-- 第一步 left 50%
+    第二部 margin 一个负值 -->
+    <style>
+        .box {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            left: 50%;
+            margin-left: -50px;
+            background-color: red;
+        }
+
+        /* 定位的一些特性 */
+
+        /* 如果给了行类元素 绝对或者固定定位
+        那么也可以给他加高宽度 */
+
+        /* 脱标的盒子不会触发 外边距塌陷 */
+
+        /* 绝对和固定 会完全压住标准流 */
+        .box2 {
+            float: left;
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+
+        .box3 {
+            position: absolute;
+            top: 200px;
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="box2">浮动 不会完全压住</div>
+    <p>你不愿意种花 你说 我不愿看见它 一点点掉落 是的 为了避免结束 你避免了一切开始</p>
+    <div class="box3">绝对定位和相对定位会完全压住</div>
+    <p>你不愿意种花 你说 我不愿看见它 一点点掉落 是的 为了避免结束 你避免了一切开始</p>
+    <p>你不愿意种花 你说 我不愿看见它 一点点掉落 是的 为了避免结束 你避免了一切开始</p>
+    <p>你不愿意种花 你说 我不愿看见它 一点点掉落 是的 为了避免结束 你避免了一切开始</p>
+    <p>你不愿意种花 你说 我不愿看见它 一点点掉落 是的 为了避免结束 你避免了一切开始</p>
+    <p>你不愿意种花 你说 我不愿看见它 一点点掉落 是的 为了避免结束 你避免了一切开始</p>
+    <p>你不愿意种花 你说 我不愿看见它 一点点掉落 是的 为了避免结束 你避免了一切开始</p>
+    <p>你不愿意种花 你说 我不愿看见它 一点点掉落 是的 为了避免结束 你避免了一切开始</p>
+    <p>你不愿意种花 你说 我不愿看见它 一点点掉落 是的 为了避免结束 你避免了一切开始</p>
+    <p style="font-weight: 900;font-size: 40px;">因为浮动当初本来就是想做文字环绕效果的 布局是衍生出来的用法</p>
+
+
+</body>
+
+</html>

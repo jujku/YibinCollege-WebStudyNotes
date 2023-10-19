@@ -1,0 +1,500 @@
+/* 阿里巴巴矢量库 */
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.woff2?t=1667223293652') format('woff2'),
+         url('..font/iconfont.woff?t=1667223293652') format('woff'),
+         url('..font/iconfont.ttf?t=1667223293652') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+/* 版心 */
+.w{
+    width: 1200px;
+    margin: 0 auto;
+}
+.header{
+    height: 200px;
+}
+.shortcut{
+    height: 40px;
+    background-color: rgb(248 248 248);
+    font-size: 14px;
+    font-weight: 400;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.shortcut .left,
+.shortcut .right{
+    height: 40px;
+}
+.shortcut .fl li:nth-of-type(1){
+    margin-bottom: 18px;
+}
+.shortcut .fl li:nth-of-type(1)>p::before{
+    content: '\ebbb';
+    font-family: 'iconfont';
+}
+.shortcut li{
+    float: left;
+    line-height: 40px;
+    margin-right: 6px;
+}
+.shortcut .fl>ul>li:nth-child(4){
+    margin-left: 13px;
+    color: orange;
+}
+.shortcut .fr li{
+    margin: 0 10px;
+}
+.search{
+    height: 160px;
+    background-color: white;
+    box-shadow: 0px 9px 6px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+.search .logo a{
+    display: block;
+    width: 127px;
+    height: 46px;
+    background: url(http://s3plus.meituan.net/static-prod01/com.sankuai.fe.www.web-files/0343210/img/logo.png) no-repeat;
+    /* font-size: 0; */
+    text-indent: -999em;
+    overflow: hidden;
+    background-size: cover; 
+    /* 背景图片自适应大小 */
+    position: absolute;
+    top: 28px;
+}
+.search .w{
+    position: relative;
+}
+.search .searchinput{
+    width: 555px;
+    height: 40px;
+    position: absolute;
+    top: 40px;
+    left: 340px;
+}
+.search input{
+    float: left;
+    display: block;
+    width: 470px;
+    height: 40px;
+    border: 1px solid #E5E5E5;
+    border-right: none;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+}
+.search .searchinput div{
+    float: left;
+    width: 85px;
+    height: 40px;
+    background-color: rgb(255,195,0);
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.search .fangdajing{
+    position: relative;
+}
+.search .fangdajing svg{
+    width: 25px;
+    height: 25px;
+    color: black;
+    position: absolute;
+    top: 7px;
+    left: 26px;
+}
+.banner{
+    height: 430px;
+}
+.banner .w{
+    position: relative;
+}
+.banner .leftbanner{
+    height: 480px;
+    width: 230px;
+    border: 1px solid rgb(229,229,229);
+    margin-top: -50px;
+    z-index: 9999;
+    position: absolute;
+    background-color: rgb(255,255,255);
+}
+.banner .leftbanner .leftbanner-top{
+    height: 50px;
+    padding-top: 18px;
+    color: #222222;
+    font-size: 16px;
+    font-weight: 700;
+    margin-left: 15px;
+}
+.banner .leftbanner .leftbanner-main{
+    height: 430px;
+    width: 230px;
+    position: relative;
+}
+.banner .leftbanner .leftbanner-main>ul>li{
+    float: none;
+    height: 27px;
+    cursor: pointer;
+    margin-right: 2px; 
+    /* 让变色不超出边框 */
+}
+.banner .leftbanner .leftbanner-main>ul>li::after{
+    content: '>';
+    position: absolute;
+    right: 10px;
+    color: grey;
+}
+.banner .leftbanner .leftbanner-main>ul>li:nth-of-type(16){
+    height: 25px;
+}
+.banner .leftbanner .leftbanner-main>ul>li:hover{
+    background-color: rgb(255,247,235);
+    font-weight: 900;
+}
+.banner .leftbanner:hover .sideblank{
+    display: block;
+}
+.banner .leftbanner .leftbanner-main div,
+.banner .leftbanner .leftbanner-main p{
+    float: left;
+    margin-left: 3px;
+}
+.banner .leftbanner .leftbanner-main p{
+    font-size: 12px;
+}
+.banner .centerbanner{
+    position: absolute;
+    margin-top: -50px;
+    width: 710px;
+    height: 480px;
+    z-index: 9;
+    left: 240px;
+}
+.banner .centerbanner .toplist{
+    height: 50px;
+}
+.banner .centerbanner .toplist ul{
+    padding-top: 15px;
+}
+.banner .centerbanner .toplist li a{
+    margin-left: 40px;
+    float: left;
+    font-weight: 700;
+    font-size: 16px;
+    color: #222;
+}
+.banner .centerbanner .toplist li a:hover{
+    color: rgb(251,199,0);
+}
+.banner .centerbanner .topbanner{
+    margin-top: 10px;
+}
+.banner .centerbanner .topbanner img,
+.banner .centerbanner .topbanner div{
+    display: block;
+    float: left;
+    height: 240px;
+    z-index: 1;
+}
+
+
+
+
+.banner .centerbanner .topbanner .lunbotu{
+    width: 550px;
+    height: 240px;
+    position: relative;
+    overflow: hidden;
+}
+.banner .centerbanner .topbanner .lunbotu .bannerimg{
+    position: absolute;
+    /* transition: left 0.1s ease 0s; */
+}
+.banner .centerbanner .topbanner .lunbotu a{
+    display: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+}
+.banner .centerbanner .topbanner .lunbotu .prev{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    margin-top: -20px;
+    z-index: 9999999;
+}
+.banner .centerbanner .topbanner .lunbotu .next{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -20px;
+    z-index: 9999999;
+}
+.banner .centerbanner .topbanner .lunbotu ul:nth-of-type(1){
+    width: 2000%;
+}
+.banner .centerbanner .topbanner .lunbotu .bannerdown{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -57px;
+    z-index: 999999;
+}
+.banner .centerbanner .topbanner .lunbotu .bannerdown>li{
+    float: left;
+    margin-left: 3px;
+    height: 10px;
+    background-color: transparent;
+    width: 20px;
+    border-bottom: rgba(255, 255, 255, 0.5) solid 5px;
+    cursor: pointer;
+}
+.banner .centerbanner .topbanner .lunbotu .bannerdown>.current{
+    border-bottom: rgba(255, 255, 255, 0.99) solid 5px;
+}
+
+
+
+.banner .centerbanner .topbanner img{
+    width: 550px;
+}
+.banner .centerbanner .topbanner .right{
+    margin-left: 10px;
+    width: 150px;
+}
+.banner .centerbanner .bottombanner{
+    margin-top: 260px;
+}
+.banner .centerbanner .bottombanner img{
+    display: block;
+    float: left;
+    height: 170px;
+    background-color: aqua;
+}
+.banner .centerbanner .bottombanner .left,
+.banner .centerbanner .bottombanner .center{
+    width: 270px;
+}
+.banner .centerbanner .bottombanner .center{
+    margin-left: 10px;
+}
+.banner .centerbanner .bottombanner .right{
+    margin-left: 10px;
+    width: 150px;
+}
+.banner .rightbanner{
+    top: 10px;
+    position:absolute;
+    right: 0px;
+    width: 240px;
+    height: 240px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+}
+
+.banner .rightbanner .user_top{
+    background-color: rgb(255,255,255);
+    height: 240px;
+    overflow: hidden;
+    border: 1px solid rgb(229,229,229);
+}
+.banner .rightbanner .user_top .head{
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+    border: gray solid 3px;
+    overflow: hidden;
+    margin: 40px auto;
+}
+.banner .rightbanner .user_top p{
+    margin-top: -40px;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+}
+.banner .rightbanner .user_top button{
+    width: 120px;
+    height: 40px; 
+    border-radius: 40px;
+    display: block;
+    margin: 12px auto;
+}
+.banner .rightbanner .user_top button:nth-of-type(1){
+    background-color: rgb(255,193,0);
+}
+.banner .rightbanner .user_top button:nth-of-type(2){
+    background-color: rgb(255,255,255);
+    border: 3px solid rgb(241, 241, 241);
+}
+.banner .rightbanner .user_top .head img{
+    width: 100%;
+    height: 100%;
+}
+.banner .rightbanner .erweima{
+    margin-top: 10px;
+    height: 170px;
+    width: 240px;
+    background-color: rgb(255,255,255);
+    border:1px solid rgb(229,229,229) ;
+}
+.banner .rightbanner .erweima .img{
+    width: 95px;
+    height: 95px;
+    margin: 5px auto;
+}
+.banner .rightbanner .erweima .img img{
+    width: 100%;
+    height: 100%;
+}
+.banner .rightbanner .erweima .text{
+    text-align: center;
+}
+.banner .rightbanner .erweima p{
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+}
+.banner .rightbanner .erweima .text span:nth-of-type(1){
+    color:rgb(236,83,48);
+    margin-right: 5px;
+}
+.banner .sideblank{
+    position: absolute;
+    display: none;
+    width: 400px;
+    height: 419px;
+    top: 11px;
+    left: 230px;
+    background-color: rgb(255,255,255);
+    padding: 30px;
+    z-index: 999999;
+}
+.banner .sideblank:hover{
+    display: block;
+}
+.banner .sideblank .title{
+    overflow: hidden;
+    border-bottom: 1px solid rgb(153,153,153);
+}
+.banner .sideblank .title .smalltitle{
+    display: block;
+    float: left;
+    font-weight: 500;
+    font-size: 16px;
+}
+.banner .sideblank .title .more{
+    display: block;
+    float: right;
+    color: rgb(153,153,153);
+}
+.banner .sideblank .title .more:after{
+    content: ">";
+}
+.banner .sideblank ul{
+    margin-top: 10px;
+    overflow: hidden;
+}
+.banner .sideblank li{
+    font-size: 14px;
+    float: left;
+    margin-right: 10px;
+}
+.footer{
+    margin-top: 40px;
+    height: 740px;
+}
+.footer .foottop{
+    height: 675px;
+    border-top: 1px solid rgb(153,153,153);
+    padding: 40px 45px;
+}
+.footer .footer-column{
+    float: left;
+    width: 220px;
+}
+.footer .foottop dt{
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.footer .foottop dd{
+    margin-top: 5px;
+    font-size: 14px;
+}
+.footer .footbottom{
+    border-top: 1px solid rgb(153,153,153);
+    margin-top: 40px;
+    padding: 15px 0 30px 20px;
+    height: 200px;
+}
+.footer .footbottom .footbottom-left{
+    float: left;
+}
+.footer .footbottom .footbottom-right{
+    float: right;
+    overflow: hidden;
+}
+.footer .footbottom .footbottom-left p:nth-of-type(1)>a,
+.footer .footbottom .footbottom-right a{
+    margin-left: 10px;
+    display: inline;
+}
+.footer .footbottom p{
+    margin-top: 5px;
+}
+.footer .footbottom .footbottom-right .img1,
+.footer .footbottom .footbottom-right .img2{
+    display: inline-block;
+    overflow: hidden;
+    text-indent: -1000px;
+    height: 38px;
+    background-image: url(https://s3plus.meituan.net/static-prod01/com.sankuai.fe.www.web-files/4d0f5a6/img/sprites/footer.png);
+    background-repeat: no-repeat;
+    margin-right: 2px;
+}
+.footer .footbottom .footbottom-right>a{
+    display: block;
+    overflow: hidden;
+}
+.footer .footbottom .footbottom-right>a p{
+    float: right;
+}
+.footer .footbottom .footbottom-right>a img{
+    margin-top: 5px;
+    display: block;
+    float: right;
+    width: 15px;
+    height: 15px;
+}
+.footer .footbottom .footbottom-right .img img{
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    vertical-align: middle;
+}
+.footer .footbottom .footbottom-right .zhizhao{
+    margin-top: 10px;
+}
+.footer .footbottom .footbottom-right .zhizhao .img{
+    vertical-align: middle;
+}
+.footer .footbottom .footbottom-right .zhizhao .img1{
+    width: 109px;
+    background-position: 0 -167px;
+    vertical-align: middle;
+}
+.footer .footbottom .footbottom-right .zhizhao .img2{
+    width: 107px;
+    background-position: 0 -40px;
+    vertical-align: middle;
+}

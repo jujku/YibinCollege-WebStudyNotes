@@ -1,0 +1,492 @@
+body{
+    /* background-image: radial-gradient(rgba(0,0,0,0) 0,rgba(0,0,0,.5) 100%),radial-gradient(rgba(0,0,0,0) 33%,rgba(0,0,0,.3) 166%); */
+}
+.all{
+    margin: 0 auto;
+    width: 1920px;
+    background-color: white;
+}
+.shortcut{
+    width: 1920px;
+    height: 64px;
+    position: absolute;
+}
+.shortcut .leftshortcut{
+    float: left;
+}
+.shortcut .leftshortcut ul li{
+    line-height: 64px;
+    float: left;
+}
+.shortcut .leftshortcut ul li{
+    margin-left: 20px;
+    color: white;
+    font-size: 14px;
+}
+.shortcut .searchinput{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 500px;
+    height: 40px;
+    left: 50%;
+    margin-left: -250px;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 13px;
+}
+.shortcut .searchinput:hover{
+    background-color: rgba(255, 255, 255);
+}
+.shortcut .searchinput input{
+    display: block;
+    height: 20px;
+    width: 420px;
+    float: left;
+    background-color: transparent;
+}
+.shortcut .searchinput .fangdajing{
+    width: 40px;
+    height: 20px;
+    float: left;
+    margin-left: 20px;
+}
+.topimg{
+    height: 180px;
+    width: 1920px;
+    background-image: url("http://i0.hdslb.com/bfs/archive/5a92350a55ba2c6a5b906bbb91d8f4d708f81d1b.png");
+    background-size: cover;
+}
+.shortcut .rightshortcut{
+    width: 620px;
+    float: right;
+    /* background-color: aqua; */
+}
+.shortcut .rightshortcut div,
+.shortcut .rightshortcut li{
+    /* line-height: 64px; */
+    margin-right: 15px;
+    float: right;
+    color: white;
+}
+.shortcut .rightshortcut>div:nth-of-type(1){
+    margin-top: 12px;
+}
+.shortcut .rightshortcut .headimg{
+    border: 2px solid white;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-image: url("https://i1.hdslb.com/bfs/face/38f6605f1594facd8febe0873295220fa0b77f7e.jpg@240w_240h_1c_1s.webp");
+    background-size: cover;
+}
+.shortcut .rightshortcut .tougao{
+    margin-top: 15px;
+    width: 90px;
+    height: 34px;
+    background-color:rgb(251,114,153);
+    border-radius: 5px;
+    line-height: 34px;
+    text-align: center;
+}
+.shortcut .rightshortcut ul li{
+    margin-top: 12px;
+    text-align: center;
+    color: white;
+    width: 50px;
+    height: 40px;
+}
+.shortcut .rightshortcut ul li>svg{
+    display: block;
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+}
+.w{
+    margin: 0 auto;
+    width: 1705px;
+}
+.nav{
+    border-top: 23px solid transparent;
+    border-bottom: 26px solid transparent;
+    height: 120px;
+}
+.nav .w .leftnav{
+    float: left;
+}
+.nav .w .leftnav li{
+    float: left;
+    margin-right: 25px;
+    text-align: center;
+}
+.nav .w .leftnav li div{
+    border: 1px solid black;
+    margin: 0 auto;
+    width: 45px;
+    height: 45px;
+    background-color: black;
+    border-radius: 40px;
+    background-image: url("https://i1.hdslb.com/bfs/face/973523eb7b400942bb0d9d94a4614e89bebad46c.jpg@92w_92h");
+    background-size: cover;
+
+}
+.nav .w .leftnav li p{
+    margin-top: 10px;
+}
+.nav .w .rightnav .rightnavleft{
+    border-right: 1px solid black;
+    width: 1220px;
+    height: 70px;
+    float: left;
+    /* background-color: bisque; */
+}
+.nav .w .rightnav .rightnavright{
+    border-top:10px solid transparent ;
+    width: 270px;
+    float: left;
+    border-left:30px solid transparent;
+}
+.nav .w .rightnav .rightnavleft li{
+    border: 1px solid gray;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    width: 90px;
+    border-radius: 5px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: rgb(246,247,248);
+    float: left;
+}
+.nav .w .rightnav .rightnavright svg,
+.nav .w .rightnav .rightnavright li,
+.nav .w .rightnav .rightnavright p{
+    color: black;
+    float: left;
+}
+.nav .w .rightnav .rightnavright li{
+    height: 30px;
+    width: 80px;
+    margin-bottom: 10px;
+}
+.nav .w .rightnav .rightnavright p{
+    margin-left: 5px;
+}
+.header{
+    width: 100%;
+    height: 468px;
+}
+.header .w .leftbanner{
+    float: left;
+}
+.header .w .leftbanner .lunbotu{
+    width: 561px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.header .w .leftbanner .lunbotu .bannerimg{
+    position: absolute;
+    width: 5000px;
+    height: 400px;
+  }
+.header .w .leftbanner .lunbotu .bannerimg li{
+  float: left;
+  width: 561px;
+  height: 400px;
+}
+.header .w .leftbanner .lunbotu .bannerimg li img{
+  width: 100%;
+  height: 100%;
+}
+.header .w .leftbanner .lunbotu .prev,
+.header .w .leftbanner .lunbotu .next{
+    display: block;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    width: 26px;
+    height: 26px;
+    background-color: rgb(92,90,104,0.7);
+    border-radius: 8px;
+    text-align: center;
+    line-height: 26px;
+    bottom: 40px;
+    z-index: 999999;
+}
+.header .w .leftbanner .lunbotu .next {
+    right: 17px;
+
+}
+.header .w .leftbanner .lunbotu .prev{
+    right: 53px;
+} 
+.header .w .leftbanner .lunbotu .bannerdown{
+    height: 20px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 999999;
+}
+.header .w .leftbanner .lunbotu .bannerdown>li{
+    float: left;
+    margin-left: 10px;
+    height: 10px;
+    background-color: gray;
+    border-radius: 10px;
+    width: 10px;
+    cursor: pointer;
+}
+.header .w .leftbanner .lunbotu .bannerdown>.current{
+    background-color: white;
+    width: 20px;
+    height: 20px;
+}
+.header .w .rightbanner{
+    float: left;
+    width: 1144px;
+}
+.header .w .rightbanner li{
+    float: left;
+    margin-left: 11px;
+    margin-bottom: 20px;
+}
+.header .w .rightbanner .img{
+    background-image: url("https://i0.hdslb.com/bfs/archive/7fc6103f50f12cfd9d89db4847521c9326d648d5.jpg@672w_378h_1c_!web-home-common-cover.webp");
+}
+.img{
+    background-size: cover;
+    position: relative;
+    border-radius: 10px;
+    background-color: black;
+    height: 155px;
+    width: 275px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.text{
+    margin-top: 10px;
+    width: 250px;
+    font-size: 14px;
+    color: black;
+}
+.ps *{
+    float: left;
+}
+.ps *:nth-of-type(2){
+    margin-left: 10px;
+}
+.img .imgbottom{
+    transition: opacity 0.5s ease 0s;
+    /* transition: all 0.5 ease 0s; */
+    opacity: 1;
+    width: 265px;
+    left: 5px;
+    /* height: 30px; */
+    bottom: 5px;
+    position: absolute;
+    color: white;
+}
+.img .imgbottom .leftbottom{
+    float: left;
+}
+.img .imgbottom .rightbottom{
+    float: right;
+}
+.img .imgbottom .leftbottom svg{
+    margin-right: 2px;
+}
+.img .imgbottom .leftbottom p{
+    margin-right: 10px;
+}
+.img .imgbottom .leftbottom *{
+    float: left;
+}
+.img .imgbottom .rightbottom *{
+    float: right;
+}
+.img .imgshadow{
+    opacity: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 275px;
+    height: 155px;
+    box-shadow: inset 0px -13px 20px 4px;
+}
+.img .bofang{
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    line-height: 160px;
+    color: white;
+    transition: opacity 0.5s ease 0s;
+}
+.img .bofang svg{
+    width: 30px;
+    height: 30px;
+}
+.img:hover .bofang{
+    opacity: 1;
+}
+.img:hover .imgbottom{
+    opacity: 0;
+}
+.tuiguang {
+    margin-top: 55px;
+    height: 269px;
+}
+.title svg{
+    width: 30px;
+    height: 25px;
+    float: left;
+}
+.title p{
+    margin-left: 5px;
+    float: left;
+    font-size: 25px;
+    color: black;
+    line-height: 25px;
+}
+.title p:nth-of-type(2){
+    margin-left: 1030px;
+}
+.tuiguang .w .tuiguangcontent{
+    margin-top: 20px;
+}
+.tuiguang .w .tuiguangcontent li {
+    float: left;
+    margin-right: 10px;
+}
+.tuiguang .w .tuiguangcontent li:nth-of-type(6){
+    margin-right: 0;
+}
+.tuiguang .w .tuiguangcontent li .img{
+    background-image: url("https://i0.hdslb.com/bfs/archive/3be57cb3fd54d3b7ca496baa1e32508af2374838.jpg@672w_378h_1c_!web-home-common-cover.webp");
+}
+.title{
+    height: 25px;
+    /* background-color: aqua; */
+}
+.ad{
+    border-radius: 10px;
+    margin-top: 60px;
+    height: 120px;
+    background-image: url("https://i0.hdslb.com/bfs/sycp/creative_img/202206/54ee7d151af28cd1e4e7c8e9a38254f2.jpg@2900w_240h_100q.webp");
+    background-size: cover;
+}
+.zhibo{
+    margin-top: 55px;
+}
+.zhibo .zhibocontent .leftcontent{
+    float: left;
+    width: 1425px;
+    height: 468px;
+    /* background-color: aqua; */
+}
+.zhibo .zhibocontent .leftcontent .img{
+    background-image: url("https://i0.hdslb.com/bfs/archive/f7c6366b3d9993aefaa4e0802dbcad0ad384ab92.jpg@672w_378h_1c_!web-search-common-cover.webp");   
+}
+.zhibo .zhibocontent .leftcontent ul:nth-of-type(2) .img{
+    background-image: url("https://i0.hdslb.com/bfs/archive/c258ef5900748844ebc1949410caaf35219d4f38.png@672w_378h_1c_!web-home-common-cover.webp");
+}
+.zhibo .zhibocontent .leftcontent ul:nth-of-type(3) .img{
+    background-image: url("https://i0.hdslb.com/bfs/archive/a15f239a63a6498626d59d73ac898749e0302477.png@672w_378h_1c_!web-home-common-cover.webp");
+}
+.zhibo .zhibocontent .leftcontent ul:nth-of-type(4) .img{
+    background-image: url("https://i0.hdslb.com/bfs/archive/4b5e3f9d16983810e8b21d72ee32724b8c199c00.png@672w_378h_1c_!web-home-common-cover.webp");
+}
+.zhibo .zhibocontent .leftcontent ul:nth-of-type(5) .img{
+    background-image: url("https://i0.hdslb.com/bfs/archive/ff8cc55893048ff49dca7a4a731598fc68c2bafb.png@672w_378h_1c_!web-home-common-cover.webp");
+}
+.zhibo .zhibocontent .leftcontent ul:nth-of-type(6) .img{
+    background-image: url("https://i0.hdslb.com/bfs/archive/7a5a84986b2d2d90372bb800bb9c44864563ce67.png@672w_378h_1c_!web-home-common-cover.webp");
+}
+.zhibo .zhibocontent .leftcontent ul:nth-of-type(7) .img{
+    background-image: url("https://i0.hdslb.com/bfs/archive/5d94377966f2fcfe15915a160b9a476ccb3feb74.png@672w_378h_1c_!web-home-common-cover.webp");
+}
+.zhibo .zhibocontent .leftcontent li{
+    margin-top: 20px;
+    float: left;
+    margin-right: 10px;
+}
+
+.zhibo .zhibocontent .rightcontent{
+    border: 1px solid rgb(241,242,243);
+    border-radius: 10px;    
+    /* margin-top: 20px; */
+    float: left;
+    width: 280px;
+    height: 468px;
+}
+.zhibo .zhibocontent .rightcontent li:nth-of-type(1){
+    height: 118px;
+}
+.zhibo .zhibocontent .rightcontent li:nth-of-type(even){
+    background-color: rgb(246,247,248);
+}
+.zhibo .zhibocontent .rightcontent li{
+    height: 50px;
+    width: 100%;
+
+}
+.zhibo .zhibocontent .rightcontent li svg,
+.zhibo .zhibocontent .rightcontent li div,
+.zhibo .zhibocontent .rightcontent li p{
+    float: left;
+    line-height: 50px;
+}
+.zhibo .zhibocontent .rightcontent li svg{
+    margin-top: 19px;
+}
+.zhibo .zhibocontent .rightcontent li p{
+    margin-left: 10px;
+}
+.zhibo .zhibocontent .rightcontent>ul>li:nth-of-type(1) p{
+    line-height: 118px;
+}
+.zhibo .zhibocontent .rightcontent ul:nth-of-type(1) div{
+    margin-left: 10px;
+    margin-top: 33px;
+    width: 90px;
+    height: 56px;
+    background-image: url("https://i0.hdslb.com/bfs/bangumi/image/9f4c54037441f5c011b0ff36756bcafba437dc70.png@192w_108h_1c.webp");
+    background-size: cover;
+}
+
+.zhibo .zhibocontent .rightcontent>ul>li:nth-of-type(1) svg{
+    margin-top: 53px;
+}
+.zhibo .title ul{
+    margin-left: 20px;
+    padding: 0 10px;
+    float: left;
+    background-color: rgb(246,247,248);
+    border-radius: 20px;
+    margin-top: 4px;
+    height: 20px;
+    width: 300px;
+}
+.zhibo .title li{
+    cursor: pointer;
+    line-height: 20px;
+    width: 40px;
+    height: 20px;
+    float: left;
+    /* margin-left: ; */
+    text-align: center;
+}
+.zhibo .title .current{
+    background-color: rgb(0,174,236);
+    border-radius: 20px;
+    color: white;
+}
+.zhibo .zhibocontent{
+    height: 460px;
+    width: 100%;
+}

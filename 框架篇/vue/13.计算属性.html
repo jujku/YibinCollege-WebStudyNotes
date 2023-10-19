@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="vue.js"></script>
+  </head>
+  <body>
+    <div class="root">
+      姓：<input type="text" v-model="firstname" /> <br />
+      名：<input type="text" v-model="lastname" /> <br />
+      全名：{{fullname}}
+    </div>
+
+    <script>
+      // 计算属性：
+      // 1.定义：要用的属性不存在，要通过已有属性计算得来
+      // 2.原理 底层借助了Object.defineproperty 方法提供的getter和setter。
+      // 3.get函数什么时候执行？
+      //  （1）.初次读取时会执行一次
+      //  （2）.当依赖的数据发生改变时会被再次调用。
+      // 4.优势：与methods实现相比，内部有缓存机制(复用)，效率更高，调试方便。
+      // 5.备注:
+      //   (1).计算属性最终会出现在vm上，直接读取使用即可
+      //   (2).如果计算属性要被修改，那必须写set函数去响应修改，且set中要引起计算时依赖的数据发生
+
+      //   与另外两者方法对比;
+      //   1.插值语法 双括号里面不推荐做多少运算
+      //   2.用函数运算 取返回值。这样会每次需要这个值的时候尽管没有改变也会调用这个函数进行一次运算
+
+      const vm = new Vue({
+        el: ".root",
+        data: {
+          firstname: "张",
+          lastname: "三",
+        },
+        computed: {
+          fullname: {
+            get() {
+              console.log("getter被调用了");
+              return this.firstname + "-" + this.lastname;
+            },
+            set(value) {
+              const arr = value.split("-");
+              console.log(arr);
+              this.firstname = arr[0];
+              this.lastname = arr[1];
+            },
+          },
+        },
+      });
+
+      //   computed里面可以简写（只考虑读写不考虑修改才能用）
+      // fullname(){
+      //     return this.firstname + '-' + this.secondname
+      // }
+    </script>
+  </body>
+</html>

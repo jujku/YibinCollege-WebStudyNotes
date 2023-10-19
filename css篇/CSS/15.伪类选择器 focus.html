@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* focus 用于选取获得焦点的表单元素 */
+        /* 焦点就是光标 */
+        /* 一般情况下 <input> 类元素才能获取 因此这个选择器也主要针对表单元素来说 */
+        .oen:focus {
+            background-color: pink;
+            color: red;
+        }
+
+        input:focus {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text">
+    <input type="text">
+    <input class="oen" type="text">
+</body>
+
+</html>

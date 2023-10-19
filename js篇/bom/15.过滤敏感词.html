@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <textarea name="" id="" cols="30" rows="10" style="resize: none"></textarea>
+    <button>发生</button>
+    <script>
+      let body = document.querySelector("body");
+      let btn = document.querySelector("button");
+      let text = document.querySelector("textarea");
+      btn.addEventListener("click", (e) => {
+        p = document.createElement("p");
+
+        p.innerHTML = text.value.replace(/操|傻逼|日]/g, "***");
+        body.appendChild(p);
+      });
+
+      //   classList.toggle('类名') 有就去掉，没有叫加上，用于做的类的切换
+
+      //立即执行的函数
+      // (function(){}());
+
+      //三个事件 blur change input
+      //   input 输入值就会触发
+      //   change 离开表单且值有变化会触发
+      //   blur 只要离开表单就触发
+
+      //classsList.add()添加 remove()移除 toggle()切换 contains() 包含
+    </script>
+  </body>
+</html>

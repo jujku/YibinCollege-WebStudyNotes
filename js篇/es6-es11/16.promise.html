@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const p = new Promise(function (resolve, reject) {
+        //reslove 传给value成功的结果
+        let data = "数据库中的数据";
+        resolve(data);
+
+        // reject传给reason 失败的结果
+        // let err = "错误";
+        // reject(err);
+      });
+
+      p.then(
+        function (value) {
+          console.log(value);
+        },
+        function (reason) {
+          console.error(reason);
+        }
+      );
+
+      //   Promise的作用就是用来封装异步操作 并且可以获取成功或者失败的结果
+    </script>
+  </body>
+</html>

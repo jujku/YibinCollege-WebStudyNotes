@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <button>点击POST</button>
+    <div></div>
+    <script>
+        const btn = document.querySelector("button")
+        const div = document.querySelector("div")
+
+        let post = function () {
+            const xhr = new XMLHttpRequest()
+            xhr.open("POST", "http://127.0.0.1:5000/book/1")
+            // xhr.send('a=100&b=200') //参数可以写在这里
+
+            // 这里可以写请求头
+            // xhr.setRequestHeader("","")这是格式
+            // 可以写预定义的也可以写自定义的，
+            // 但是自定义需要后端配合 一般用来做用户校验
+
+            xhr.send('a:100&b:200') //什么样发格式都可以 只要服务端能处理
+
+            xhr.addEventListener("readystatechange", function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        // console.log(1);
+                        div.innerHTML = xhr.response
+                    } else {
+
+                    }
+                }
+            })
+        }
+
+        btn.addEventListener("click", post)
+        div.addEventListener("mouseover", post)
+    </script>
+</body>
+
+</html>

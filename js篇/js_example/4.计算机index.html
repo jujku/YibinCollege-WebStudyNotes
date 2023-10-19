@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="4.计算机CSS.css">
+    <script src="4.计算机JS.js"></script>
+</head>
+
+<body>
+    <div class="calculator">
+        <input class="output" value="" id="output" disabled="disabled">
+        <div class="numbers">
+            <input type="button" value="7" onclick="calculatorClick.numberClick(7)">
+            <input type="button" value="8" onclick="calculatorClick.numberClick(8)">
+            <input type="button" value="9" onclick="calculatorClick.numberClick(9)">
+            <input type="button" value="4" onclick="calculatorClick.numberClick(4)">
+            <input type="button" value="5" onclick="calculatorClick.numberClick(5)">
+            <input type="button" value="6" onclick="calculatorClick.numberClick(6)">
+            <input type="button" value="1" onclick="calculatorClick.numberClick(1)">
+            <input type="button" value="2" onclick="calculatorClick.numberClick(2)">
+            <input type="button" value="3" onclick="calculatorClick.numberClick(3)">
+            <input type="button" value="0" onclick="calculatorClick.numberClick(0)">
+            <input type="button" value="AC" onclick="calculatorClick.cleanClick()">
+            <input type="button" value="=" onclick="calculatorClick.equalClick(value)">
+        </div>
+        <div class="operators">
+            <input type="button" value="+" onclick="calculatorClick.operatorClick(value)">
+            <input type="button" value="-" onclick="calculatorClick.operatorClick('-')">
+            <input type="button" value="*" onclick="calculatorClick.operatorClick('*')">
+            <input type="button" value="/" onclick="calculatorClick.operatorClick('/')">
+
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* margin 外边距
+        border 边框
+        padding 内边距
+        内容
+        padding
+        border
+        margin */
+
+        /* border: width style color */
+        /* 复合写法 */
+        .one {
+            border-style: none none solid;
+            border-width: 2px;
+            border-color: black
+        }
+
+        .one:focus {
+            border-color: aqua;
+        }
+
+        /* 表格细线边框 */
+        /* 相邻表格的边框会和在一起 border-collapse */
+        table {
+            width: 500px;
+            height: 249px;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid red;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        /* 边框会影响 盒子的实际大小 边框不算在盒子大小内 */
+    </style>
+</head>
+
+<body>
+    <div>账号<input class="one" type="text">
+        密码<input class="one" type="password"></input></div>
+    <table>
+        <td>dsa</td>
+        <td>das</td>
+        <td>dsa</td>
+        <tr>
+            <td>dsa</td>
+            <td>das</td>
+            <td>dsa</td>
+
+        </tr>
+    </table>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 获取元素的几种方法
+
+        // 根据提供的ID获取
+        // 根据标签名获取
+        // 通过 HTML5新增的方法获取
+        // 特殊元素获取
+
+        //1.根据ID
+        // getElementByld()方法获取 id创建的元素对象
+
+    </script>
+</head>
+
+<body>
+    <div id="time">2019-17-8</div>
+    <script>
+        var timer = document.getElementById('time')
+        //id 是大小写敏感的 字符串
+        console.log(timer);
+        //返回值是这个元素
+        console.log(typeof timer);
+        // 返回值是 匹配到 ID 的 DOM Element 对象  如果没有则返回null
+
+        console.dir(timer)
+        // 这个用来打印返回的元素对象 更好的查看里面的属性和方法
+    </script>
+</body>
+
+</html>

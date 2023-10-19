@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 利用对象封装自己的数学对象  里面有PI 最大值 最小值
+        var myMath = {
+            PI: 3.1415923653,
+            max: function () {
+                var max = arguments[0];
+                for (var i = 1; i < arguments.length; i++) {
+                    if (arguments[i] > max) {
+                        max = arguments[i];
+                    }
+                }
+                return max;
+            },
+            min: function () {
+                var min = arguments[0];
+                for (var i = 1; i < arguments.length; i++) {
+                    if (arguments[i] < min) {
+                        min = arguments[i];
+                    }
+                }
+                return min;
+            }
+        }
+        console.log(myMath.PI);
+        console.log(myMath.max(1, 5, 9));
+        console.log(myMath.min(1, 5, 9));
+
+
+        console.log(Math.abs('pink')); // NaN
+        console.log(Math.abs('-1'));  // 结果是1 因为有隐式转换 所以可以转换未数字型;
+        // fllor 向下取整  ceil 向上取整     round 四舍五入    注意-3.5为-3
+
+
+        // 随机数方法
+        // random 返回随机一个小数 [0,1)
+        console.log(Math.random());
+
+        // 获得min到max之间随机的整数 取不到最大 可以取最小
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+        console.log(getRandomInt(1, 10));
+
+        // 随机点名
+        var names = ['金武', '瑞丰', '猪宝', '禹杉'];
+        console.log(names[getRandomInt(0, 4)]);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

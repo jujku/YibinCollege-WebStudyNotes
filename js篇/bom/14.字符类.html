@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 在中括号里面加取反符号  ^
+      // [^a-z]  就是取除a-z以为的字符
+      // . 匹配换行符以为的任何单个字符
+
+      // 预定义的一些简写方式
+      // \d == [0-9]
+      // \D == [^0-9]  后面的大写字符都取反
+      // \w == [A-Za-z0-9_]
+      // \s == [\t\r\n\v\f]
+
+      //修饰符
+      // /表达式/修饰符
+      //i 是 ignore   g 是 gloabl 是匹配所有满足政治表达式的结果
+      console.log(/a/i.test("A")); //true
+      //   global的话是匹配所有 比如说上面这个只要匹配到第一个a就完了不匹配了
+      console.log(/a/g.exec("vavava"));
+
+
+    </script>
+  </body>
+</html>

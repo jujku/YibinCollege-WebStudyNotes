@@ -1,0 +1,134 @@
+/* 发布卡片 */
+.publish .w .publishcard{
+    position: relative;
+    margin: 50px auto;
+    border-radius: 20px;
+    width: 700px;
+    height: 400px;
+    box-shadow: 0px 11px 15px 5px rgba(0, 0, 0, 0.3);
+    background-color: rgb(255,228,196);
+}
+.publish .w .publishcard #publishimg{
+    opacity: 0;
+    display: block;
+    position: absolute;
+    width: 100px;
+    top: 50%;
+    left: 80px;
+}
+.publish .w .publishcard .publishimgbtn{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    margin-top: -100px;
+    left: 30px;
+    cursor: pointer;
+    /* background-color: rgb(232,232,232); */
+    text-align: center;
+    line-height: 200px;
+    border: 1px solid black;
+    /* background-image: url() w; */
+    background-size:100% 100%
+}
+.publish .w .publishcard #winename{
+    display: block;
+    position: absolute;
+    height: 30px;
+    width: 150px;
+    border-bottom:1px solid black ;
+    background-color: transparent;
+    /* border-radius: 30px; */
+    top: 116px;
+    margin-top: -15px;
+    left: 250px;
+    text-align: center;
+    font-size: 16px;
+}
+.publish .w .publishcard #winetext{
+    display: block;
+    position: absolute;
+    background-color: transparent;
+    resize: none;
+    height: 150px;
+    top: 150px;
+    left: 250px;
+}
+.publish .w .publishcard .formualation{
+    position: absolute;
+    /* background-color: aqua; */
+    right: 30px;
+    top: 30px;
+    width: 150px;
+    height: 300px;
+}
+.publish .w .publishcard .formualation #base_liquor{
+    display: block;
+    width: 70px;
+    height: 20px;
+    background-color: transparent;
+    border: 0;
+    border-bottom:1px solid black;
+    appearance:none;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari 和 Chrome */
+
+}
+.publish .w .publishcard .formualation span{
+    display: block;
+    float: left;
+    color: black;
+    font-size: 14px;
+}
+.publish .w .publishcard .formualation .formualationin{
+    margin-top: 30px;
+}
+.publish .w .publishcard .formualation .formualationin .inin{
+    overflow: hidden;
+    margin-top: 10px;
+}
+.publish .w .publishcard .formualation .formualationin #formualation_name{
+    display: block;
+    float: left;
+    width: 80px;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    text-align: center;
+}
+.publish .w .publishcard .formualation .formualationin p{
+    float: left;
+}
+.publish .w .publishcard .formualation .formualationin #formualation_num{
+    display: block;
+    width: 50px;
+    float: left;
+    text-align: center;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+}
+.publish .w .publishcard .formualation button{
+    display: block;
+    margin-top: 10px;
+    background-color: transparent;
+    font-weight: 800;
+}
+.publish .w .publishcard .formualation button:nth-of-type(1){
+    float: left;
+}
+.publish .w .publishcard .formualation button:nth-of-type(2){
+    float: right;
+}
+ 
+/* 发布按钮 */
+.publish .w .publishcard #publish{
+    position: absolute;
+    display: block;
+    width: 50px;
+    margin-left: -25px;
+    bottom: 30px;
+    left: 50%;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: bold;
+}
+

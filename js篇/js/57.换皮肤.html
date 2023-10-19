@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    ul {
+      width: 600px;
+      margin: 100px auto;
+    }
+
+    li {
+      list-style: none;
+      display: inline-block;
+    }
+
+    div {
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+
+  <body>
+    <ul>
+      <li>
+        <div style="background-color: red"></div>
+      </li>
+      <li>
+        <div style="background-color: pink"></div>
+      </li>
+      <li>
+        <div style="background-color: yellow"></div>
+      </li>
+      <li>
+        <div style="background-color: tomato"></div>
+      </li>
+      <li>
+        <div style="background-color: purple"></div>
+      </li>
+    </ul>
+    <script>
+      var change = document.querySelector("ul").querySelectorAll("div");
+
+      for (var index = 0; index < change.length; index++) {
+        change[index].onclick = function () {
+          document.body.style.backgroundColor = this.style.backgroundColor;
+        };
+      }
+
+      // l如果是鼠标经过的事件 不用排他  一般是设置两个事件  一个是onmouseover 一个是onmouserout
+    </script>
+  </body>
+</html>

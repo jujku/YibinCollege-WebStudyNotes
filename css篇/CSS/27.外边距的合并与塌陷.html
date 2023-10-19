@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 外边距合并 */
+        /* 当定义块元素垂直外边距 合并时 */
+        .one,
+        .two {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .one {
+            margin-bottom: 100px;
+        }
+
+        .two {
+            margin-top: 200px;
+        }
+
+        /* 他会选择大的哪一个外边距 并不会叠加 */
+        /* 上面说的是相邻的情况 下面是嵌套 会有塌陷的情况 */
+        .father {
+            width: 400px;
+            height: 400px;
+            background-color: purple;
+            margin-top: 50px;
+        }
+
+        .son {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin-top: 100px;
+        }
+
+        /* 塌陷是指 父级盒子里面的子级盒子 加上外边距时 会与父级盒子的上外边距合并 并不会让父盒子 和子盒子分开 */
+        /* 3种解决方法 */
+        /* 1.加一个边框 如果边框有影响 可以加透明边框 transport*/
+        /* 2. 逆向思维 为父元素定义一个上内边距 */
+        /* 3.为父元素 添加 一个 overflow:hidden */
+    </style>
+</head>
+
+<body>
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+
+</body>
+
+</html>

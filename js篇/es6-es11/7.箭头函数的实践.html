@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="id"></div>
+    <script>
+
+        // 需求 1  点击div 2s 后颜色变成粉红色
+        let id = document.querySelector("#id")
+
+        id.addEventListener('click', function () {
+            console.log(this);
+            setTimeout(function () {
+                console.log(this);
+                // this.style.background = "red"
+            }, 2000)
+        })
+
+        id.addEventListener('click', function () {
+            console.log(this);
+            setTimeout(() => {
+                console.log(this);
+                this.style.background = "red"
+            }, 2000);
+        })
+
+        // 需求 2 过滤数组
+
+        const arr = [1, 6, 9, 10, 100, 25]
+        const result = arr.filter(function (item) {
+            if (item % 2 === 0) {
+                return true;
+            } else {
+                return false;
+            }
+        })
+        console.log(result);
+
+        const result2 = arr.filter(item => item % 2 === 0)
+
+        console.log(result2);
+        console.log(0.1 + 0.2);
+        // console.log();
+        console.log(0.1 + 0.2 === 0.3);
+
+        // 箭头函数适合与 this 无关的回调，定时器，数组的方法回调
+        // 箭头函数不适合与 this 有关的回调，事件回调，对象的方法
+
+
+    </script>
+</body>
+
+</html>

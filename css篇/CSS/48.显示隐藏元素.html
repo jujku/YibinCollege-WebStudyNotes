@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 让一个元素在页面中隐藏或者显示出来 */
+        /* display 显示隐藏
+        visibility 显示隐藏
+        overflow 溢出显示隐藏 */
+
+        /* display:none 隐藏对象
+        display:block 有可能不是为了转换元素，而是显示元素 */
+
+        .pink {
+            display: none;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .red {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+        /* visibility:visible 
+        visibility:hidden 
+        指定元素可见还是隐藏 */
+
+        .blue {
+            visibility: hidden;
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+
+        .green {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+
+        /* overflow对溢出的部分进行隐藏和显示 */
+        /* 默认是显示  hidden auto scroll */
+        .black {
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+            overflow: hidden;
+        }
+
+        .red2 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            overflow: scroll;
+        }
+
+        /* 溢出的部分显示滚动条 */
+        /* 如果把scroll 换成auto 就超出时才加滚动条 而scroll不管是否溢出都有滚动条 */
+    </style>
+</head>
+
+<body>
+    <div class="pink"></div>
+    <div class="red">不仅元素隐藏了 而且位置也没了</div>
+    <div class="blue"></div>
+    <div class="green">只会隐藏元素 不会让位置没了</div>
+    <div class="black">
+        溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏
+    </div>
+    <div class="red2">
+        溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏溢出溢出溢出隐藏
+    </div>
+
+</body>
+
+</html>

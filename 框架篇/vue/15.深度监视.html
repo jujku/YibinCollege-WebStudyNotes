@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="vue.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      {{number.a}}
+      <button @click="number.a++">btn</button>
+      <button @click="number.b++">btn</button>
+      <button @click="number = {f:1}">btn</button>
+    </div>
+
+    <script>
+      // 1,vue中的watch默认不监测对象内部值的改变(一层)
+      // 2,配置deep:true可以检测对象内部值改变(多层)
+
+      // vye自身可以检测对象内部值的改变，但Vue提供的watch默认不可以。
+      // 使用watch时更具数据的具体结构，决定是否采用深度监视
+
+      const vm = new Vue({
+        el: "#root",
+        data: {
+          number: {
+            a: 1,
+            b: 2,
+          },
+        },
+        watch: {
+          "number.a": {
+            handler(newValue, oldValue) {
+              console.log(newValue, oldValue);
+            },
+          },
+          number: {
+            deep: true, //深度监视
+            handler(newValue, oldValue) {
+              console.log("deep", newValue, oldValue);
+            },
+          },
+        },
+      });
+
+      //   当配置项里面只有handler项的时候可以简写
+      //   ishot(newValue,oldValue){
+      //     console.log();
+      //   }
+
+      // vm.$watch("ishot".function(newValue,oldValue){
+      //     console.log();
+      // })
+      // 写成函数的形式
+    </script>
+  </body>
+</html>

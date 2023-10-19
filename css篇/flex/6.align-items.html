@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+
+        /* align-items是侧轴的排列方式(适合单行) */
+      div {
+        display: flex;
+        width: 700px;
+        height: 400px;
+        background-color: pink;
+        justify-content: space-around;
+
+        /* align-items: flex-start; */
+        /* align-items: flex-end; */
+        /* align-items: center; */
+        align-items: stretch;
+        /* 拉伸 不能给子元素设置高度 */
+      }
+      span {
+        width: 150px;
+        /* height: 100px; */
+        background-color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span>1</span><span>2</span><span>3</span></span>
+    </div>
+  </body>
+</html>

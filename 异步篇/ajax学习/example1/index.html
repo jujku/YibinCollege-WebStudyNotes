@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        input {
+            display: block;
+            width: 400px;
+        }
+
+        textarea {
+            display: block;
+            width: 400px;
+            resize: none;
+            /* 文本域不能调整大小 */
+
+        }
+
+        span {
+            display: block;
+            float: right;
+            margin-right: 40px;
+            border-radius: 20px;
+            height: 30px;
+            padding-left: 1em;
+            padding-right: 1em;
+            line-height: 30px;
+        }
+
+        li {
+
+            display: block;
+            border-bottom: 1px solid;
+            line-height: 30px;
+            margin-top: 10px;
+        }
+
+        .verificationCode {
+            width: 100px;
+            height: 50px;
+            display: flex;
+            border: 1px black solid;
+            align-items: center;
+            justify-content: center;
+            user-select: none;
+            cursor: pointer;
+        }
+
+        .firstNumber {
+            font-size: 26px;
+            margin-right: 5px;
+        }
+
+        .operationNumber {
+            font-size: 26px;
+            margin-right: 5px;
+        }
+
+        .secodeNumber {
+            font-size: 26px;
+        }
+
+        .inputNumber {
+            padding: 9px;
+            width: 70px;
+            margin-left: 15px;
+            font-size: 24px;
+        }
+
+        .inputNumber::-webkit-inner-spin-button {
+            appearance: none;
+        }
+
+        .baibai {
+            display: flex;
+            margin: 0 auto;
+        }
+
+        #a {
+            float: left;
+            width: 20px;
+        }
+
+        #b {
+            float: left;
+            width: 20px;
+        }
+
+        .jia {
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="http://101.33.245.149:8080/demo1/add" id="add">
+        评论人:<input type="text" value="请输入你的名称...." name="username">
+        评论内容: <textarea id="" cols="30" rows="10" name="content"></textarea>
+        <div><button style="float: left;display: block;" type="submit">发表评论</button></div>
+        <div style="float: left;margin-left: 20px;">
+            <input id="a" value=" " disabled='disabled'>
+            <p class="jia">+</p>
+            <input id="b" value=" " disabled='disabled'>
+            <p class="jia">=</p>
+        </div>
+        <input type="text" style="float: left;display: block;width: 50px;margin-left: 5px">
+    </form>
+
+    <div class="zhanshi">
+        <ul id="cmt-list">
+            <li>
+                <span style="background-color: #F0AD4E;">评论时间:</span>
+                <span style="background-color: #5bc0de;">评论人:</span>
+                Item 1
+            </li>
+        </ul>
+    </div>
+
+    <!-- 验证码 -->
+    <div class="baibai">
+        <div class="verificationCode">
+            <div class="firstNumber"></div>
+            <div class="operationNumber"></div>
+            <div class="secodeNumber"></div>
+        </div>
+        <label style="line-height: 50px;height: 50px;margin: 0 15px;"> 正确答案</label>
+        <input class="inputNumber" type="number">
+    </div>
+
+
+    <script>
+        function getCommentList() {
+            var VSCODE_CORS_URL = {
+                key: "http://localhost:1337",
+                proxy: "http://101.33.245.149:8080"
+            };
+            $.ajax({
+                type: "get",
+                url: "http://localhost:1337/demo1/jz?VSCODE_CORS=" +
+                    JSON.stringify(VSCODE_CORS_URL),
+                success: function (res) {
+                    var jsObject = JSON.parse(res)
+                    console.log(res);
+                    // if (res.status !== 200) return alert('获取评论列表失败')
+                    var rows = []
+                    $.each(jsObject, function (i, item) {
+                        var str = '<li><span style="background-color: #F0AD4E;">评论时间:'
+                            + item.time + '</span><span style="background-color: #5bc0de;">评论人:' + item.userName + '</span>'
+                            + item.content + '</li>'
+                        rows.push(str)
+
+                    })
+                    $('#cmt-list').empty().append(rows.join(''))
+                }
+            })
+        }
+
+        getCommentList()
+
+        $(function () {
+            $('#add').submit(function (e) {
+                e.preventDefault()
+                var data = $(this).serialize()
+                $.post('http://101.33.245.149:8080/demo1/add', data, function (res) {
+                    if (res.status !== 201) {
+                        return alert('发表评论失败')
+                    }
+                    getCommentList()
+                    $('#add')[0].reset()
+                })
+            })
+        })
+    </script>
+    <script>
+        $(function () {
+            $.get('http://192.168.43.212/demo1_war/key', function (res) {
+
+                document.getElementById("a").value = res.a;
+                document.getElementById("b").value = res.b;
+
+
+            })
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --icon-color: #a1a1a1;
+  --bg-color: #dddddd;
+  --com-light-color: #f2f2f2;
+  --com-dark-color: #a3a2a3;
+}
+
+html {
+  font-size: 1px;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+input:focus {
+  border: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-color);
+  min-width: 1010rem;
+  min-height: 610rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 1000rem;
+  height: 600rem;
+  user-select: none;
+  border-radius: 10rem;
+  transition: all 0.2s;
+}
+
+main.chose {
+  box-shadow: 0rem 0rem 0rem 0rem var(--bg-color) inset,
+    -4rem -4rem 4rem var(--com-light-color) inset,
+    4rem 4rem 4rem var(--com-dark-color) inset;
+}
+
+.init-btn {
+  cursor: pointer;
+  font-size: 14rem;
+  color: var(--icon-color);
+}
+
+.init-btn:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.move-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40rem;
+  height: 40rem;
+  border-radius: 20rem;
+  box-shadow: 0rem 0rem 0rem 0rem var(--bg-color) inset,
+    2rem 2rem 2rem var(--com-light-color) inset,
+    -2rem -2rem 2rem var(--com-dark-color) inset;
+  transition: all 0.2s;
+}
+
+.move-btn.chose {
+  box-shadow: 0rem 0rem 0rem 0rem var(--bg-color) inset,
+    -2rem -2rem 10rem var(--com-light-color) inset,
+    4rem 4rem 5rem var(--com-dark-color) inset;
+}
+
+.search-box {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  padding: 10rem 10rem;
+  border-radius: 40rem;
+  box-shadow: 3rem 3rem 10rem var(--com-dark-color),
+    -3rem -3rem 10rem var(--com-light-color);
+  cursor: pointer;
+}
+
+.search-box > input {
+  margin-left: 10rem;
+  width: 400rem;
+  height: 40rem;
+  padding: 0 10rem;
+  background-color: var(--bg-color);
+  font-size: 18rem;
+  border-radius: 8rem 20rem 20rem 8rem;
+  box-shadow: 0rem 0rem 0rem 0rem var(--bg-color) inset,
+    -4rem -4rem 5rem var(--com-light-color) inset,
+    4rem 4rem 5rem var(--com-dark-color) inset;
+}
+
+.shortcut-box {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  padding: 5rem 10rem 10rem 10rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20rem;
+  box-shadow: 3rem 3rem 10rem var(--com-dark-color),
+    -3rem -3rem 10rem var(--com-light-color);
+}
+
+.shortcut {
+  margin-top: 5rem;
+  width: 100rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shortcut-icon {
+  width: 60rem;
+  height: 60rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shortcut-icon > svg {
+  width: 36rem;
+  height: 36rem;
+}
+
+.shortcut-describe {
+  margin-top: 5rem;
+  font-size: 16rem;
+  color: #606060;
+  max-width: 100rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

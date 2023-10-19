@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <button id="first">点我</button>
+    <script>
+        // 事件是可以被js侦测到的一个行为
+        // 触发 响应机制
+        // 事件是由三部分组成
+        // 1.事件源
+        // 事件源 事件被处罚的对象 谁  按钮
+
+        var btn = document.getElementById('first');
+
+        // 2.事件类型
+        //  如何触发 什么事件 比如鼠标点击(onclic) 还是鼠标经过
+
+        btn.onclick = function () {
+            alert('你点我干嘛！')
+        }
+
+        // 3.事件处理程序 
+        // 通过一个函数赋值的方式 完成
+
+
+        // // 常见的鼠标事件
+        // onclick  鼠标点击左键触发
+        // onmouseover  鼠标经过触发
+        // onmouseout 鼠标离开触发
+        // onfocus 获得鼠标焦点触发
+        // onblur 失去鼠标焦点触发
+        // onmousemovw  鼠标移动触发
+        // onmouseup 鼠标弹起触发
+        // onmousedown 鼠标按下触发
+
+    </script>
+
+</body>
+
+</html>

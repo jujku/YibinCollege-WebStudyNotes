@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+
+</head>
+
+<body>
+    <!-- 监听表单 -->
+    <form action="/login" id="form1" method="post">
+        <input type="text" name="username">
+        <input type="password" name="password">
+        <button type="submit">提交</button>
+    </form>
+
+    <script>
+        $(function () {
+            $('#form1').submit(function (e) {
+                alert('监听到了表带的提交事件')
+                e.preventDefault();
+                // 阻止表单的默认提交行为
+                var data = $(this).serialize();
+                console.log(data);
+            })
+        })
+    </script>
+    <div class="笔记">
+        serialize()函数
+        可以一次性获得表带中所有的数据
+        $(selector).serialize
+
+        获取时必须给每个input添加name属性
+        得到的结果是键值对
+        username=用户名的值&password=密码
+    </div>
+</body>
+
+</html>

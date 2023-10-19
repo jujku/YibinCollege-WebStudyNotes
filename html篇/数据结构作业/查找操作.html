@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      span,
+      input {
+        display: block;
+        margin-top: 10px;
+      }
+
+      div {
+        border: 1px solid black;
+        margin-top: 20px;
+        width: 300px;
+        padding: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <span>这是你的线性表</span>
+      <input type="text" class="creat" />
+    </div>
+    <div>
+      <input type="text" style="width: 50px" class="add" />
+      <button id="add">添加</button>
+    </div>
+    <div>
+      <input type="text" style="width: 50px" class="findone" />
+      <button id="sequentialSearch">顺序查找</button
+      ><input
+        type="text"
+        style="width: 50px; display: inline"
+        placeholder="结果"
+        class="resultone"
+      />
+    </div>
+    <div>
+      <input type="text" style="width: 50px" class="findtwo" />
+      <button id="findtwo">折半查找</button
+      ><input
+        type="text"
+        style="width: 50px; display: inline"
+        placeholder="结果"
+        class="resulttwo"
+      />
+    </div>
+    <script>
+      function OrderedList() {
+        this.items = [];
+      }
+
+      OrderedList.prototype.print = function () {
+        return this.items.join(" ");
+      };
+
+      OrderedList.prototype.add = function (item) {
+        // 添加一个新元素
+        this.items.push(item);
+        // 对数组排序
+        this.items.sort(function (a, b) {
+          return a - b;
+        });
+      };
+
+      OrderedList.prototype.sequentialSearch = function (item) {
+        // 遍历列表中的每一项
+        for (let i = 0; i < this.items.length; i++) {
+          // 显示查找过程
+          console.log(this.items[i]);
+          if (this.items[i] == item) {
+            // 如果找到了元素，则返回它的索引
+            return i;
+          }
+        }
+
+        // 如果没有找到元素，则返回 -1
+        return -1;
+      };
+
+      OrderedList.prototype.binarySearch = function (target) {
+        // 定义左右边界
+        let left = 0;
+        let right = this.items.length - 1;
+        // 循环查找
+        while (left <= right) {
+          // 计算中间索引值
+          let mid = Math.floor((left + right) / 2);
+
+          // 比较中间元素的值和查找目标的值
+          if (this.items[mid] == target) {
+            console.log(this.items[mid]);
+            // 如果相同，查找成功
+            return mid;
+          } else if (this.items[mid] < target) {
+            // 显示查找过程
+            console.log(this.items[mid]);
+            // 如果中间元素的值小于查找目标的值，则在右子区间继续查找
+            left = mid + 1;
+          } else {
+            // 显示查找过程
+            console.log(this.items[mid]);
+            // 如果中间元素的值大于查找目标的值，则在左子区间继续查找
+            right = mid - 1;
+          }
+        }
+
+        // 如果查找失败，返回 -1
+        return -1;
+      };
+
+      // 使用示例
+      var list = new OrderedList();
+
+      let creat = document.querySelector(".creat");
+      let add = document.querySelector(".add");
+      let findone = document.querySelector(".findone");
+      let resultone = document.querySelector(".resultone");
+      let findtwo = document.querySelector(".findtwo");
+      let resulttwo = document.querySelector(".resulttwo");
+
+      let addbtn = document.querySelector("#add");
+      let sequentialSearchbtn = document.querySelector("#sequentialSearch");
+      let binarySearchbtn = document.querySelector("#findtwo");
+
+      addbtn.addEventListener("click", function () {
+        list.add(Number(add.value));
+        add.value = "";
+        creat.value = list.print();
+      });
+
+      sequentialSearchbtn.addEventListener("click", function () {
+        resultone.value = list.sequentialSearch(findone.value);
+      });
+
+      binarySearchbtn.addEventListener("click", function () {
+        resulttwo.value = list.binarySearch(findtwo.value);
+      });
+    </script>
+  </body>
+</html>

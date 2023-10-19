@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YBU学生管理系统</title>
+    <style>
+      .input {
+        margin: 50px auto;
+        height: 14px;
+        width: 600px;
+      }
+      .input input {
+        outline: none;
+        border-radius: 3px;
+        border-color: gainsboro;
+        border-style: solid;
+      }
+      .input input:nth-of-type(1) {
+        display: inline-block;
+        width: 80px;
+      }
+      .input input:nth-of-type(2) {
+        display: inline-block;
+        width: 60px;
+      }
+      .input input:nth-of-type(3) {
+        display: inline-block;
+        width: 20px;
+      }
+      .input input:nth-of-type(4) {
+        display: inline-block;
+        width: 60px;
+      }
+      table {
+        margin: 100px auto;
+      }
+      thead {
+        background-color: gainsboro;
+      }
+      tbody td {
+        padding: 0 4px;
+        text-align: center;
+      }
+      table tbody td p {
+        cursor: pointer;
+        color: red;
+        line-height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="input">
+      <span>学号:</span><input type="text" class="id" /> <span>姓名:</span
+      ><input type="text" class="name" /> <span>性别:</span
+      ><select class="sex" id="">
+        <option selected>男</option>
+        <option>女</option>
+      </select>
+      <span>年龄:</span><input type="text" class="age" /> <span>地址:</span
+      ><input type="text" class="city" />
+      <button>录入</button>
+    </div>
+    <table border="1px" cellpadding="4px" cellspacing="0">
+      <thead>
+        <tr>
+          <th>学号</th>
+          <th>姓名</th>
+          <th>姓别</th>
+          <th>年龄</th>
+          <th>地址</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script>
+      function getdatas() {
+        let datas = JSON.parse(localStorage.getItem("datas"));
+        if (datas) {
+          if (datas.length == 0) {
+            let datas = [
+              {
+                studentID: 210104113,
+                sname: "蔡昌宏",
+                sex: "男",
+                age: "19",
+                city: "宜宾",
+              },
+              {
+                studentID: 210104114,
+                sname: "曹家垚",
+                sex: "男",
+                age: "20",
+                city: "宜宾",
+              },
+              {
+                studentID: 210104115,
+                sname: "雷超",
+                sex: "男",
+                age: "20",
+                city: "宜宾",
+              },
+              {
+                studentID: 210104116,
+                sname: "辛禹杉",
+                sex: "男",
+                age: "18",
+                city: "广安",
+              },
+            ];
+            localStorage.setItem("datas", JSON.stringify(datas));
+            return datas;
+          }
+          return datas;
+        } else {
+          let datas = [
+            {
+              studentID: 210104113,
+              sname: "蔡昌宏",
+              sex: "男",
+              age: "19",
+              city: "宜宾",
+            },
+            {
+              studentID: 210104114,
+              sname: "曹家垚",
+              sex: "男",
+              age: "20",
+              city: "宜宾",
+            },
+            {
+              studentID: 210104115,
+              sname: "雷超",
+              sex: "男",
+              age: "20",
+              city: "宜宾",
+            },
+            {
+              studentID: 210104116,
+              sname: "辛禹杉",
+              sex: "男",
+              age: "18",
+              city: "广安",
+            },
+          ];
+          localStorage.setItem("datas", JSON.stringify(datas));
+          return datas;
+        }
+      }
+
+      function render() {
+        let datas = getdatas();
+        const tbody = document.querySelector("tbody");
+        tbody.innerHTML = "";
+        for (let i = 0; i < datas.length; i++) {
+          const tr = document.createElement("tr");
+          tbody.appendChild(tr);
+          for (let v in datas[i]) {
+            const td = document.createElement("td");
+            td.innerHTML = datas[i][v];
+            tr.appendChild(td);
+          }
+          const td = document.createElement("td");
+          td.innerHTML = `<p data-id = ${i}>删除</p>`;
+          tr.appendChild(td);
+        }
+      }
+      render();
+
+      const submit = document.querySelector("button");
+      submit.addEventListener("click", () => {
+        let data = {};
+        let datas = getdatas();
+        data.studentID = datas[datas.length - 1].studentID + 1;
+        data.sname = document.querySelector(".name").value;
+        data.sex = document.querySelector(".sex").value;
+        data.age = document.querySelector(".age").value;
+        data.city = document.querySelector(".city").value;
+        datas.push(data);
+        localStorage.setItem("datas", JSON.stringify(datas));
+        render();
+      });
+
+      const tbody = document.querySelector("tbody");
+      tbody.addEventListener("click", (e) => {
+        console.log(typeof e.target.tagName);
+        console.log(e.target.tagName);
+        console.log(e.target.tagName == "P");
+        if (e.target.tagName == "P") {
+          datas = getdatas();
+          datas.splice(e.target.dataset.id, 1);
+          localStorage.setItem("datas", JSON.stringify(datas));
+          render();
+        }
+      });
+    </script>
+  </body>
+</html>

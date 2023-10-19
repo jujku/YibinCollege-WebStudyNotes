@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //  es6之前 全局作用域 和 局部作用域
+        // 全局作用域 整个 script 标签  或者是一个单独的js文件
+        // 如果在函数内部 没有声明直接赋值的变量也属于全局变量 (不建议使用)
+        var num = 10;
+        console.log(num);
+        // 局部作用域(函数作用域) 在函数内部就是局部作用域 这个代码的名字只在函数内部起效果和作用
+        function fn() {
+            //局部作用域
+            var num = 20;
+            console.log(num);
+        }
+        fn();
+
+        // 全局变量只有浏览器关闭才会销毁
+        // 局部变量 当我们程序完毕 就会销毁 比较节约内存
+
+        //js现阶段 没有块级作用域  es6有块级作用域
+        //块级作用域 {} if{} for{}
+        // if外面的也可以用if里面声明的变量
+
+    </script>
+</head>wwwww
+
+<body>
+
+    h1
+
+</body>
+
+</html>

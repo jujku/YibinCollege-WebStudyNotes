@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        position: absolute;
+        left: 100px;
+        top: 0;
+        cursor: grabbing;
+      }
+      .selected {
+        border: solid 1px black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <!-- <div class="box2"></div> -->
+
+    <script>
+      let isDragging = false;
+      let initialX, initialY;
+      const box = document.querySelector(".box");
+
+      box.addEventListener("mousedown", function (e) {
+        isDragging = true;
+        initialX = e.clientX - this.getBoundingClientRect().left;
+        initialY = e.clientY - this.getBoundingClientRect().top;
+      });
+      document.addEventListener(
+        "mousemove",
+        function (e) {
+          if (!isDragging) return;
+
+          const offsetX = e.clientX - initialX;
+          const offsetY = e.clientY - initialY;
+
+          this.style.left = offsetX + "px";
+          this.style.top = offsetY + "px";
+        }.bind(box)
+      );
+      box.addEventListener("mouseup", function (e) {
+        isDragging = false;
+      });
+    </script>
+  </body>
+</html>

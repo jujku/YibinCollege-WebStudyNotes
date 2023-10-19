@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 如果爸爸没有定位 会以最近的一个有定位的父级元素 */
+        /* 列如爷爷 */
+
+        /* 绝对定位是不占原来的位置 他会脱标  */
+        .fa {
+            width: 500px;
+            height: 500px;
+            background-color: blue;
+            position: relative;
+
+        }
+
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="fa">
+        <div class="son"></div>
+    </div>
+</body>
+
+</html>

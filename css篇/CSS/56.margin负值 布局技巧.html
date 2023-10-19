@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 列如商品页面 排列紧密的物品 会有一个细线边框 如果直接加border会重叠 不好看 -->
+    <!-- 如果给每个盒子加上一个margin-left 就可以了 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li {
+            width: 100px;
+            height: 200px;
+            border: 1px solid black;
+            float: left;
+            margin-left: -1px;
+        }
+
+        ul li:hover {
+            position: relative;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <p>但是这个做鼠标焦点事件 的时候右边的盒子会压住左边盒子的右边框</p>
+    <p>我们可以给 焦点事件 在加一个定位 让他压住标准流</p>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      // 这里的 iterator 接口就是 对象里面的一个属性
+      // 任何数据结构只要部署 iteator 接口 就可以完成遍历操作
+      // ES6 创造了一种新的遍历命令 for....of 循环，iterator 接口主要供for...of消费
+
+      // 原生具备 iterator 接口的数据(可用for of遍历)
+      // Array Arguments Set Map String TypedArray NodeList
+
+      // 工作原理
+      // 创建一个指针对象，指向当前数据结构的起始位置
+      // 第一次调用 next 方法 指针自动指向数据结构的第一个成员
+      // 接下来不断调用 next 方法 指针一直往后移动 直到指向最后一个成员
+
+      const arr = ["一", "二", "三", "四"];
+
+      // for in 是遍历属性名的 for of遍历迭代器的
+
+      for (let v of arr) {
+        console.log(v);
+      }
+
+      // 原理
+      console.log(arr); // 里面会有一个symbol方法
+
+      let iterators = arr[Symbol.iterator]();
+
+      console.log(iterators);
+
+      console.log(iterators.next().done);
+      console.log(iterators.next());
+      console.log(iterators.next());
+      console.log(iterators.next());
+      console.log(iterators.next());
+      console.log(iterators.next());
+      console.log(iterators.next().done);
+    </script>
+  </body>
+</html>

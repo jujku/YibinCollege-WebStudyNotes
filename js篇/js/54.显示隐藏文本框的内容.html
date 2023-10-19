@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        width: 600px;
+        border: 1px solid green;
+        margin: 100px auto;
+        border-radius: 100px;
+
+    }
+
+    .search {
+        display: block;
+        margin: 0 auto;
+        width: 396px;
+        height: 37px;
+        border: none;
+        outline: none;
+        font-size: 14px;
+        text-align: center;
+
+    }
+</style>
+
+
+<body>
+    <input type="radio" onclick="alert('ads')">
+    <input type="radio" onfocus="alert('ads')">
+    <div class="box">
+        <input type="text" class="search" placeholder="点击输入搜索内容">
+    </div>
+    <script>
+        var search = document.getElementsByClassName('search')
+
+        search[0].onfocus = function () {
+            search[0].placeholder = '';
+        }
+        search[0].onblur = function () {
+            search[0].placeholder = '点击输入搜索内容'
+        }
+    </script>
+</body>
+
+</html>

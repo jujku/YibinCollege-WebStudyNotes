@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="vue.js"></script>
+  </head>
+
+  <body>
+    <div id="root">
+      <div :style="styleObj">asdf</div>
+      <!--对象写法-->
+      <div :style="[styleObj,styleObj2]">asdf</div>
+      <!--  数组写法  -->
+    </div>
+    <script>
+      const vm = new Vue({
+        el: "#root",
+        data() {
+          return {
+            styleObj: {
+              fontSize: "40px",
+              color: "red",
+            },
+            styleObj2: {
+              backgroundColor: "blue",
+            },
+          };
+        },
+      });
+    </script>
+  </body>
+</html>

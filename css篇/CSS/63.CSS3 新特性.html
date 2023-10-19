@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 选择器
+    css盒子模型
+    其他特性 -->
+
+
+    <style>
+        /* <!-- 属性选择器 -->
+    <!-- 可以根据元素特定的属性来选择 --> */
+        input[value] {
+            /* 选择有 value的值 */
+            color: pink;
+            /* 选择符
+            E[att] 选择具有att属性到底E元素
+            E[att="val"] 选择具有att属性且属性值等于val的E元素  重点部分！
+            E[att^="val"] 选择具有att属性 并且值以val开头的E元素
+            E[att$="val"] 以val结尾
+            E[att*="val"] 含有val的 */
+        }
+
+        /* 这个选择器的权重是 11 因为input还算1 */
+
+        /* 结构伪类选择器 */
+        /* 主要根据文档结构 */
+        /* '""E:first-child""'  父元素中的第一个子元素
+        E:"""last-child """父元素中的最后一个子元素
+        列如
+        ul li:first-child{} */
+
+        /* """"E:nth-child(n)""""  重点
+        n 可以是数字 关键字 公式
+        如果是数字 就是选择第几个子元素
+        如果是关键字 even偶数 odd奇数
+        如果是公式 如果是公式的话 是从0开始 并且0和其他超过元素的会被忽略 
+        ol li:nth-child(n) 从0开始 每次加 1 这里面必须是n 相当于全选 */
+        /* 公式 2n 偶数
+        2n+1 奇数
+        5n 5 10 15 20
+        n+5 5 6 7... 从第五个开始
+        -n+5  前五个 包括第五个   */
+
+        /* 把child换成type */
+        /* E:first-of-type */
+        /* E:last-of-type */
+        /* E:nth-of-type(n) */
+        section div:nth-of-type(1) {
+            background-color: blue;
+        }
+
+        /* child 是先看序号再看 子元素
+        type 是先把对应的子元素 排序 在来序号 */
+    </style>
+</head>
+
+<body>
+
+    <input type="text" value="">
+    <input type="text">
+    <p style="color: red;"> 属性选择器 伪类选择器 类选择器 权重都为10</p>
+    <section>
+        <p>sdf</p>
+        <div>sadf</div>
+    </section>
+</body>
+
+</html>

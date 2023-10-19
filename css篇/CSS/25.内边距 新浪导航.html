@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* padding 内边距 */
+        /* padding复合属性 */
+        /* 一个值是四边
+        两个值是 上下 和 左右
+        三个值是 上 左右 下 
+        四个值是 上 右 下 左 顺时针 */
+
+        /* padding 会影响盒子实际大小 */
+        .one {
+            width: 200px;
+            height: 200px;
+            border-style: solid;
+        }
+
+        .two {
+            width: 200px;
+            height: 200px;
+            border-style: solid;
+            padding: 20px;
+        }
+
+        /* padding的特性 在做导航栏的时候 如果有不同数字每个格子 用padiing会看着更规则 间隔一样 */
+        .nav {
+            height: 41px;
+            border-top: 3px solid #ff8500;
+            border-bottom: 1px solid #edeef0;
+            color: #4c4c4c;
+            background-color: #fcfcfc;
+            line-height: 41px;
+        }
+
+        .nav a {
+            font-size: 14px;
+            color: #4c4c4c;
+            text-decoration: none;
+            display: inline-block;
+            /* 注意转换行内块元素 */
+            padding: 0 20px;
+            /* 注意padding的作用 */
+
+        }
+
+        .nav a:hover {
+            background-color: #eee;
+            color: #ff8500;
+        }
+
+        /* 之前做的小米侧边栏 左侧应该用padding 缩进更好一点  text-indent 不精确*/
+    </style>
+</head>
+
+<body>
+    <!-- <div class="one"></div>
+    <div class="two"></div> -->
+    <div class="nav">
+        <a href="#">新浪导航</a>
+        <a href="#">手机新浪网</a>
+        <a href="#">移动客户端</a>
+        <a href="#">微博</a>
+        <a href="#">三个字</a>
+    </div>
+    <p style="color: red;">注意 块级元素和父级一样宽 不是继承父级元素的宽度</p>
+    <p style="color: red;">注意 当没定义宽度的时候 padding不会撑开盒子</p>
+    <p style="color: red;">注意 div父级定义了宽度时 ,如定义了一个子级P也没定义宽度 也不会撑开盒子</p>
+
+</body>
+
+</html>

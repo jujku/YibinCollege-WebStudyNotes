@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .all:hover {
+        color: red;
+        cursor: pointer;
+    }
+
+    th {
+        background-color: aqua;
+
+    }
+</style>
+
+<body>
+    <table border="1px" align="center" cellspacing='0px' cellpadding='5px'>
+        <thead>
+            <tr>
+                <th>
+                    <p class="all">全选</p>
+                </th>
+                <th>
+                    姓名
+                </th>
+                <th>
+                    价格
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <input type="checkbox">
+                </td>
+                <td>
+                    苹果
+                </td>
+                <td>
+                    100元
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox">
+                </td>
+                <td>
+                    橘子
+                </td>
+                <td>
+                    1000元
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox">
+                </td>
+                <td>
+                    葡萄
+                </td>
+                <td>
+                    10元
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox">
+                </td>
+                <td>
+                    辛禹杉
+                </td>
+                <td>
+                    210104116
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        var all = document.querySelector('.all')
+        var checkbox = document.querySelectorAll('input')
+
+        var flag = 0;
+
+        all.onclick = function () {
+            if (flag == 0) {
+                for (var index = 0; index < checkbox.length; index++) {
+                    checkbox[index].checked = true
+                    this.style.color = 'red'
+                    this.innerHTML = '已全选'
+                    flag = 1
+                }
+            } else {
+                for (var index = 0; index < checkbox.length; index++) {
+                    checkbox[index].checked = false;
+                    this.style.color = '';
+                    this.innerHTML = '全选'
+                    flag = 0;
+                }
+            }
+        }
+        for (var index = 0; index < checkbox.length; index++) {
+            checkbox[index].onclick = function () {
+                var flag2 = 1;
+                for (var index = 0; index < checkbox.length; index++) {
+                    if (checkbox[index].checked == false) {
+                        flag2 = 0;
+                    }
+                }
+                if (flag2 == 1) {
+                    all.style.color = 'red'
+                    all.innerHTML = '已全选'
+                    flag = 1;
+                } else {
+                    all.style.color = '';
+                    all.innerHTML = '全选'
+                    flag = 0;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

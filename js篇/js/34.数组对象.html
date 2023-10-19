@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 数组创建的两种方式
+        // 1，字面量方式
+        // var arr = [1,2,3]
+        // 2.new Array（）
+        // var arr1 = new Array(2) 这个2表示长度为2 有两个空数组
+        // var arr1 = new Array(2,3) 创建了一个有2和3元素的数组
+
+        // 检测是否为数组
+        // 1， instanceof 运算符
+        var arr = [1, 2, 3]
+        var obj = {}
+        console.log(arr instanceof Array); //true
+        console.log(obj instanceof Array); //flase
+
+        function reverse(arr) {
+            if (arr instanceof Array) {
+                var newArr = []
+                for (var i = arr.length - 1; i >= 0; i--) {
+                    newArr[newArr.length] = arr[i];
+                }
+                return newArr;
+            }
+            else {
+                return '不是数组'
+            }
+        }
+        console.log(reverse(arr));
+        console.log(reverse(obj));
+        //2.Array.isArray(参数)  ie9以上版本支持
+        console.log(Array.isArray(arr));
+        console.log(Array.isArray(obj));
+
+
+        // 添加删除数组元素的方法
+        // 1.push() 再我们数组的末尾 添加一个或多个数组元素
+        var arr = [1, 2, 3];
+        arr.push(4, 'pink');
+        console.log(arr);
+        console.log(arr.push(4, 'pink')); //push完毕之后返回的结果是  新数组的长度
+        //2.unshift 在数组开头添加
+        var arr = [1, 2, 3]
+        console.log(arr.unshift('pink'));
+        console.log(arr);
+        // 也是返回的数组长度
+
+        // 3.pop 删除末尾的元素
+        var arr = [1, 2, 3]
+        console.log(arr.pop());  //返回的是删除的元素
+        console.log(arr);
+        //没有参数 一次只能删除一个
+        var arr = ['ruifeng', 1, 2, 3]
+        console.log(arr.shift());
+        console.log(arr);
+        //和POP一样，只不过是删除的第一个元素
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

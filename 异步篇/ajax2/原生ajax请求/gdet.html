@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <input type="text" name="username">
+        <input type="text" name="password">
+        <button type="submit">提交</button>
+    </form>
+    <script>
+        const form = document.querySelector("form")
+        const button = document.querySelector("button")
+        const input = document.querySelectorAll("input")
+
+        button.addEventListener("click", function (e) {
+            e.preventDefault()
+            let formData = new FormData(form);
+            let xhr = new XMLHttpRequest()
+            url = "http://localhost:5000/book/add"
+            xhr.open("POST", url)
+            // xhr.withCredentials = true;
+            xhr.send(formData)
+            // xhr.addEventListener("readystatechange",function())
+        })
+    </script>
+</body>
+
+</html>

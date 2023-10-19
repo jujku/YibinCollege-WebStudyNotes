@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* <P>多行（兼容性问题很大 适合于 webkit浏览器 和 移动端了解）</P> */
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /* 弹性伸缩盒子模型展示 */
+            display: -webkit-box;
+            /* 限制在一个块元素显示的文本行数 */
+            -webkit-line-clamp: 2;
+            /* 设置或检索伸缩盒子对象的子元素的排列方式 */
+            -webkit-box-orient: vertical;
+        }
+    </style>
+</head>
+
+<body>
+    <p>省略号问题 分单行和多行</p>
+    <br>
+    <p>单行</p>
+    <!-- 先强制一行显示文本 -->
+    <p>white-space: nowrap;(默认是 normal 自动换行)</p>
+    <!-- 在将超出的部分隐藏 -->
+    <p>overflow:hidden;</p>
+    <!-- 文字用省略号替代超出的部分 -->
+    <p>text-overflow: ellipsis;</p>
+
+    <div style="width:100px;height:100px;background-color: red;" class="div">撒发射点发射点发啊手动阀手动阀我的</div>
+    <br>
+    <br>
+    <br>
+    <div>多行多行多行多行多行多行多行多行多行</div>
+    <p>省略号后面的一般用盒子高度解决 </p>
+    <p style="color: red;">用类选择器没有</p>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 函数参数的默认值 -->
+    <script>
+        // 1.形参的一个初始值  具有默认值的参数 一般位置靠后。
+        function add(a, b, c = 10) {
+            return a + b + c;
+        }
+        console.log(add(1, 2));
+        console.log(add(1, 2, 5));
+
+        // 2.与结构赋值结合 也可以赋予默认值
+
+        function connect({ host = "127.0.0.1", username, password, port }) {
+            console.log(host);
+            console.log(username);
+            console.log(password);
+            console.log(port);
+        }
+        connect({
+            host: 'baidu.com',
+            username: 'root',
+            password: "root",
+            port: 3306
+        })
+    </script>
+</body>
+
+</html>

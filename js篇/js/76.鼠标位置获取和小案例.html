@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    img {
+      position: absolute;
+    }
+  </style>
+
+  <body>
+    <img src="../QQ截图20220325031638.png" alt="" />
+    <script>
+      // document.addEventListener("click", function (e) {
+      //     console.log(e.clientX);
+      //     console.log(e.clientY)
+      //     console.log("相对于浏览器可视区域");
+      //     console.log(e.pageX)
+      //     console.log(e.pageY)
+      //     console.log("相对于文档页面");
+      //     console.log(e.screenX)
+      //     console.log(e.screenY)
+      //     console.log("相对于电脑屏幕");
+      // })
+
+      // 鼠标跟踪小案例
+      var img = document.querySelector("img");
+      document.addEventListener("mousemove", function (e) {
+        var y = e.pageY;
+        var x = e.pageX;
+        console.log(y);
+        console.log(x);
+        img.style.top = y + "px";
+        img.style.left = x + "px";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="vue.js"></script>
+  </head>
+  <body>
+    <div class="root">
+      遍历数组
+      <ul>
+        <li v-for="(p,index) of persons" :key="index">
+          {{p.name}}-{{p.age}}-{{index}}
+        </li>
+      </ul>
+      遍历对象
+      <ul>
+        <li v-for="(val,key) of objects " :key="index">{{key}}-{{val}}</li>
+      </ul>
+      不常用 字符串 和 指定次数
+    </div>
+
+    <script>
+      const vm = new Vue({
+        el: ".root",
+        data() {
+          return {
+            persons: [
+              { id: 1, name: "小留", age: 18 },
+              { id: 2, name: "小王", age: 17 },
+              { id: 3, name: "小张", age: 19 },
+            ],
+            objects: { id: 3, name: "小张", age: 19 },
+          };
+        },
+      });
+    </script>
+  </body>
+</html>

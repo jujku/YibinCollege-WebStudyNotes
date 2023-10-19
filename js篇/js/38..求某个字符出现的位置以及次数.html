@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 把 f 再字符串里面所有的 位置 打印出来
+        // indexOf 第二个参数是从哪里查找 如果查找到最后都没有的话就返回-1
+        var str = 'fasdfasdfasdfdfadfeewqwefds'
+        var index = str.indexOf('f');
+        var num = 0;
+        while (index != -1) {
+            console.log(index);
+            num++;
+            index = str.indexOf('f', index + 1)
+        }
+        console.log(num + '次');
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

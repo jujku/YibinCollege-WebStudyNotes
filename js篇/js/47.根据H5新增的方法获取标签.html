@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">this is class</div>
+    <div class="box">this is class</div>
+    <script>
+        // 根据类名 返回元素的集合
+        var boxs = document.getElementsByClassName('box')
+        console.log(boxs);
+
+        // 选择器 选择
+        //返回指定选择器的第一个元素对象 不是集合了
+        // document.querySelector
+        // 不管是标签 类 还是 id都是选的第一个
+        var box = document.querySelector('.box');
+        console.log(box);
+
+        // document.querySelectorAll()返回指定选择器的所有对象的集合
+
+
+    </script>
+
+</body>
+
+</html>

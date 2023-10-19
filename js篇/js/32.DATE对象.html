@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Date() 日期对象 是一个构造函数 必须使用new 来调用和创建我们的日期对象;
+        // 因为是 构造函数所以要用 new
+        var arr = new Array() // 创建了一个数组对象
+        var obj = new Object() // 创建了一个对象实例
+        // 1, 使用Date
+        var date = new Date();
+        console.log(date);
+        // 参数的常用写法  数字型  2019,10,01  或者 字符型  '2019-10-1 13:6:25'比较常用
+        var date1 = new Date(2019, 10, 1)
+        console.log(date1);  //返回的是 11月 不是10月
+        var date2 = new Date('2019-10-1 8:8:8');
+        console.log(date2); //返回的是10月
+        // Date是构造函数 必须实例化后才能使用
+
+        // 日期格式化
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

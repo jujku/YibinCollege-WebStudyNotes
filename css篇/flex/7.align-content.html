@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        display: flex;
+        width: 700px;
+        height: 400px;
+        background-color: pink;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        /* 相比于 align-items多了这两个属性 */
+        /* align-content: space-around; */
+        align-content: space-between;
+      }
+      span {
+        margin: 0 10px;
+        width: 150px;
+        height: 100px;
+        background-color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span
+      ><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+    </div>
+  </body>
+</html>

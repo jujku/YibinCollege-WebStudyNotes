@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clearfix:before,
+        /* 记住多个选择器有逗号 */
+        .clearfix:after {
+            content: "";
+            display: table;
+            /* 转换成表格 后面讲为什么 */
+            /* 前面和后面都闭合了 */
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+        .box {
+            width: 1000px;
+            background-color: red;
+        }
+
+        .one {
+            width: 100px;
+            height: 100px;
+            float: left;
+            background-color: aqua;
+        }
+
+        .two {
+            width: 100px;
+            height: 100px;
+            float: left;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box clearfix">
+        <div class="one"></div>
+        <div class="two"></div>
+    </div>
+</body>
+
+</html>

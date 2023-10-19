@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // ES6 允许按照一定模式从数组和对象种提取值，对变量进行赋值
+        // 这叫做结构赋值
+
+        // 1.数组的结构
+        const F4 = ['睿风哥哥', '金武桑', '磊磊', '宋小宝']
+        let [rui, liu, zhao, song] = F4
+
+        console.log(rui);
+        console.log(liu);
+        console.log(zhao);
+        console.log(song);
+
+        // 2.对象的解构
+        const zhaob = {
+            name: "赵本山",
+            sex: "男",
+            xiaoping: function () {
+                console.log("我会讲小品");
+            }
+        }
+
+        let { name, sex, xiaoping } = zhaob
+        console.log(name);
+        console.log(sex);
+        console.log(xiaoping);
+
+        xiaoping()
+
+        zhaob.xiaoping()
+
+        // 注意对象的解构赋值必须是 同名
+
+
+    </script>
+</body>
+
+</html>

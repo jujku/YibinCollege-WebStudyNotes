@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 加了一堆type  -->
+    <!-- email url date time
+    month week number tel search color -->
+    <input type="color">
+    <!-- 重点 number tel search -->
+
+    <p>新增的表单属性</p>
+    required 不能为空<br>
+    placeholder 表单的提示信息 可以用伪类选择器改样式<br>
+    autofocus 页面加载完毕后 自带聚焦到该表单<br>
+    autocomplete off/on 默认是开启的（前提 必须成功提交过 而且 要用name，可以有提交记录）<br>
+    <form action="">
+        <input type="text" name="pig" autocomplete="on">
+        <button type="submit">提交</button>
+    </form>
+    multiple 可以多选文件提交
+    <br>
+    <input type="file" multiple>
+</body>
+
+</html>

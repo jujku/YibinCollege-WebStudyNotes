@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .father {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+    }
+
+    .son {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+    }
+</style>
+
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <script>
+        // 1.从 doucment 到 elenment是捕获阶段。
+        // 2.从 elenment 到 doucment是冒泡阶段
+        // 3.js只能处于捕获阶段或者冒泡阶段其中一个阶段
+        // 4.主要研究冒泡阶段
+        // 5.第三个参数如果是 True 就是捕获阶段 如果没有或者是False就是冒泡阶段
+
+        var father = document.querySelector(".father")
+        var son = document.querySelector(".son")
+
+        // 这是捕获阶段的代码
+        /*son.addEventListener("click", function () {
+           alert("son")
+        }, true)
+        father.addEventListener("click", function () {
+             alert("father")
+        }, true) */
+
+        //这是冒泡阶段的代码
+        son.addEventListener("click", function () {
+            alert("son")
+        }, false)
+        father.addEventListener("click", function () {
+            alert("father")
+        })
+        document.addEventListener("click", function () {
+            alert("document")
+        })
+    </script>
+</body>
+
+</html>

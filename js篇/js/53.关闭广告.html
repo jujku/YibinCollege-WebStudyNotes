@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            display: block;
+            margin: 50px auto;
+        }
+
+        .ad {
+
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ad">
+        <p>我是一个广告</p>
+        <p>是不是看我不爽啊</p>
+        <p>快来关掉我啊</p>
+    </div>
+    <button>点击关闭广告</button>
+    <script>
+        var btn = document.querySelector('button')
+        var ad = document.getElementsByClassName('ad')
+
+        btn.onclick = function () {
+            this.style.display = 'none';
+            ad[0].style.display = 'none'; // 这里不能用this 因为this是指的函数的调用者
+        }
+        // 有一种循环精灵图的操作 但是要精灵图有规律可以一次性把 精灵图排列好
+        // 前提是 精灵图本身有规律  然后  在网页上的布局也有规律
+    </script>
+</body>
+
+</html>

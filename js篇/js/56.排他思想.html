@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <button>按钮</button><button>按钮</button><button>按钮</button><button>按钮</button><button>按钮</button>
+
+    <script>
+        var btn = document.querySelectorAll('button')
+        console.log(btn);
+        for (var index = 0; index < btn.length; index++) {
+            btn[index].onclick = function () {
+                for (var index = 0; index < btn.length; index++) {
+                    btn[index].style.backgroundColor = ''
+                    // 这里用的是btn[index] 因为这里是清除其他的样式 所以不能用函数调用者 如果用了this 就相当于没用
+                }
+                this.style.backgroundColor = 'red' // 这里必须用函数调用者  具体原理还不是很清除
+            }
+        }
+
+        // 这叫做排他思想  先杀死其他所有人 然后在让自己当王 在轮播图 里面会有
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 权重的叠加 */
+        /* 复合选择器会有权重的叠加问题 */
+        ul li {
+            color: red;
+        }
+
+        li {
+            color: green;
+        }
+
+        /* ui 与 li */
+        /* 会叠加成 0，0，0，1 + 0，0，0，1 = 0，0，0，2 */
+        /* 权重叠加 永远不会有继位 */
+        .nav li {
+            color: pink;
+        }
+
+        /* 0,0,1,0 + 0,0,0,1 = 0,0,1,1 */
+        /* a:hover伪类选择器也是0，0，1，1； */
+    </style>
+</head>
+
+<body>
+    <ul class="nav">
+        <li>大猪蹄子
+        </li>
+    </ul>
+
+</body>
+
+</html>

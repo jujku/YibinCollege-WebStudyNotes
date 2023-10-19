@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // indexOf() 数组中找给定元素的索引号 
+        // 返回值 存在就返回索引号 不存在就返回-1
+        var arr = ['red', 'green', 'black', 'pink', 'black']
+        console.log(arr.indexOf('black')); // 2   如果不存在返回的就是-1  
+        //如果有多个满足条件的索引号 它只会返回第一个
+        console.log(arr.lastIndexOf('black'));
+        // lastIndexOf 是从后面往前面查找
+
+        // 数组去重
+        // 封装一个去重的函数
+        function unique(arr) {
+            var newarr = [];
+            for (var i = 0; i < arr.length; i++) {
+                if (newarr.indexOf(arr[i]) == -1) {
+                    newarr.push(arr[i])
+                }
+            }
+            return newarr;
+        }
+        var arr = [3, 21, 4, 4, 4, 3, 12, 4, 6, 7, 6, 7, 9]
+        console.log(unique(arr));
+
+        // 将数组转换为字符串
+        // 1.toString()
+        var arr = [1, 2, 3]
+        console.log(arr.toString());
+        // 2.join(分隔符)
+        var arr1 = [3, 2, 5, 31, 2, 4]
+        console.log(arr1.join('-'));
+        // 默认是逗号 用 & 以后提交表单数据有用
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1.charAt(index) 根据位置返回字符
+        var str = 'andy';
+        console.log(str.charAt(3)); /* y */
+        //遍历所有字符
+        for (var index = 0; index < str.length; index++) {
+            console.log(str.charAt(index));
+        }
+
+        // 2.charCodeAt(index) 获取指定位置的ascll码 可以判断用户按下了哪个键
+        // A65 a97
+        console.log(str.charCodeAt(0));
+
+        // 3.H5 IE8+ 新增
+        console.log(str[0]);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

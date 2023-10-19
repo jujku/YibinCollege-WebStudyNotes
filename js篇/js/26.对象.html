@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 对象是一组  无序的 相关属性 和 方法 的集合，所有的事物都是对象，列如字符串 数值 数组
+        // 对象是由 属性 方法 组成的
+        // 属性 事物的特征 常用名词
+        // 方法 事物的行为 常用动词
+        // 利用字面量创建对象
+        // 对象的字面量是 花括号 {}
+        // var obj = {}; //创建了一个空对象
+        var obj = {
+            uname: '张三丰',
+            age: 18,
+            sex: '男',      //用逗号隔开
+            sayHi: function () {
+                console.log('hi~');
+            }
+        }
+
+        // 里面的属性 或者方法我们采取 键值对的形式  键 属性名： 值  属性值
+        // 多个属性 方法 用逗号隔开
+        // 方法冒号后面跟的是一个匿名函数
+
+        // 使用对象
+        // 调用 对像名.属性名
+        console.log(obj.uname);
+        // 第二种调用方式
+        console.log(obj['uname']);
+
+        // 调用方法
+        obj.sayHi() //记住加小括号
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

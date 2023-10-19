@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 鼠标指针样式
+    文本域拉大
+    输入框高光提示 -->
+    <style>
+        .one {
+            resize: none;
+            /* 文本框拉大 */
+        }
+
+        .two {
+            outline: 0;
+            /* 显示框高亮提醒 */
+        }
+    </style>
+
+</head>
+
+<body>
+    <ul>
+        鼠标样式
+        <li style="cursor: default;">我是普通指针</li>
+        <li style="cursor: pointer;">我是小手</li>
+        <li style="cursor: move;">我是移动</li>
+        <li style="cursor: text;">我是文本指针</li>
+        <li style="cursor: not-allowed">我是禁止指针</li>
+
+        文本域拉大 和 输入框高光
+        <textarea name="" id="" cols="30" rows="10" class="one two"></textarea>
+        <input type="text" class="two">
+    </ul>
+
+</body>
+
+</html>

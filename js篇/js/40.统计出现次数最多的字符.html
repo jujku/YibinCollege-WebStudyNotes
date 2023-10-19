@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //可以用来检测属性是否存在 其实就是 o.age 因为当属性值为0的时候返回的是没有该属性
+        var o = {
+            age: 18
+        }
+        if (o['age']) {
+            console.log('里面有该属性');
+        } else {
+            console.log('没有该属性');
+        }
+
+
+        var str = 'abcefdfhaao'
+        var o = {}
+        for (var index = 0; index < str.length; index++) {
+            var char = str.charAt(index);
+            console.log(char);
+            if (o[char]) {
+                o[char]++;
+            } else {
+                o[char] = 1;
+            }
+        }
+        console.log(o);
+
+        // 遍历对象
+        var max = 0;
+        var ch = '';
+        for (var k in o) {
+            // k是属性名
+            if (o[k] > max) {
+                max = o[k]
+                ch = k;
+            }
+        }
+        console.log('出现最多的值是' + ch + '出现了' + max + '次');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

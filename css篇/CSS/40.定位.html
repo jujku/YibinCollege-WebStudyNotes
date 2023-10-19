@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位</title>
+    <style>
+        /* 绝对定位重要 */
+        /* 绝对定位是相对于 他的祖先元素的 */
+        /* 如果没有祖先元素 或者 祖先元素没有定位 就像对于浏览器对齐 */
+        .father {
+            background-color: blue;
+            width: 200px;
+            height: 200px;
+
+        }
+
+        .one {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="one"></div>
+    </div>
+    <!-- <div>
+        /* 可以使某个元素自由的在一个盒子内移动位置，并且压住其他盒子 */
+        /* 有些盒子可以固定在屏幕某个位置 */
+        /* 定位的组成 */
+        /* 定位 = 定位模式 + 边偏移 */
+
+        /* 1.定位模式 position
+        static 静态定位
+        relative 相对定位
+        absolu 绝对定位
+        fixed 固定定位 */
+
+        /* 2.边偏移 */
+        /* top bottom left right
+        都是相对于父元素 */
+
+        /* 静态定位 */
+        /* 元素默认的定位方式 也就是无定位 没有边偏移 就是标准流 */
+
+        /* 相对定位
+        是以自己原来的位置为准 不是为父元素 也不是以浏览器 */
+        /* 虽然盒子走了但是他原来的位置还保留着 继续占用 不脱标 */
+        /* 典型的应用就是给绝对定位 当爹 用来限制绝对定位 */
+
+    </div> -->
+</body>
+
+</html>

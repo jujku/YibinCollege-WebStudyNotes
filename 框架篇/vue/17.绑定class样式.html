@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .basic {
+        width: 100px;
+        height: 100px;
+        border: solid 1px black;
+      }
+
+      .pink {
+        background-color: pink;
+      }
+      .red {
+        background-color: red;
+      }
+      .yellow {
+        background-color: yellow;
+      }
+
+      .font1 {
+        font-size: 20px;
+      }
+      .font2 {
+        font-weight: bold;
+      }
+      .font3 {
+        color: blue;
+      }
+    </style>
+    <script src="vue.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <!-- 字符串写法：适用于 样式的类名不确定，需要动态指定 -->
+      <div class="basic" :class="color" @click="changeColor">{{text}}</div>
+      <!-- 数组写法: 适用于 要绑定的样式个数不确定,名字也不确定 -->
+      <div class="basic" :class="classArr">{{text}}</div>
+      <!-- 对象写法 适用于 要绑定的样式个数确定,但要动态决定用不用 -->
+      <div class="basic" :class="classObj">{{text}}</div>
+    </div>
+
+    <script>
+      const vm = new Vue({
+        el: "#root",
+        data() {
+          return {
+            text: "text",
+            color: undefined,
+            classArr: ["font1", "font2", "font3"],
+            classObj: {
+              font1: true,
+              font2: false,
+              font3: false,
+            },
+          };
+        },
+        methods: {
+          changeColor: function () {
+            const arr = ["red", "pink", "yellow"];
+            this.color = arr[Math.floor(Math.random() * 3)];
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

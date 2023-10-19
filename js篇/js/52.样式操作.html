@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .div {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+    }
+</style>
+
+<body>
+    <!-- 两种方式 
+    一种是 行内样式  这样产生的是行内样式 权重很高
+    一种是 类名样式操作
+    element.style 
+    element.className -->
+    <div class="div"></div>
+    <script>
+        var div = document.querySelector('div');
+        // 注意CSS里面的样式都是 驼峰命名法
+        div.onclick = function () {
+            div.style.backgroundColor = 'red';
+            div.style.width = '200px';
+            // 这种方式是直接加在行内的
+
+        }
+    </script>
+
+</body>
+
+</html>

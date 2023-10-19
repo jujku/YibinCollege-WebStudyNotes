@@ -1,0 +1,58 @@
+{
+  "id": "3381573",
+  "name": "字体库",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "846264",
+      "name": "网页全屏",
+      "font_class": "wangyequanping",
+      "unicode": "e670",
+      "unicode_decimal": 58992
+    },
+    {
+      "icon_id": "846265",
+      "name": "网页缩小",
+      "font_class": "wangyesuoxiao",
+      "unicode": "e671",
+      "unicode_decimal": 58993
+    },
+    {
+      "icon_id": "7738181",
+      "name": "三角形",
+      "font_class": "sanjiaoxing",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "19669937",
+      "name": "网页-关闭",
+      "font_class": "guanbi",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    },
+    {
+      "icon_id": "20797371",
+      "name": "下滑三角",
+      "font_class": "xiahuasanjiao",
+      "unicode": "e6c8",
+      "unicode_decimal": 59080
+    },
+    {
+      "icon_id": "20797374",
+      "name": "右三角",
+      "font_class": "yousanjiao",
+      "unicode": "e6c9",
+      "unicode_decimal": 59081
+    },
+    {
+      "icon_id": "20797376",
+      "name": "左三角",
+      "font_class": "zuosanjiao",
+      "unicode": "e6ca",
+      "unicode_decimal": 59082
+    }
+  ]
+}

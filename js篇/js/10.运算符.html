@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 浮点数很容易出误差 列如
+        // 所以一般不直接运用小数运算
+        console.log(0.1 + 0.2);   //=0.30000000000000004
+
+        // 我们不能直接拿着浮点数来进行比较 是否相等
+        var num = (0.1 + 0.2);
+        console.log(num == 0.3);
+
+        // 后置自加运算符
+
+        var num1 = 1;
+        console.log(num1);
+        console.log(num1++); //此时num++等于 1  但是    num1 已经加了自加了一个 1 变成了2
+        console.log(num1);
+        console.log('自增自减分割线------------------');
+
+        // 前置置自增运算符
+        var num2 = 1;
+        console.log(num2);
+        console.log(++num2);  //此时  ++num2 等于 2 加了一个 1  ；num2也等于2
+        console.log(num2);
+
+        console.log('--------------');
+        var num3 = 1;
+        console.log(num3++ + ++num3);  //此时 num3+++ 等于 1   num3 = 2 所以 ++num3=3  num3 = 3
+
+        //比较运算符 
+
+        console.log(19 == '19');  //会转型 结果为true  == 默认转换数据类型 把字符串转换为 数字型
+        // 全等
+        console.log(18 === '18'); // 这是全等 要求 数值 数据类型全部相等   === 与  !==
+
+        //逻辑运算符
+        // 逻辑中断(短路) 逻辑与短路运算
+        console.log((123 && 456));    //如果表达式1为真 就输出表达式2
+        console.log(0 && 456);       //如果表达式1为假 就输出表达式1
+        console.log(0 && 456 + 4 && 2313);
+        console.log('' && 1234 && 456);    //这几个都为0 最后一个为空
+        console.log('自己测试');
+        console.log(1 && 456 + 1 && 456); //也是输出表达式2
+
+        // 逻辑或短路运算
+        // 如果表达式1为真 就返回表达式1  如果为假就返回表达式2
+        console.log(123 || 456); //返回的是 表达式1
+        console.log(0 || 456); //返回的是 表达式2
+
+        console.log('举个例子');
+        var num6 = 0;
+        console.log(123 || num6++);
+        console.log(num6);       //0
+        // 依然是0因为被中断了
+        console.log('赋值运算符');
+
+        // 赋值运算符
+        var age = 10;
+        age +=2;
+        age -=2;
+        age *=2;
+        age /=2;
+        console.log(age);
+
+        // ,逗号运算符是优先级最低的运算符
+        //多个逻辑运算符  先看或
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

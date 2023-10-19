@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 伪类选择器 */
+        /* 用于向某些选择器添加特殊效果 比如给链接添加特殊效果 图选择第一个 第n个元素 */
+        /* 最大的特点是 ; */
+        /* 分类  链接伪类  结构伪类  等 */
+
+        /* 链接伪类 */
+
+        /* 注意链接伪类必须按照这个顺序写 */
+        /* LVHA */
+
+
+        /* 未访问的链接  a:link */
+        a:link {
+            color: #333;
+            text-decoration: none;
+        }
+
+        /* 访问过的链接 */
+        a:visited {
+            color: orange;
+        }
+
+        /* 鼠标经过的链接 */
+        a:hover {
+            color: blue;
+        }
+
+        /* 鼠标点下的时候的状态 */
+        a:active {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">小猪佩奇</a>
+    <a href="http://www.taobao.com">未访问的链接</a>
+
+</body>
+
+</html>

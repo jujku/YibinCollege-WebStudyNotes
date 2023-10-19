@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input {
+        display: block;
+        margin: 40px auto;
+    }
+</style>
+
+<body>
+    <input type="search">
+    <script>
+        var input = document.querySelector("input")
+        document.addEventListener("keyup", function (e) {
+            if (e.key === "s") {
+                input.focus()
+            }
+        })
+
+        //注意！ keydown 优先于 数字输出 优先于 keyup
+        // 意思就是如果 这里是keydown的话 会先执行事件 再把s输入进去
+    </script>
+</body>
+
+</html>

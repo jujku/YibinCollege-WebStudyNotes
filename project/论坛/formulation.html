@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>鸡尾酒论坛</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/register.css" />
+    <link rel="stylesheet" href="css/publish.css" />
+    <link rel="stylesheet" href="css/formulation.css" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/1.2.0/axios.js"></script>
+    <script src="js/animate.js"></script>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="w">
+        <div class="left">
+          <a href="index.html">首页</a>
+          <a href="publish.html" id="gotopublish">发布</a>
+          <!-- <div class="search">
+                    <input type="text" class="searchinput">
+                    <button class="searchbtn">搜索</button>
+                </div> -->
+        </div>
+        <div class="right">
+          <a href="register.html" class="offline">登录或注册</a>
+          <div class="online">
+            <div class="exit">
+              <button class="exitbtn">退出</button>
+            </div>
+            <p class="username">username</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="publish">
+      <div class="w">
+        <div class="publishcard">
+          <p id="userdata">发布者：username</p>
+          <p id="usertime">发布时间：time</p>
+          <div class="publishimgbtn">图片</div>
+          <input type="text" id="winename" placeholder="酒名" readonly />
+          <textarea
+            id="winetext"
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="简介"
+            readonly
+          ></textarea>
+          <div class="formualation">
+            <span>基酒类型:</span><span id="base_liquor">金酒</span>
+            <div class="formualationin">
+              <div class="inin">
+                <input
+                  type="text"
+                  id="formualation_name"
+                  placeholder="配料名"
+                />
+                <p>:</p>
+                <input type="text" id="formualation_num" placeholder="用量" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="comments">
+      <div class="w">
+        <div class="commentslist">
+          <div class="shadow"></div>
+          <div class="comment">
+            <div class="commentuser">
+              <p id="commentusername">username</p>
+              <p id="commenttime">time</p>
+            </div>
+            <div class="commenttext">
+              <p id="commenttext">这是一个测试文本</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sendcomment">
+      <div class="w">
+        <textarea name="" id="sendcommenttext" cols="30" rows="10"></textarea>
+        <button id="sendcommentbtn">评论</button>
+      </div>
+    </div>
+    <script src="js/header.js"></script>
+    <script src="js/formulationInterface.js"></script>
+    <script src="js/formulationAnimation.js"></script>
+  </body>
+</html>

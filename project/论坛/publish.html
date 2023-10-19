@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>发布页面</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/register.css" />
+    <link rel="stylesheet" href="css/publish.css" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/1.2.0/axios.js"></script>
+    <style></style>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="w">
+        <div class="left">
+          <a href="index.html">首页</a>
+          <a href="publish.html" id="gotopublish">发布</a>
+          <!-- <div class="search">
+                    <input type="text" class="searchinput">
+                    <button class="searchbtn">搜索</button>
+                </div> -->
+        </div>
+        <div class="right">
+          <a href="register.html" class="offline">登录或注册</a>
+          <div class="online">
+            <div class="exit">
+              <button class="exitbtn">退出</button>
+            </div>
+            <p class="username">username</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="publish">
+      <div class="w">
+        <div class="publishcard">
+          <input
+            type="file"
+            id="publishimg"
+            name="file"
+            accept=".png, .jpg,.jpeg"
+          />
+          <div class="publishimgbtn">点击上传图片</div>
+          <input type="text" id="winename" placeholder="酒名" />
+          <textarea
+            id="winetext"
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="简介"
+          ></textarea>
+          <div class="formualation">
+            <span>基酒类型:</span
+            ><select name="" id="base_liquor">
+              <option value="金酒">金酒</option>
+              <option value="白兰地">白兰地</option>
+              <option value="朗姆酒">朗姆酒</option>
+              <option value="特基拉">特基拉</option>
+              <option value="伏特加">伏特加</option>
+              <option value="威士忌">威士忌</option>
+              <option value="不含基酒">不含基酒</option>
+            </select>
+            <div class="formualationin">
+              <div class="inin">
+                <input
+                  type="text"
+                  id="formualation_name"
+                  placeholder="配料名"
+                />
+                <p>:</p>
+                <input type="text" id="formualation_num" placeholder="用量" />
+              </div>
+            </div>
+            <button id="addformualation">添加</button>
+            <button id="deletformualation">删除</button>
+          </div>
+          <button id="publish">发布</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/header.js"></script>
+    <script src="js/publishAnimation.js"></script>
+    <script src="js/publishInterface.js"></script>
+  </body>
+</html>

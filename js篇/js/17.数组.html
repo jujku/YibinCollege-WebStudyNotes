@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 数组的创建方法
+        // 1. 用new
+        var arr = new Array();  //创建数组
+        // 利用字面量[]
+        var arr1 = [];  //创建了一个空的数组
+        var arr2 = [1,2,'pink',true]; //JS里面的数组可以存放任意形式的数据
+
+        // 获取数组元sad素
+        console.log(arr2);
+        console.log(arr2[2]);
+        console.log(arr2[4]);
+
+        // 遍历数组
+        for(i = 0; i < 4; i++)
+        console.log(arr2[i]);
+        console.log(arr2.length);
+        
+        // 动态遍历
+        for(i = 0; i < arr2.length; i++)
+        {
+            console.log(arr2[i]);
+        }
+
+        // 最大值
+        var arr3 = [6,9,61];
+        var max = arr3[0];
+        for(i = 0; i < arr3.length; i++){
+            if(max <= arr3[i])
+            {
+                max = arr3[i];
+            }
+
+        }
+        console.log(max);
+
+        // 把数组转化为字符串
+        var arr4 = ['pijnl','red','blakc']
+        var str = '';
+        for(i = 0 ; i < arr4.length ; i++)
+        {
+            str = str + arr4[i] + '|';
+
+        }
+        console.log(str);
+
+        // 增加数组元素 修改length长度
+        var arr5 = [5,3,4]
+        console.log(arr5.length);
+        arr5.length = 5;
+        console.log(arr5);
+        console.log(arr5[3]);
+        // JS中很随意可以随便添加 替换
+        // 不要给数组名赋值
+
+        // 数组筛选方法1
+        var arr6 =  [15,43,121,4,6,23,65,2,6,7,23,2]
+        var newarr = [];
+        var j = 0;
+        for(i = 0 ; i < arr6.length ; i++){
+            if(arr6[i] >= 10)
+            {
+                newarr[j] = arr6[i];
+                j++;
+            }
+        }
+        console.log(newarr);
+
+        // 一个超妙的数组筛选法
+        var arr7 = [6,43,1,543,213,65,12,6,4,6,23,2]
+        var newarr2 = [];
+        for(i = 0; i < arr7.length; i++){
+            if(arr7[i] >= 10)
+            {
+                newarr2[newarr2.length] = arr7[i]; // 每给newarr一个值他数组长度就增加一个 刚好对应数组脚标
+            }
+        }
+        console.log(newarr2);
+
+        // 数组去重
+        var arr8 = [0,5,9874,0,65,0,45,0,0,0,56]
+        var newarr3 = [];
+        for(i = 0; i < arr8.length; i++){
+            if(arr8[i] != 0){
+                newarr3[newarr3.length] = arr8[i];
+            }
+        }
+        console.log(newarr3);
+
+        // 数组翻转
+        var arr9 = [1,56,897,64,874,46,123]
+        var newarr4 = [];
+        for(i = arr9.length - 1; i >= 0; i--){
+            newarr4[newarr4.length] = arr9[i];
+        }
+        console.log(newarr4);
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

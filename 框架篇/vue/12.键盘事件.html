@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="vue.js"></script>
+  </head>
+  <body>
+    <!-- 1.Vue中常用的按键别名 -->
+    <!-- 回车    enter
+        删除    delete
+        退出    esc
+        空格    space
+        换行    tab （特殊要更换焦点元素 所以用keydown）
+        上      up
+        下      down
+        左      left 
+        右      right
+
+        用法  @keyup.enter -->
+
+    <!-- 2.VUe没有提供别名的案件 可以使用原始key来绑定，两个词组成的要换成短横线命名(lebab-case)
+        例如更换大小写，CapsLock  caps-lock -->
+
+    <!-- 3.系统修饰键  ctrl，alt，shift，meta -->
+    <!-- 1.配合keyup的话 按下修饰键同时按下其他键 释放后才触发事件 -->
+    <!-- 例如 ctrl + c 是在C键释放后才触发事件 -->
+    <!-- 2.配合keydown的话就正常触发事件 -->
+
+    <!-- 这里ctrl后面可以加其他键  比如说 @keyup.ctrl.y -->
+
+    <div id="root">
+      <input type="text" @keyup.ctrl="showInfo" />
+    </div>
+
+    <script>
+      const vm = new Vue({
+        el: "#root",
+        data: {},
+        methods: {
+          showInfo(e) {
+            console.log(e.target.value);
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 分支语句
+        /* if(条件表达式){
+            执行语句1
+
+         } else{
+             执行语句2
+         }*/
+
+
+        //  下面是一个判断瑞年的案列
+
+        // 能被4整除且不能整除100的为闰年 或者能被400整除
+        var year = prompt('请输入年份');
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+            alert(year + '是闰年');
+        } else {
+            alert(year + '是平年');
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

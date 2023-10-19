@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .duiqi {
+            vertical-align: middle;
+            /* 让图片和文字垂直居中 */
+        }
+    </style>
+</head>
+
+<body>
+    vertical-align 垂直对齐
+    <br>
+    <p style="color: red;">只针对 行内元素 或者 行内块元素</p>
+    文本域也是行内块元素<br>
+    顶线 中线 基线 底线
+    <br>
+    <img src="54.文字 基线.jpg" alt="" style="width:100px;height: 100px;"> 图片和文字默认是基线对齐的 不是底线
+    <br>
+    <img src="54.文字 基线.jpg" alt="" class="duiqi" style="width:100px;height: 100px;">居中对齐
+    <br>
+    vertical-align还可以解决图片底测空白间隙的问题
+    因为图片是以基线对齐的 到底线还有点空隙
+    <p style='color:red;'>所以加个 vertical-align:bottom 可以解决</p>
+    <div style="border:5px solid red"><img src="54.文字 基线.jpg" alt="" style="width:100px;height: 100px;">图片下面有空白间隙</div>
+    <div style="border:5px solid red"><img src="54.文字 基线.jpg" alt=""
+            style="width:100px;height: 100px;vertical-align: bottom;">换成其他的就没有了</div>
+    <p>但是这个基线对齐 是行内元素 独有的 直接转换为块级元素也能解决 但是一般推荐用这个方法解决</p>
+
+
+</body>
+
+</html>

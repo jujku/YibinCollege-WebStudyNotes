@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        margin: 0 auto;
+    }
+
+    .father {
+        background-color: pink;
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        /* 解决塌陷问题 */
+    }
+
+    .son {
+        margin-top: 9px;
+        background-color: red;
+        width: 50px;
+        height: 50px;
+    }
+</style>
+
+<body>
+    <!-- 阻止冒泡 -->
+    <div class="father">father
+        <div class="son">son</div>
+    </div>
+
+
+    <!-- 冒泡的妙用 -->
+    <ul>
+        <li>苏菲的世界</li>
+        <li>苏菲的世界</li>
+        <li>苏菲的世界</li>
+        <li>苏菲的世界</li>
+        <li>苏菲的世界</li>
+    </ul>
+
+    <script>
+        var son = document.querySelector(".son")
+        var father = document.querySelector(".father")
+        father.addEventListener("click", fn1)
+        son.addEventListener("click", fn2)
+        function fn1(e) {
+            alert("father")
+            e.stopPropagation()  //表示冒泡会在father这个元素这里终结
+        }
+        function fn2(e) {
+            alert("son")
+        }
+        document.addEventListener("click", function (e) {
+            alert("document")
+        })
+
+        // 冒泡的妙用 委托 （面试常考）
+        // 将监听器设置在父元素上，而不是子元素上。利用冒泡原理影响子元素
+        var ul = document.querySelector("ul")
+        ul.addEventListener("click", function (e) {
+            e.target.style.backgroundColor = "pink"
+        })
+    </script>
+</body>
+
+</html>

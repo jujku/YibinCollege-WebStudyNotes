@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <script>
+        var ul = document.querySelector("ul")
+        //node.cloneNode()  括号里面为false 为浅克隆只克隆节点  true为深克隆
+        var li1 = ul.children[0].cloneNode()
+        var li2 = ul.children[0].cloneNode(true)
+        ul.appendChild(li1)
+        ul.appendChild(li2)
+    </script>
+</body>
+
+</html>

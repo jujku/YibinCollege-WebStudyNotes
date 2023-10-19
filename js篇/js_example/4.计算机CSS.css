@@ -1,0 +1,45 @@
+.calculator {
+    width: 405px;
+    border: solid 1px white;
+    background: #ffefd5;
+    margin: 50px auto;
+    padding: 20px;
+} 
+/* 计算区域的 宽度 边框 背景色 边距 */
+.output {
+    width: 356px;
+    height: 50px;
+    padding: 20px;
+    font-size: 20px;
+    background-color: white;
+    text-align: right;
+}
+/* 设置计算区域文本域 */
+input[type = button] {
+    border: solid 1px white; /* 边框 */
+    width: 100px;
+    height: 80px;
+    background: grey;
+    cursor: pointer;  /* 光标形状 手形 */
+    color: white;
+    font-size: 30px;
+}
+/* 按键样式 */
+
+.numbers {
+    width: 300px;
+    display: inline-flex;
+    flex-wrap: wrap;  /* 堆叠方式  */
+}
+/* 数字的样式 */
+
+.operators {
+    width: 100px;
+    position: relative;
+    left: -3px;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+
+

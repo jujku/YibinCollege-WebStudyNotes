@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // es6引入一种新的数据类型是 Symbol 是原始数据类型
+        // 类似字符串
+
+        // 1 symbol的值是唯一的
+        // 2 symbol的值不能与其他数据进行运算  加减，字符串的拼接
+        // 3 symbol定义的对象属性不能使用 for...in 循环遍历 但是可以使用 Reflect.ownKeys来获取对象的所有键名
+
+        // 创建Symbol
+        let s = Symbol();
+
+        console.log(s, typeof s);
+
+        let s2 = Symbol('瑞峰');
+        let s3 = Symbol('瑞峰');
+        console.log(s2, s3);
+        console.log(s2 === s3);
+
+        let s4 = Symbol.for('瑞峰')
+        let s5 = Symbol.for('瑞峰')
+        console.log(s4, s5);
+        console.log(s2 === s4);
+        console.log(s5 === s4);
+
+
+        // USONB
+        // u undefined unll
+        // s string symbol
+        // o object
+        // n number
+        // b boolean
+
+        let game = {
+            up: function () {
+                console.log("不用symbol up");
+            },
+            down: function () {
+                console.log("不用symbol down");
+            },
+        }
+        //声明一个对象
+
+        // 添加方法
+        // 第一种
+
+        let methods = {
+            up: Symbol(),
+            down: Symbol()
+        };
+
+        game[methods.up] = function () {
+            console.log("我可以改变形状");
+        }
+        game[methods.down] = function () {
+            console.log("我可以快速下降！");
+        }
+
+        console.log(game);
+
+        let youxi = {
+            name: '狼人杀',
+            [Symbol('say')]: function () {
+                console.log("我可以发言");
+            },
+            [Symbol('zibao')]: function () {
+                console.log("我可以自爆");
+            }
+        }
+
+        let abc = 123
+        console.log(youxi);
+    </script>
+</body>
+
+</html>

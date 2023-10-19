@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str = 'andy';
+        console.log(str.length);
+        // 复杂数据类型才有 属性和方法 
+        // 简单数据为什么会有 length 属性呢
+        // 基本包装类型  就是把简单数据类型 包装为了 复杂数据类型
+
+        // 列
+        // 上面 var str = 'andy ' 如下代码所示
+
+        // 这就叫基本包装类型
+        // 这样基本数据类型就用了属性和方法
+        var temp = new String('andy');
+        // 把临时变量赋值给 str
+        str = temp;
+        // 销毁这个临时变量
+        temp = null;
+
+        // 字符串不可变
+        var str = 'andy'
+        str = 'red'
+        // 改变的不是内容 而是指针。
+        // 第二布是先 开辟一个内存空间 写入 red 然后把str的指针改为 第二个
+        // 所以不要随意拼接 改变字符串 会浪费空间
+
+        // 字符串所有的方法 都不会修改字符串本身(字符串是不可变的) 操作完成后会返回一个新的字符串
+        // 字符串对象，根据字符返回位置
+        var str = '改革春天吹满天,春天来了'
+        console.log(str.indexOf('改'));
+        console.log(str.indexOf('改', 3)); //第二个参数是从哪里开始查找
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

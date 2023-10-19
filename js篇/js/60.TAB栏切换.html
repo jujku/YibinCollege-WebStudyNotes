@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    li {
+      list-style: none;
+      float: left;
+      height: 38px;
+      width: 100px;
+      font-size: 24px;
+      font-weight: 600;
+      text-align: center;
+      padding-top: 2px;
+    }
+
+    .tab {
+      width: 400px;
+      margin: 100px auto;
+    }
+
+    .tab_list {
+      height: 40px;
+      width: 450px;
+      background-color: azure;
+      border: 1px solid gray;
+    }
+
+    .red {
+      background-color: tomato;
+      color: white;
+    }
+  </style>
+
+  <body>
+    <div class="tab">
+      <div class="tab_list">
+        <ul>
+          <li class="red">蔡昌红</li>
+          <li>曹家垚</li>
+          <li>雷超</li>
+          <li>辛禹杉</li>
+        </ul>
+      </div>
+      <div class="tab_icon">
+        <div style="display: block">
+          <p>蔡昌宏</p>
+          <p>年龄：18</p>
+          <p>性别：男</p>
+          <p>学号：210104114</p>
+        </div>
+        <div style="display: none">
+          <p>曹家垚</p>
+          <p>年龄：19</p>
+          <p>性别: 男</p>
+          <p>学号：210104115</p>
+        </div>
+        <div style="display: none">
+          <p>雷超</p>
+          <p>年龄：20</p>
+          <p>性别：女</p>
+          <p>学号 210104116</p>
+        </div>
+        <div style="display: none">
+          <p>辛禹杉</p>
+          <p>年龄：18</p>
+          <p>性别：男</p>
+          <p>学号 210104117</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      var li = document.querySelector(".tab_list").querySelectorAll("li");
+      var item = document.querySelector(".tab_icon").querySelectorAll("div");
+      console.log(item);
+
+      for (var index = 0; index < li.length; index++) {
+        li[index].setAttribute("index", index);
+        li[index].onclick = function () {
+          for (var index = 0; index < li.length; index++) {
+            li[index].className = "";
+            item[index].style.display = "none";
+            var i = this.getAttribute("index");
+          }
+          this.className = "red";
+
+          // item[this.getAttribute('index')].style.display = 'block'
+          item[i].style.display = "block"; //这两个都可以
+        };
+      }
+    </script>
+  </body>
+</html>

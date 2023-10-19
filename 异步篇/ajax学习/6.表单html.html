@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+
+</head>
+
+<body>
+    <!-- 监听表单 -->
+    <form action="/login" id="form1" method="post">
+        <input type="text" name="user-name">
+        <input type="password" name="password">
+        <button type="submit">提交</button>
+    </form>
+
+    <script>
+        $(function () {
+            $('#form1').submit(function (e) {
+                alert('监听到了表带的提交事件')
+                e.preventDefault();
+                // 阻止表单的默认提交行为
+            })
+        })
+    </script>
+    <div class="笔记">
+        <!-- 两种监听方式
+    $('#form1').sumbit(function(e) {
+        alert('监听到了表带的提交事件')
+    })
+    $('#form2').on('sumbit',function(e) {
+        alert('监听到了表带的提交事件')
+    })
+     -->
+        <!-- action 提交到那个url
+    target _blank
+    method = 'get' 或者 post
+    enctype 发送表带数据之前如何对数据进行编码 
+    需要文件上传的时候 需要改成multipart/form-data -->
+
+        <!-- 同步提交 
+    页面会发生跳转
+    页面之前的状态和数据会丢失
+
+    解决方案 表单只负责采集数据  AJAX负责提交数据-->
+    </div>
+</body>
+
+</html>
