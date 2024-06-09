@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat App</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js"></script>
+  </head>
+  <body>
+    <div id="chat">
+      <ul id="messages"></ul>
+      <form id="form" action="">
+        <input id="input" autocomplete="off" /><button>Send</button>
+      </form>
+    </div>
+
+    <script>
+      var socket = io("http://127.0.0.1:5000");
+
+      document.getElementById("form").onsubmit = function () {
+        var input = document.getElementById("input");
+        socket.emit("message", input.value);
+        input.value = "";
+        return false;
+      };
+
+      socket.on("message", function (msg) {
+        var ul = document.getElementById("messages");
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode(msg));
+        ul.appendChild(li);
+      });
+    </script>
+  </body>
+</html>

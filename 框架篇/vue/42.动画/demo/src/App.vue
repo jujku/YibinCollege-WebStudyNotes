@@ -1,34 +1,27 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div>
+    <test-component></test-component>
+    <guo-du></guo-du>
+    <TransitionGroupTest></TransitionGroupTest>
+    <animate-css></animate-css>
   </div>
 </template>
 
 <script>
-import pubsub from "pubsub-js";
-import HelloWorld from "./components/HelloWorld.vue";
+// import pubsub from "pubsub-js";
+import TestComponent from "./components/TestComponent.vue";
+import GuoDu from "./components/GuoDu.vue";
+import TransitionGroupTest from "./components/TransitionGroupTest.vue";
+import AnimateCss from "./components/AnimateCss.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    TestComponent,
+    GuoDu,
+    TransitionGroupTest,
+    AnimateCss,
   },
-  methods: {
-    demo() {
-      pubsub.publish("hello", "hellop");
-    },
-  },
+  methods: {},
 };
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

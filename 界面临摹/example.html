@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        margin: 100px auto;
+        width: 300px;
+        height: 450px;
+        background-color: aqua;
+      }
+      .container .title {
+        position: relative;
+        width: 100%;
+        height: 100px;
+        background-color: palevioletred;
+      }
+      .container .title .update {
+        position: absolute;
+      }
+      .container .title h1 {
+        width: 100%;
+        text-align: center;
+        line-height: 100px;
+      }
+      .container .userList {
+        width: 100%;
+        height: 300px;
+        background-color: antiquewhite;
+        overflow: hidden scroll;
+      }
+      .container .userList .user {
+        display: flex;
+        justify-content: space-between;
+        height: 50px;
+        width: 100%;
+        background-color: bisque;
+        border: 1px solid black;
+        line-height: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .container .userList .user .loginTime {
+        font-size: small;
+      }
+      .container .foot {
+        background-color: aquamarine;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <button class="update">刷新</button>
+        <h1>在线列表</h1>
+      </div>
+      <div class="userList">
+        <div class="user">
+          <div class="username">text</div>
+          <div class="loginTime">date</div>
+        </div>
+      </div>
+      <div class="foot">
+        <button class="exit">退出</button>
+        <a href="www.baidu.com">www.baidu.com</a>
+      </div>
+    </div>
+    <script>
+      let data = [
+        {
+          username: "小王",
+          loginTime: "2024-05-02 19:00",
+        },
+        {
+          username: "小王",
+          loginTime: "2024-05-02 19:00",
+        },
+        {
+          username: "小王",
+          loginTime: "2024-05-02 19:00",
+        },
+        {
+          username: "小王",
+          loginTime: "2024-05-02 19:00",
+        },
+        {
+          username: "小王",
+          loginTime: "2024-05-02 19:00",
+        },
+        {
+          username: "小王",
+          loginTime: "2024-05-02 19:00",
+        },
+        {
+          username: "小王",
+          loginTime: "2024-05-02 19:00",
+        },
+        {
+          username: "小王",
+          loginTime: "2024-05-02 19:00",
+        },
+      ];
+      const userList = document.querySelector(".userList");
+      const update = document.querySelector(".update");
+
+      function updateUsers() {
+        let arr = [];
+        for (key in data) {
+          arr.push(`<div class="user"><div class="username">${data[key].username}</div>
+          <div class="loginTime">${data[key].loginTime}</div></div>`);
+        }
+        userList.innerHTML = arr.join("");
+      }
+
+      update.addEventListener("click", updateUsers);
+    </script>
+  </body>
+</html>
