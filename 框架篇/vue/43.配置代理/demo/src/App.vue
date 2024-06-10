@@ -1,19 +1,21 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Proxy1 />
+    <Proxy2 />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Proxy1 from "./components/Proxy1.vue";
+import Proxy2 from "./components/Proxy2.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Proxy1,
+    Proxy2,
+  },
+};
 </script>
 
 <style>
