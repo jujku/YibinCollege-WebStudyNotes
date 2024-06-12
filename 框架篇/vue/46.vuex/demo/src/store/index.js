@@ -33,6 +33,14 @@ const mutations = {
 
 const state = {
   num: 0,
+  name: "jujku",
+  item: "钻石",
+};
+
+const getters = {
+  bigNum() {
+    return state.num * 10;
+  },
 };
 
 export default new Vuex.Store({
@@ -40,4 +48,5 @@ export default new Vuex.Store({
   mutations,
   state,
   // key value相同的时候 es6语法简写
+  getters,
 });
