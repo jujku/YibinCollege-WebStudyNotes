@@ -4,7 +4,6 @@
     <h1>{{ $store.state.num }}</h1>
     <h1>放大十倍后{{ bigNum }}</h1>
     <h1>一个{{ name }} 有 {{ item }}</h1>
-    <h3 style="color: red">下方人员的人数 {{ persons.length }}</h3>
     <select v-model.number="num">
       <option value="1">1</option>
       <option value="2">2</option>
@@ -33,7 +32,7 @@ export default {
     // ...mapState({name: "name", item: "item" }),
 
     //数组简写
-    ...mapState(["name", "item", "persons"]),
+    ...mapState(["name", "item"]),
     ...mapGetters(["bigNum"]),
   },
   methods: {

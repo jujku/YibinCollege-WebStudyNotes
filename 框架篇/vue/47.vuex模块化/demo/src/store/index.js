@@ -29,17 +29,12 @@ const mutations = {
   JIAN(state, value) {
     state.num -= value;
   },
-
-  ADD_PERSON(state, value) {
-    state.persons.unshift(value);
-  },
 };
 
 const state = {
   num: 0,
   name: "jujku",
   item: "钻石",
-  persons: [{ id: "001", name: "jujku" }],
 };
 
 const getters = {
