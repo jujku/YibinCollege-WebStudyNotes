@@ -29,9 +29,4 @@ export default {
 h1 {
   background-color: aqua;
 }
-
-.hello-enter-active,
-.hello-leave.leave-active {
-  transition: 10s linear;
-}
 </style>

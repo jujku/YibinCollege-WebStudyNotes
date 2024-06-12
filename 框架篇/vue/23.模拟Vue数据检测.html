@@ -28,8 +28,6 @@
           if (obj[k] instanceof Object) {
             obj[k] = new observe(obj[k]);
           }
-          console.log(this);
-          console.log(k);
           Object.defineProperty(this, k, {
             get() {
               return obj[k];
