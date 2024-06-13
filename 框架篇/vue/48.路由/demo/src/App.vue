@@ -14,20 +14,12 @@
 </template>
 
 <script>
-import About from "./pages/About.vue";
-import Home from "./pages/Home.vue";
 import Banner from "./components/Banner.vue";
-import News from "./pages/News.vue";
-import Message from "./pages/Message.vue";
 
 export default {
   name: "App",
   components: {
-    About,
-    Home,
     Banner,
-    News,
-    Message,
   },
 };
 </script>
