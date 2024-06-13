@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Banner />
     <div class="router">
       <router-link to="/about" active-class="active"
         >about(router-link)</router-link
@@ -13,13 +14,20 @@
 </template>
 
 <script>
-import About from "./components/About.vue";
-import Home from "./components/Home.vue";
+import About from "./pages/About.vue";
+import Home from "./pages/Home.vue";
+import Banner from "./components/Banner.vue";
+import News from "./pages/News.vue";
+import Message from "./pages/Message.vue";
+
 export default {
   name: "App",
   components: {
     About,
     Home,
+    Banner,
+    News,
+    Message,
   },
 };
 </script>
@@ -33,7 +41,8 @@ export default {
   font-weight: bold;
   color: red;
 }
-h1 {
+h1,
+p {
   text-align: center;
 }
 </style>
